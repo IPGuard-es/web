@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>
-    <!-- Page Header Start -->
+    <!-- Page Header End -->
 
 
     <!-- Contact Start -->
@@ -124,7 +124,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4"
+                                     style="width: 100px; height: 100px; border-width: 15px !important;">
                                     <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
                                 </div>
                                 <h5 class="font-weight-medium m-0 mt-2">Barcelona, España</h5>
@@ -132,7 +133,8 @@
                         </div>
                         <div class="col-md-4">
                             <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4"
+                                     style="width: 100px; height: 100px; border-width: 15px !important;">
                                     <i class="fa fa-2x fa-envelope-open text-secondary"></i>
                                 </div>
                                 <h5 class="font-weight-medium m-0 mt-2">info@ipguard.es</h5>
@@ -140,7 +142,8 @@
                         </div>
                         <div class="col-md-4">
                             <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4"
+                                     style="width: 100px; height: 100px; border-width: 15px !important;">
                                     <i class="fa fa-2x fa-phone-alt text-secondary"></i>
                                 </div>
                                 <h5 class="font-weight-medium m-0 mt-2">+34 636 224 398</h5>
@@ -148,36 +151,85 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12">
                     <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
+                        <!-- ZOHO FORM (bonito + funcional) -->
+                        <form action="https://forms.zohopublic.eu/jesusoranipg1/form/ContactUs/formperma/honwhEk7rndbBIBodkokbVS9J83OR-S5drMmswYH9V0/htmlRecords/submit"
+                              name="form"
+                              id="zohoForm"
+                              method="POST"
+                              accept-charset="UTF-8"
+                              enctype="multipart/form-data">
+
+                            <!-- Hidden Zoho fields -->
+                            <input type="hidden" name="zf_referrer_name" value="">
+                            <!-- Si quieres redirigir a una página de gracias, rellena este value -->
+                            <input type="hidden" name="zf_redirect_url" value="">
+                            <input type="hidden" name="zc_gad" value="">
+
                             <div class="form-row">
+                                <!-- Nombre -->
                                 <div class="col-md-6">
                                     <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Tu Nombre" required="required" data-validation-required-message="Por favor, escribe tu nombre" />
-                                        <p class="help-block text-danger"></p>
+                                        <input type="text"
+                                               class="form-control"
+                                               maxlength="255"
+                                               name="Name_First"
+                                               fieldType="7"
+                                               placeholder="Nombre"
+                                               autocomplete="given-name"
+                                               required />
                                     </div>
                                 </div>
+
+                                <!-- Apellidos -->
                                 <div class="col-md-6">
                                     <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Tu Email" required="required" data-validation-required-message="Por favor, escribe tu email" />
-                                        <p class="help-block text-danger"></p>
+                                        <input type="text"
+                                               class="form-control"
+                                               maxlength="255"
+                                               name="Name_Last"
+                                               fieldType="7"
+                                               placeholder="Apellidos"
+                                               autocomplete="family-name"
+                                               required />
                                     </div>
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Asunto (ej. Auditoría / Firewall / VPN / Pentesting)" required="required" data-validation-required-message="Por favor, escribe un asunto" />
-                                <p class="help-block text-danger"></p>
+
+                            <!-- Email -->
+                            <div class="control-group mt-3">
+                                <input type="email"
+                                       class="form-control"
+                                       maxlength="255"
+                                       name="Email"
+                                       fieldType="9"
+                                       placeholder="Tu Email"
+                                       autocomplete="email"
+                                       required />
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control" rows="6" id="message" placeholder="Cuéntanos qué necesitas (empresa, alcance, urgencia, etc.)" required="required" data-validation-required-message="Por favor, escribe tu mensaje"></textarea>
-                                <p class="help-block text-danger"></p>
+
+                            <!-- Mensaje -->
+                            <div class="control-group mt-3">
+                                <textarea class="form-control"
+                                          name="MultiLine"
+                                          maxlength="65535"
+                                          rows="6"
+                                          placeholder="Cuéntanos qué necesitas (auditoría, firewall, VPN, pentesting...)"
+                                          required></textarea>
                             </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+
+                            <!-- Botón -->
+                            <div class="mt-4">
+                                <button class="btn btn-primary py-3 px-5" type="submit">
+                                    Enviar Mensaje
+                                </button>
                             </div>
                         </form>
+                        <!-- /ZOHO FORM -->
+
                     </div>
                 </div>
             </div>
@@ -232,6 +284,7 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <p class="m-0 text-center text-white">
             &copy; <a class="text-white font-weight-medium" href="#">IPGuard</a>. Todos los derechos reservados. Diseñado a partir de una plantilla de
@@ -253,9 +306,9 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <!-- IMPORTANTE: estos scripts son del formulario del template (pueden interferir con Zoho) -->
+    <!-- <script src="mail/jqBootstrapValidation.min.js"></script> -->
+    <!-- <script src="mail/contact.js"></script> -->
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
