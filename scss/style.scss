@@ -1,6 +1,6 @@
 /******* Bootstrap Theming ********/
 
-$primary: #194376;
+$primary: #3a3736;
 $secondary: #46C6CE;
 $light: #F3F6FF;
 $dark: #1A1A1A;
@@ -12,24 +12,31 @@ $theme-colors: (
     "dark": $dark,
 );
 
-$font-family-sans-serif: 'Open Sans', sans-serif;
+// TIPOGRAFÍA
+$font-family-sans-serif: 'PT Serif', serif;
+$headings-font-family: 'Le Jour Serif', serif;
 
 $body-color: #757575;
-
 $headings-color: $primary;
 
 $enable-responsive-font-sizes: true;
-
 $enable-rounded: false;
 
 @import "bootstrap/scss/bootstrap";
 
 
 /********** Template CSS ************/
+
+/* Aplicamos Le Jour Serif a todos los headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+}
+
+/* Ajustamos pesos */
 h1,
 h2,
 .font-weight-bold {
-    font-weight: 800 !important;
+    font-weight: 700 !important;
 }
 
 h3,
@@ -44,6 +51,12 @@ h6,
     font-weight: 400 !important;
 }
 
+/* Body con PT Serif */
+body {
+    font-family: $font-family-sans-serif;
+}
+
+/* Iconos */
 [class^=flaticon-]:before,
 [class*=" flaticon-"]:before,
 [class^=flaticon-]:after,
@@ -52,6 +65,24 @@ h6,
     margin-left: 0;
 }
 
+@font-face {
+  font-family: 'Le Jour Serif';
+  src: url('../fonts/LeJourSerif-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Le Jour Serif';
+  src: url('../fonts/LeJourSerif-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Back to top */
 .back-to-top {
     position: fixed;
     display: none;
@@ -63,25 +94,16 @@ h6,
 }
 
 @-webkit-keyframes action {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-15px);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
 }
 
 @keyframes action {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-15px);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
 }
 
+/* Navbar */
 .nav-bar::before {
     position: absolute;
     content: "";
@@ -105,7 +127,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         padding: 10px 15px;
     }
 }
@@ -117,6 +139,7 @@ h6,
     }
 }
 
+/* Carousel */
 .carousel-caption {
     top: 0;
     left: 0;
@@ -134,6 +157,7 @@ h6,
     }
 }
 
+/* Testimonials */
 .testimonial-carousel .owl-dots {
     margin-top: 30px;
     text-align: center;
@@ -152,6 +176,7 @@ h6,
     background: $secondary;
 }
 
+/* Contact */
 .contact-form .help-block ul {
     margin: 0;
     padding: 0;
