@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IPGuard — Portal de clientes</title>
+  <meta name="description" content="Portal de clientes IPGuard" />
+
+  <style>
+     :root{
+  --brand-brown:#8B6F5A;
+  --brand-brown-hover:#6f5846;
+  --text:#1d1d1f;
+  --sub:#6e6e73;
+  --bg:#ffffff;
+}
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 14px;
+    }
+
+    main.container{
+      width:min(560px, 92vw);
+      text-align:center;
+    }
+
+    .logo{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    /* Logo grande (el logo hace de “título”) */
+    .logo img{
+      width:220px;     /* ajusta aquí si lo quieres aún mayor: 260px */
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .subtitle{
+      font-size:17px;
+      color:var(--sub);
+      margin:10px 0 34px;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      padding:14px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:17px;
+      font-weight:500;
+      margin:0 auto 14px;
+      transition:0.2s;
+    }
+
+   
+
+.btn-primary{
+  background:var(--brand-brown);
+  color:#ffffff;
+}
+
+.btn-primary:hover{
+  background:var(--brand-brown-hover);
+}
+
+.btn-secondary{
+  background:transparent;
+  color:var(--brand-brown);
+}
+
+.btn-secondary:hover{
+  text-decoration:underline;
+}
+
+    .footer{
+      margin-top:34px;
+      font-size:13px;
+      color:var(--sub);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- LOGO (cámbialo si tu archivo se llama distinto) -->
+    <div class="logo">
+      <img src="../img/favicon3.png" alt="IPGuard">
+      <!-- Si usas favicon.png: <img src="../img/favicon.png" alt="IPGuard"> -->
+    </div>
+
+    <p class="subtitle">Portal de clientes</p>
+
+    <a class="btn btn-primary" href="https://ipguardaccess.cloudflareaccess.com">
+      Acceder al panel
+    </a>
+<!--
+    <a class="btn btn-secondary" href="https://status.ipguard.es" target="_blank" rel="noopener">
+      Ver estado del servicio
+    </a>
+-->
+    <a class="btn btn-secondary" href="mailto:support@ipguard.es?subject=Incidencia%20IPGuard">
+      Contactar con soporte
+    </a>
+
+    <div class="footer">© 2026 IPGuard</div>
+  </main>
+</body>
+</html>
