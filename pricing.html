@@ -25,64 +25,70 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-primary py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white pl-3" href="sign-in.html">Soporte</a>
-                        <a class="text-white pl-3" href="https://dev-ejj7touoxtvpiyur.us.auth0.com/u/login?state=hKFo2SAxXzBqVDBnMVN4S2F4M09maGcyOFE5YkRQek1rT1NYTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHkwOEVKXzFIMjBLZjBTdl9YRXVTOE94NTNyWGVzay11o2NpZNkgN25LeHNWQUxiMEN0QXZPVFhOd2ZWS2tGZmZ5d004VDM">Login</a>
-                        <a class="text-white pl-3" href="https://dev-ejj7touoxtvpiyur.us.auth0.com/u/signup?state=hKFo2SAxXzBqVDBnMVN4S2F4M09maGcyOFE5YkRQek1rT1NYTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHkwOEVKXzFIMjBLZjBTdl9YRXVTOE94NTNyWGVzay11o2NpZNkgN25LeHNWQUxiMEN0QXZPVFhOd2ZWS2tGZmZ5d004VDM">SignIn</a>                    
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <!-- <a class="text-white px-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="text-white px-3" href=""><i class="fab fa-twitter"></i></a>-->
-                        <a class="text-white px-3" href="https://www.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
-                        <!-- <a class="text-white px-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="text-white pl-3" href=""><i class="fab fa-youtube"></i></a>-->
-                    
-                    </div>
-                </div>
+
+    <!-- TOP BAR -->
+    <div class="container-fluid topbar-custom">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="contact.html" style="text-decoration: underline;">Auditoría gratuita con el registro</a>
+           </div>
+            <div class="topbar-right">
+                <a href="https://www.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#contacto"><i class="fab fa-instagram"></i></a>
+                <a href="#contacto"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
+    <!-- NAVBAR -->
+    <div class="nav-shell">
+        <div class="navbar-custom">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light">
 
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-secondary"><span class="text-primary">IP</span>Guard</h1>
+                <!-- LOGO -->
+                <a href="#" class="navbar-brand">
+                    <h1 class="m-0 text-secondary">
+                        <span class="text-primary">IP</span>Guard
+                    </h1>
                 </a>
+
+                <!-- MOBILE -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="pricing.html" class="nav-item nav-link active">Planes</a>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+                    <!-- LINKS -->
+                    <div class="navbar-nav mx-auto">
+                        <a href="funcionalidades.html" class="nav-item nav-link">Producto</a>
+                        <a href="funcionalidades.html" class="nav-item nav-link">Funcionalidades</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog</a>
-                                <a href="single.html" class="dropdown-item">Artículo</a>
+                                <a href="service.html" class="dropdown-item">Ciberseguridad</a>
+                                <a href="ia.html" class="dropdown-item">IA & Automatización</a>
+                                <!--<a href="about.html" class="nav-item nav-link"> Sobre Nosotros</a>-->
                             </div>
                         </div>
+                        <a href="pricing.html" class="nav-item nav-link">Casos</a>
+                        <a href="pricing.html" class="nav-item nav-link">Precios</a>
                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
+
+                    <!-- RIGHT -->
+                    <div class="nav-right">
+                        <a href="#" class="nav-link">Login</a>
+                        <a href="#" class="nav-link">Pide tu demo</a>
+                        <a href="#" class="btn btn-primary btn-pill">Registro</a>
+                    </div>
+
                 </div>
             </nav>
         </div>
     </div>
-    <!-- Navbar End -->
+
 
 
     <!-- Page Header Start -->
