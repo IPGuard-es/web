@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPGuard Social</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#2563EB;
+  --ph:#1D4ED8;
+  --pl:#60A5FA;
+  --sl:#BFDBFE;
+  --t:#EAF3FF;
+  --n:#F4F8FF;
+  --bg:#F8FBFF;
+  --sur:#FFFFFF;
+  --bdr:#DCE8F7;
+  --tx:#0F172A;
+  --tx2:#1E3A8A;
+  --mu:#64748B;
+  --soft:#EEF5FF;
+  --dark:#0B1220;
+  --dark2:#162033;
+  --r:18px;
+  --sh:0 10px 30px rgba(37,99,235,.08);
+  --shl:0 22px 70px rgba(37,99,235,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--tx);
+  overflow-x:hidden;
+}
+a{text-decoration:none}
+
+/* TOP BAR */
+#topbar{
+  background:
+    radial-gradient(circle at 75% 15%, rgba(96,165,250,.16) 0%, transparent 22%),
+    radial-gradient(circle at 20% 10%, rgba(191,219,254,.55) 0%, transparent 20%),
+    linear-gradient(150deg,var(--n) 0%,var(--bg) 52%,var(--sur) 100%);
+  color:var(--mu);
+  font-size:12px;
+  padding:8px 4vw;
+  display:flex;
+  justify-content:flex-end;
+  gap:24px;
+  align-items:center;
+  font-family:'DM Mono',monospace;
+  transition:transform .3s,border-color .3s;
+  border-bottom:none;
+}
+#topbar a{color:var(--mu)}
+#topbar a:hover{color:var(--tx)}
+
+/* NAV */
+#nav{
+  position:fixed;
+  top:34px;
+  left:0;
+  right:0;
+  z-index:200;
+  transition:transform .35s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s,top .3s;
+}
+#nav.scrolled{
+  background:rgba(248,251,255,.92);
+  backdrop-filter:blur(18px);
+  box-shadow:0 2px 22px rgba(37,99,235,.08);
+}
+#nav.hidden{transform:translateY(-140px)}
+.nav-inner{
+  max-width:1480px;
+  margin:0 auto;
+  padding:14px 4vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-box{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--p),var(--pl));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:16px;
+  box-shadow:0 12px 28px rgba(37,99,235,.25)
+}
+.logo-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  font-weight:800;
+  color:var(--tx)
+}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{
+  color:var(--mu);
+  font-size:15px;
+  font-weight:500;
+  transition:color .2s
+}
+.nav-links a:hover{color:var(--tx)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+
+.btn-o,.btn-alert,.btn-hero-p,.btn-hero-g,.btn-chip{
+  border-radius:999px;
+  font-family:'DM Sans',sans-serif;
+  transition:.2s ease;
+  cursor:pointer
+}
+.btn-o{
+  border:1.5px solid var(--bdr);
+  color:var(--tx2);
+  padding:10px 20px;
+  font-size:14px;
+  font-weight:600;
+  background:#fff
+}
+.btn-o:hover{
+  border-color:var(--p);
+  background:var(--soft)
+}
+.btn-alert,.btn-hero-p{
+  background:var(--p);
+  color:#fff;
+  padding:11px 22px;
+  font-size:14px;
+  font-weight:700;
+  border:none;
+  box-shadow:0 10px 30px rgba(37,99,235,.18)
+}
+.btn-alert:hover,.btn-hero-p:hover{
+  background:var(--ph);
+  transform:translateY(-2px)
+}
+.btn-hero-p{
+  padding:18px 34px;
+  font-size:17px
+}
+.btn-hero-g{
+  border:1.5px solid var(--bdr);
+  color:var(--tx);
+  padding:18px 34px;
+  font-size:17px;
+  font-weight:600;
+  background:#fff
+}
+.btn-hero-g:hover{
+  border-color:var(--p);
+  background:var(--soft)
+}
+.btn-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 16px;
+  border:1px solid #C9D8ED;
+  background:rgba(255,255,255,.72);
+  color:var(--tx);
+  font-size:14px;
+  font-weight:600;
+  backdrop-filter:blur(10px);
+}
+
+/* HERO */
+#hero{
+  min-height:100vh;
+  display:flex;
+  align-items:flex-start;
+  background:
+    radial-gradient(circle at 75% 15%, rgba(96,165,250,.16) 0%, transparent 22%),
+    radial-gradient(circle at 20% 10%, rgba(191,219,254,.55) 0%, transparent 20%),
+    linear-gradient(150deg,var(--n) 0%,var(--bg) 52%,var(--sur) 100%);
+  padding-top:130px;
+  overflow:hidden;
+}
+.hero-inner{
+  max-width:1480px;
+  margin:0 auto;
+  padding:40px 4vw 70px;
+  display:grid;
+  grid-template-columns:0.92fr 1.08fr;
+  gap:64px;
+  align-items:start;
+  width:100%;
+}
+.hero-text{
+  max-width:640px;
+  padding-top:26px;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#fff;
+  border:1px solid var(--bdr);
+  border-radius:999px;
+  padding:8px 16px;
+  font-size:12px;
+  color:var(--p);
+  font-weight:600;
+  margin-bottom:24px;
+  font-family:'DM Mono',monospace;
+  opacity:0;
+  animation:fadeUp .6s .1s forwards;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(54px,5.4vw,84px);
+  font-weight:800;
+  line-height:0.98;
+  letter-spacing:-.045em;
+  color:var(--tx);
+  margin-bottom:22px;
+  opacity:0;
+  animation:fadeUp .6s .2s forwards;
+}
+.hero h1 em{
+  color:var(--p);
+  font-style:italic
+}
+.hero-sub{
+  font-size:19px;
+  color:var(--mu);
+  max-width:620px;
+  margin-bottom:34px;
+  line-height:1.7;
+  opacity:0;
+  animation:fadeUp .6s .3s forwards;
+}
+.hero-btns{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
+  opacity:0;
+  animation:fadeUp .6s .4s forwards;
+}
+.hero-pricing{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--mu);
+  font-weight:500;
+  opacity:0;
+  animation:fadeUp .6s .45s forwards;
+}
+.hero-pricing strong{color:var(--tx)}
+.trust-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+  opacity:0;
+  animation:fadeUp .6s .5s forwards;
+}
+.hero-visual{
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+  opacity:0;
+  animation:fadeIn .8s .45s forwards;
+}
+
+/* PREMIUM SOCIAL VISUAL */
+.visual-stack{
+  width:min(100%,680px);
+  display:grid;
+  gap:16px;
+}
+.orb-card{
+  background:linear-gradient(145deg,#0F172A 0%,#18233a 48%,#1D4ED8 100%);
+  border-radius:34px;
+  padding:24px;
+  box-shadow:0 40px 90px rgba(15,23,42,.28);
+  overflow:hidden;
+  min-height:530px;
+}
+.orb-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px
+}
+.orb-top .mini{
+  font-size:12px;
+  color:rgba(255,255,255,.72);
+  text-transform:uppercase;
+  letter-spacing:.18em
+}
+.orb-status{
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  font-size:12px;
+  font-weight:700
+}
+.orb-wrap{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:20px;
+  align-items:center
+}
+.orb{
+  width:100%;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #93C5FD 0%, #3B82F6 35%, #1D4ED8 62%, #0F172A 100%);
+  position:relative;
+  box-shadow:0 30px 80px rgba(37,99,235,.35);
+  animation:orbFloat 5s ease-in-out infinite
+}
+.orb:before{
+  content:'';
+  position:absolute;
+  inset:18px;
+  border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.16);
+  background:repeating-conic-gradient(rgba(255,255,255,.05) 0deg 10deg, transparent 10deg 20deg)
+}
+.orb:after{
+  content:'';
+  position:absolute;
+  top:18%;
+  left:60%;
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  background:rgba(255,255,255,.28);
+  filter:blur(8px)
+}
+.social-panel{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;
+  padding:18px;
+  color:#fff;
+  backdrop-filter:blur(12px)
+}
+.social-panel h3{
+  font-size:26px;
+  line-height:1.15;
+  margin-bottom:8px
+}
+.social-panel p{
+  font-size:14px;
+  line-height:1.7;
+  color:rgba(255,255,255,.72);
+  margin-bottom:18px
+}
+.risk-list{display:grid;gap:10px}
+.risk-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  font-size:14px
+}
+.dot{width:11px;height:11px;border-radius:50%}
+.blue1{background:#93C5FD}
+.blue2{background:#60A5FA}
+.blue3{background:#1D4ED8}
+
+.metric-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.metric{
+  background:#fff;
+  border:1px solid var(--bdr);
+  border-radius:24px;
+  padding:20px;
+  box-shadow:var(--sh)
+}
+.metric .m-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px
+}
+.metric .m-title{
+  font-size:13px;
+  color:var(--mu);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+.metric .m-num{
+  font-family:'Playfair Display',serif;
+  font-size:44px;
+  color:var(--tx)
+}
+.metric .m-sub{
+  font-size:14px;
+  color:var(--mu);
+  line-height:1.6
+}
+.metric .badge{
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  color:#fff
+}
+.metric .b1{background:#3B82F6}
+.metric .b2{background:#60A5FA}
+.metric .b3{background:#1D4ED8}
+
+@keyframes orbFloat{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-18px) rotate(3deg)}
+}
+
+/* GENERAL SECTIONS */
+.section-wrap{
+  max-width:1600px;
+  margin:0 auto;
+  padding:110px 4vw
+}
+.text-center{text-align:center}
+.section-label{
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  color:var(--p);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.section-label:after{
+  content:'';
+  display:block;
+  width:28px;
+  height:1px;
+  background:var(--pl)
+}
+.text-center .section-label{justify-content:center}
+.text-center .section-label:after{display:none}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(34px,3.4vw,58px);
+  font-weight:800;
+  color:var(--tx);
+  letter-spacing:-.025em;
+  line-height:1.08;
+  margin-bottom:14px
+}
+.section-sub{
+  font-size:19px;
+  color:var(--mu);
+  line-height:1.8;
+  max-width:820px;
+  margin:0 auto 60px
+}
+
+/* SOCIAL PROBLEM CARDS */
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.problem-card{
+  background:#fff;
+  border:1px solid var(--bdr);
+  border-radius:26px;
+  padding:28px;
+  box-shadow:var(--sh);
+  transition:.25s ease
+}
+.problem-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shl)
+}
+.problem-card .tag{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--soft);
+  color:var(--p);
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:18px
+}
+.problem-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  line-height:1.1;
+  color:var(--tx);
+  margin-bottom:14px
+}
+.problem-card p{
+  font-size:16px;
+  color:var(--mu);
+  line-height:1.8
+}
+
+/* SERVICE SPLITS */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:90px;
+  align-items:center;
+  margin-bottom:90px
+}
+.split.rev{direction:rtl}
+.split.rev>*{direction:ltr}
+.split-text{max-width:620px}
+.split-text .section-title{font-size:clamp(30px,3vw,46px)}
+.split-text .section-sub{
+  margin:0 0 28px;
+  max-width:620px
+}
+.split-actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap
+}
+.link-arrow{
+  color:var(--p);
+  font-size:15px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:gap .2s
+}
+.link-arrow:hover{gap:10px}
+.related-links{margin-top:22px}
+.related-links span{
+  font-size:12px;
+  font-family:'DM Mono',monospace;
+  color:var(--mu);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  display:block;
+  margin-bottom:8px
+}
+.related-links a{
+  font-size:14px;
+  color:var(--p);
+  text-decoration:underline;
+  margin-right:22px
+}
+.illus{
+  border-radius:28px;
+  aspect-ratio:1;
+  background:linear-gradient(145deg,#EFF6FF,#FFFFFF);
+  border:1px solid var(--bdr);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  box-shadow:var(--sh)
+}
+
+/* RESULTS */
+.stats-bg{
+  background:linear-gradient(145deg,#0D1B34 0%, #17305d 52%, #1D4ED8 100%);
+  padding:100px 4vw;
+  overflow:hidden
+}
+.stats-bg:before{
+  content:'';
+  position:absolute;
+  top:-140px;
+  left:50%;
+  transform:translateX(-50%);
+  width:1000px;
+  height:620px;
+  background:radial-gradient(circle, rgba(147,197,253,.14) 0%, transparent 65%)
+}
+.stats-inner{max-width:1600px;margin:0 auto}
+.stats-inner .section-title{color:#fff}
+.stats-inner .section-sub{color:rgba(255,255,255,.76)}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(255,255,255,.12);
+  border-radius:22px;
+  overflow:hidden
+}
+.stat-box{
+  background:rgba(255,255,255,.04);
+  padding:42px 32px;
+  transition:.2s
+}
+.stat-box:hover{background:rgba(255,255,255,.08)}
+.stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:54px;
+  font-weight:800;
+  color:#BFDBFE;
+  margin-bottom:8px
+}
+.stat-lbl{
+  font-size:15px;
+  color:rgba(255,255,255,.78);
+  line-height:1.7
+}
+.globe-wrap{
+  margin-top:56px;
+  border-radius:24px;
+  background:rgba(255,255,255,.05);
+  overflow:hidden;
+  min-height:260px;
+  display:grid;
+  place-items:center
+}
+
+/* TABS */
+.tab-section{
+  background:#fff;
+  border-top:1px solid var(--bdr);
+  border-bottom:1px solid var(--bdr);
+  padding:100px 4vw
+}
+.tab-inner{max-width:1600px;margin:0 auto}
+.tabs{
+  display:flex;
+  gap:0;
+  border-bottom:2px solid var(--bdr);
+  margin:28px auto 40px;
+  justify-content:center
+}
+.tab-btn{
+  background:none;
+  border:none;
+  padding:16px 30px;
+  font-size:15px;
+  font-weight:700;
+  color:var(--mu);
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  margin-bottom:-2px;
+  transition:.2s;
+  font-family:'DM Sans',sans-serif
+}
+.tab-btn.active{
+  color:var(--p);
+  border-bottom-color:var(--p)
+}
+.tab-content{
+  display:none;
+  grid-template-columns:1fr 1fr;
+  gap:54px;
+  align-items:start
+}
+.tab-content.active{
+  display:grid;
+  animation:fadeIn .4s
+}
+.tab-left h3{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:var(--tx);
+  margin-bottom:14px
+}
+.tab-left p{
+  font-size:17px;
+  color:var(--mu);
+  line-height:1.8;
+  margin-bottom:24px
+}
+.quote-card{
+  background:#fff;
+  border:1px solid var(--bdr);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:var(--sh)
+}
+.quote-logo{
+  font-family:'DM Mono',monospace;
+  font-size:16px;
+  font-weight:700;
+  color:var(--p);
+  margin-bottom:16px
+}
+.quote-text{
+  font-size:16px;
+  color:var(--tx2);
+  line-height:1.85;
+  font-style:italic;
+  margin-bottom:18px
+}
+.quote-author strong{
+  font-size:15px;
+  color:var(--tx)
+}
+.quote-author span{
+  font-size:13px;
+  color:var(--mu);
+  display:block
+}
+.logos-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:26px
+}
+.logo-pill{
+  background:var(--soft);
+  border:1px solid var(--bdr);
+  border-radius:999px;
+  padding:10px 16px;
+  font-family:'DM Mono',monospace;
+  font-size:12px;
+  font-weight:700;
+  color:var(--tx2)
+}
+
+/* USE CASES */
+.usecases-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+.uc-card{
+  background:#fff;
+  border:1px solid var(--bdr);
+  border-radius:22px;
+  padding:32px 26px;
+  text-align:center;
+  box-shadow:var(--sh);
+  transition:.25s ease
+}
+.uc-card:hover{
+  border-color:var(--pl);
+  transform:translateY(-4px);
+  box-shadow:var(--shl)
+}
+.uc-icon{
+  font-size:32px;
+  margin-bottom:14px
+}
+.uc-title{
+  font-size:16px;
+  font-weight:700;
+  color:var(--tx);
+  line-height:1.5
+}
+
+/* FINAL CTA */
+.discover{
+  background:linear-gradient(135deg,var(--pl) 0%,var(--p) 100%);
+  padding:100px 4vw;
+  overflow:hidden
+}
+.discover:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+}
+.discover-inner{
+  max-width:1600px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:48px
+}
+.disc-item{text-align:center}
+.disc-icon{
+  font-size:40px;
+  margin-bottom:16px
+}
+.disc-title{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:10px
+}
+.disc-text{
+  font-size:16px;
+  color:rgba(255,255,255,.84);
+  line-height:1.85;
+  margin-bottom:18px
+}
+.disc-link{
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:6px
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:rgba(255,255,255,.68);
+  padding:76px 4vw 0
+}
+.footer-top{
+  max-width:1600px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:220px repeat(5,1fr);
+  gap:42px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+.footer-logo .logo-name{color:#fff}
+.footer-contact{
+  margin-top:14px;
+  font-size:13px
+}
+.footer-contact a{
+  color:var(--pl);
+  font-weight:700
+}
+.footer-col h5{
+  font-size:11px;
+  font-family:'DM Mono',monospace;
+  color:rgba(255,255,255,.4);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:16px
+}
+.footer-col ul{list-style:none}
+.footer-col li{
+  font-size:13px;
+  color:rgba(255,255,255,.62);
+  padding:4px 0
+}
+.footer-bottom{
+  max-width:1600px;
+  margin:0 auto;
+  padding:20px 0 32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  color:rgba(255,255,255,.34)
+}
+.social-row{
+  display:flex;
+  gap:14px
+}
+.social-btn{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(255,255,255,.6);
+  font-size:13px
+}
+.social-btn:hover{
+  background:var(--p);
+  color:#fff
+}
+
+/* REVEAL */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .65s,transform .65s
+}
+.reveal.in{
+  opacity:1;
+  transform:none
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero-inner,.split,.tab-content.active,.discover-inner{grid-template-columns:1fr}
+  .problem-grid,.usecases-grid{grid-template-columns:repeat(2,1fr)}
+  .metric-grid,.stats-grid{grid-template-columns:repeat(2,1fr)}
+  .orb-wrap{grid-template-columns:1fr}
+  .orb{max-width:360px;margin:0 auto}
+  .hero-text{max-width:none;padding-top:0}
+  .hero-visual{justify-content:flex-start}
+  .visual-stack{width:min(100%,760px)}
+}
+@media(max-width:900px){
+  #topbar{
+    background:var(--bg);
+    color:var(--mu);
+    font-size:12px;
+    padding:8px 24px;
+    display:flex;
+    justify-content:flex-end;
+    gap:14px;
+    align-items:center;
+    font-family:'DM Mono',monospace;
+    transition:transform .3s,border-color .3s;
+    border-bottom:none;
+  }
+  .nav-inner,.hero-inner,.section-wrap,.stats-bg,.tab-section,.discover,footer{
+    padding-left:24px;
+    padding-right:24px
+  }
+  .nav-links{display:none}
+  .hero-inner{padding-top:24px;padding-bottom:72px}
+  .hero h1{font-size:clamp(42px,12vw,64px)}
+  .hero-sub,.section-sub,.tab-left p,.disc-text{font-size:17px}
+  .problem-grid,.usecases-grid,.metric-grid,.stats-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  #nav{top:34px}
+  .orb{width:280px;height:280px}
+}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <a href="#">Soporte</a>
+  <a href="#">Ventas: 636 224 398</a>
+  <a href="#" style="font-size:16px">🌐</a>
+</div>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-box">IP</div>
+      <span class="logo-name">IPGuard Social</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#que">Qué protegemos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Cómo funciona</a></li>
+      <li><a href="#perfiles">Para quién</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn-o" href="#">Ver demo</a>
+      <a class="btn-alert" href="#">Revisar mi cuenta</a>
+    </div>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span>Auditoría gratuita incluida</span></div>
+
+      <h1>
+        <span>Protege las redes sociales</span><br>
+        <em>que generan dinero</em>
+      </h1>
+
+      <p class="hero-sub">
+        Si tu cuenta mueve clientes, campañas o ventas, perderla no es una opción. Detectamos riesgos reales y te ayudamos a dejarla protegida en menos de 24h.
+      </p>
+
+      <div class="hero-btns">
+        <a class="btn-hero-p" href="#">Auditoría gratuita</a>
+        <a class="btn-hero-g" href="#">Proteger mi cuenta</a>
+      </div>
+
+      <div class="hero-pricing">
+        Desde <strong>5€/mes</strong> · <strong>400€/año</strong> · auditoría gratuita incluida
+      </div>
+
+      <div class="trust-row">
+        <span class="btn-chip">Instagram</span>
+        <span class="btn-chip">TikTok</span>
+        <span class="btn-chip">YouTube</span>
+        <span class="btn-chip">Managers</span>
+        <span class="btn-chip">Agencias</span>
+        <span class="btn-chip">Marcas</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-stack">
+
+  <div class="orb-card" style="padding:34px">
+
+    <div style="display:flex;justify-content:space-between;margin-bottom:20px">
+      <span class="mini">SOCIAL RISK ANALYSIS</span>
+      <span class="orb-status">En riesgo</span>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:40px">
+
+      <!-- SCORE -->
+      <div style="flex:1">
+        <div style="font-size:72px;font-weight:800;color:#fff">67</div>
+        <div style="color:rgba(255,255,255,.6);font-size:14px">
+          Nivel de riesgo actual
+        </div>
+
+        <!-- Barra -->
+        <div style="margin-top:14px;height:10px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden">
+          <div style="width:67%;height:100%;background:linear-gradient(90deg,#60A5FA,#1D4ED8)"></div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div style="flex:1">
+        <h3 style="font-size:24px;margin-bottom:10px">
+          Tu cuenta tiene puntos débiles
+        </h3>
+
+        <div class="risk-list">
+          <div class="risk-item"><span>Exposición digital</span><span class="dot blue1"></span></div>
+          <div class="risk-item"><span>Accesos compartidos</span><span class="dot blue2"></span></div>
+          <div class="risk-item"><span>Recuperación débil</span><span class="dot blue3"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <div class="m-top"><span class="m-title">Nivel actual</span><span class="badge b1">67%</span></div>
+            <div class="m-num">67</div>
+            <div class="m-sub">riesgo estimado según acceso, recuperación y exposición.</div>
+          </div>
+          <div class="metric">
+            <div class="m-top"><span class="m-title">Respuesta</span><span class="badge b2">24h</span></div>
+            <div class="m-num">24h</div>
+            <div class="m-sub">para aplicar medidas clave y dejar una base más sólida.</div>
+          </div>
+          <div class="metric">
+            <div class="m-top"><span class="m-title">Explicación</span><span class="badge b3">Simple</span></div>
+            <div class="m-num">1</div>
+            <div class="m-sub">plan claro, sin jerga ni documentos eternos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="que">
+  <div class="section-wrap">
+    <div class="text-center reveal" style="margin-bottom:72px">
+      <p class="section-label">Qué protegemos</p>
+      <h2 class="section-title">Cuentas que generan negocio, visibilidad y confianza</h2>
+      <p class="section-sub">Esto no va de parecer una empresa de ciber dura. Va de ayudarte a no perder una cuenta que ya forma parte de tu marca, tus ingresos o tu relación con clientes.</p>
+    </div>
+
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <span class="tag">Riesgo real</span>
+        <h3>Te pueden quitar la cuenta</h3>
+        <p>Una contraseña reciclada, un email mal protegido o un acceso compartido ya pueden abrir la puerta.</p>
+      </div>
+      <div class="problem-card">
+        <span class="tag">Impacto</span>
+        <h3>Pierdes dinero y reputación</h3>
+        <p>No es solo un perfil. Son campañas, seguidores, clientes y una imagen construida durante años.</p>
+      </div>
+      <div class="problem-card">
+        <span class="tag">Prevención</span>
+        <h3>La mayoría llega tarde</h3>
+        <p>Nosotros entramos antes del problema: revisamos, explicamos y cerramos lo importante con medidas simples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="background:#fff">
+  <div class="section-wrap" style="padding-top:10px">
+    <div class="split reveal">
+      <div class="split-text">
+        <p class="section-label">Auditoría</p>
+        <h3 class="section-title">Detectamos lo que un atacante sí ve, aunque tú no lo notes</h3>
+        <p class="section-sub">Revisamos accesos, correos vinculados, recuperación, exposición pública y permisos compartidos para encontrar puntos débiles reales.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Quiero una revisión</a>
+          <a class="link-arrow" href="#">Ver todo lo que miramos →</a>
+        </div>
+        <div class="related-links">
+          <span>Relacionado</span>
+          <a href="#">Qué revisamos</a>
+          <a href="#">Señales de riesgo</a>
+        </div>
+      </div>
+      <div class="illus">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:92%;padding:20px">
+          <defs>
+            <linearGradient id="phoneBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FFFFFF"/>
+              <stop offset="100%" stop-color="#EAF3FF"/>
+            </linearGradient>
+          </defs>
+          <rect x="120" y="35" width="260" height="430" rx="42" fill="#0F172A"/>
+          <rect x="133" y="49" width="234" height="402" rx="30" fill="url(#phoneBg)"/>
+          <rect x="213" y="64" width="72" height="10" rx="5" fill="#C7D2FE"/>
+          <text x="155" y="104" font-size="16" fill="#1D4ED8" font-weight="700">IPGuard Social</text>
+          <rect x="155" y="122" width="190" height="102" rx="22" fill="#1D4ED8"/>
+          <text x="175" y="150" font-size="12" fill="#BFDBFE">Estado de la cuenta</text>
+          <text x="175" y="192" font-size="42" fill="#FFFFFF" font-weight="800">67%</text>
+          <text x="175" y="212" font-size="12" fill="rgba(255,255,255,.75)">riesgo estimado</text>
+          <rect x="155" y="246" width="190" height="44" rx="18" fill="#FFFFFF" stroke="#DCE8F7"/>
+          <rect x="155" y="302" width="190" height="44" rx="18" fill="#FFFFFF" stroke="#DCE8F7"/>
+          <rect x="155" y="358" width="190" height="44" rx="18" fill="#FFFFFF" stroke="#DCE8F7"/>
+          <circle cx="178" cy="268" r="8" fill="#60A5FA"/>
+          <circle cx="178" cy="324" r="8" fill="#3B82F6"/>
+          <circle cx="178" cy="380" r="8" fill="#1D4ED8"/>
+          <text x="197" y="272" font-size="13" fill="#0F172A">Exposición digital</text>
+          <text x="197" y="328" font-size="13" fill="#0F172A">Accesos inseguros</text>
+          <text x="197" y="384" font-size="13" fill="#0F172A">Recuperación débil</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="split rev reveal">
+      <div class="split-text">
+        <p class="section-label">Blindaje</p>
+        <h3 class="section-title">Te protegemos sin montarte una película técnica</h3>
+        <p class="section-sub">Aplicamos mejoras simples pero críticas: doble factor bien configurado, recuperación segura, control de accesos y limpieza de exposición.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Revisar mi cuenta gratis</a>
+          <a class="link-arrow" href="#">Ver medidas clave →</a>
+        </div>
+      </div>
+      <div class="illus">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:92%;padding:20px">
+          <rect x="70" y="88" width="360" height="320" rx="30" fill="#FFFFFF" stroke="#DCE8F7"/>
+          <rect x="95" y="118" width="310" height="78" rx="24" fill="#0F172A"/>
+          <text x="125" y="148" font-size="12" fill="#BFDBFE">Checklist de protección</text>
+          <text x="125" y="182" font-size="30" fill="#FFFFFF" font-weight="800">Base segura</text>
+          <rect x="95" y="222" width="310" height="46" rx="18" fill="#EFF6FF"/>
+          <rect x="95" y="284" width="310" height="46" rx="18" fill="#EFF6FF"/>
+          <rect x="95" y="346" width="310" height="46" rx="18" fill="#EFF6FF"/>
+          <circle cx="125" cy="245" r="10" fill="#1D4ED8"/>
+          <circle cx="125" cy="307" r="10" fill="#60A5FA"/>
+          <circle cx="125" cy="369" r="10" fill="#3B82F6"/>
+          <text x="147" y="250" font-size="14" fill="#0F172A">Doble factor bien montado</text>
+          <text x="147" y="312" font-size="14" fill="#0F172A">Recuperación segura</text>
+          <text x="147" y="374" font-size="14" fill="#0F172A">Accesos revisados</text>
+          <path d="M390 90 C455 140, 455 300, 370 390" fill="none" stroke="#BFDBFE" stroke-width="10" opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="split reveal">
+      <div class="split-text">
+        <p class="section-label">Impacto</p>
+        <h3 class="section-title">Evita perder acceso, reputación e ingresos</h3>
+        <p class="section-sub">Si una cuenta mueve campañas, clientes o marca, perderla no es un susto pequeño. Por eso priorizamos medidas que ayudan de verdad y se entienden a la primera.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Hablar con nosotros</a>
+          <a class="link-arrow" href="#">Ver casos reales →</a>
+        </div>
+        <div class="related-links">
+          <span>Relacionado</span>
+          <a href="#">Qué pasa si te hackean</a>
+          <a href="#">Cómo reducir el riesgo</a>
+        </div>
+      </div>
+      <div class="illus">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:92%;padding:20px">
+          <rect x="78" y="78" width="344" height="344" rx="34" fill="#0F172A"/>
+          <circle cx="250" cy="250" r="104" fill="none" stroke="#1D4ED8" stroke-width="26"/>
+          <circle cx="250" cy="250" r="74" fill="none" stroke="#60A5FA" stroke-width="14" stroke-dasharray="8 10"/>
+          <circle cx="250" cy="250" r="10" fill="#93C5FD"/>
+          <path d="M250 250 L330 195" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="330" cy="195" r="12" fill="#FFFFFF"/>
+          <text x="250" y="238" text-anchor="middle" font-size="14" fill="#BFDBFE">Cuenta protegida</text>
+          <text x="250" y="278" text-anchor="middle" font-size="40" font-weight="800" fill="#FFFFFF">24h</text>
+          <text x="250" y="302" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.72)">para dejar lo importante cerrado</text>
+          <rect x="125" y="350" width="250" height="36" rx="18" fill="rgba(255,255,255,.08)"/>
+          <text x="250" y="373" text-anchor="middle" font-size="13" fill="#FFFFFF">Más claridad. Menos sustos. Más control.</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" class="stats-bg reveal">
+  <div class="stats-inner">
+    <div class="text-center" style="margin-bottom:48px">
+      <p class="section-label" style="justify-content:center;color:#BFDBFE">Resultados</p>
+      <h2 class="section-title">Riesgos claros y mejoras rápidas</h2>
+      <p class="section-sub">En pocos minutos puedes saber si tu cuenta está en riesgo y qué deberías cambiar para protegerla.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num">+50</div>
+        <div class="stat-lbl">cuentas analizadas</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">riesgos detectados</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">0</div>
+        <div class="stat-lbl">hackeos tras auditoría</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">24h</div>
+        <div class="stat-lbl">tiempo medio para aplicar mejoras clave</div>
+      </div>
+    </div>
+    <div class="globe-wrap">
+      <svg viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;opacity:.9">
+        <defs>
+          <radialGradient id="bgc" cx="50%" cy="95%" r="80%">
+            <stop offset="0%" stop-color="#60A5FA" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#1D4ED8" stop-opacity=".05"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="600" cy="290" rx="560" ry="220" fill="url(#bgc)" stroke="#60A5FA" stroke-width="1" stroke-opacity=".3"/>
+        <g stroke="#60A5FA" stroke-opacity=".25" fill="none">
+          <ellipse cx="600" cy="290" rx="430" ry="168"/>
+          <ellipse cx="600" cy="290" rx="285" ry="115"/>
+        </g>
+        <g fill="#93C5FD">
+          <circle cx="250" cy="170" r="5"/><circle cx="380" cy="140" r="6"/><circle cx="520" cy="160" r="4"/>
+          <circle cx="620" cy="128" r="7"/><circle cx="760" cy="150" r="5"/><circle cx="880" cy="138" r="6"/>
+          <circle cx="970" cy="170" r="4"/>
+        </g>
+        <g stroke="#60A5FA" stroke-width="1.2" stroke-opacity=".4">
+          <line x1="250" y1="170" x2="380" y2="140"/>
+          <line x1="380" y1="140" x2="520" y2="160"/>
+          <line x1="520" y1="160" x2="620" y2="128"/>
+          <line x1="620" y1="128" x2="760" y2="150"/>
+          <line x1="760" y1="150" x2="880" y2="138"/>
+          <line x1="880" y1="138" x2="970" y2="170"/>
+          <line x1="380" y1="140" x2="620" y2="128"/>
+          <line x1="620" y1="128" x2="880" y2="138"/>
+        </g>
+        <text x="600" y="80" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="700">Visibilidad clara del riesgo</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="casos" class="tab-section reveal">
+  <div class="tab-inner">
+    <h2 class="section-title text-center" style="margin-bottom:8px">Creadores, managers y marcas ya piensan en proteger mejor sus cuentas</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab(0)">Detecta</button>
+      <button class="tab-btn" onclick="switchTab(1)">Previene</button>
+      <button class="tab-btn" onclick="switchTab(2)">Protege</button>
+    </div>
+
+    <div class="tab-content active" id="tab0">
+      <div class="tab-left">
+        <h3>Detecta si tu cuenta está en riesgo</h3>
+        <p>Revisamos lo que suele fallar de verdad: accesos, correos, recuperación, exposición pública y permisos compartidos.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Quiero saber mi riesgo</a>
+          <a class="link-arrow" href="#">Más información →</a>
+        </div>
+        <div class="logos-row">
+          <div class="logo-pill">INSTAGRAM</div>
+          <div class="logo-pill">TIKTOK</div>
+          <div class="logo-pill">YOUTUBE</div>
+          <div class="logo-pill">MARCAS</div>
+        </div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-logo">CASO REAL</div>
+        <p class="quote-text">"Lo que más valoran nuestros clientes es entender por fin qué les puede pasar y tener un plan claro para proteger su cuenta sin volverse técnicos de golpe."</p>
+        <div class="quote-author">
+          <strong>Equipo IPGuard</strong>
+          <span>Protección de redes sociales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab1">
+      <div class="tab-left">
+        <h3>Previene antes del problema</h3>
+        <p>Aplicamos cambios concretos que reducen el riesgo real: doble factor bien configurado, recuperación segura, limpieza de exposición y control de accesos.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Ver qué corregimos</a>
+          <a class="link-arrow" href="#">Más información →</a>
+        </div>
+        <div class="logos-row">
+          <div class="logo-pill">AGENCIAS</div>
+          <div class="logo-pill">CREADORES</div>
+          <div class="logo-pill">MANAGERS</div>
+        </div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-logo">PREVENCIÓN</div>
+        <p class="quote-text">"La mayoría piensa en seguridad cuando ya ha perdido la cuenta. Nuestro trabajo es llegar antes, detectar el problema y dejar la base bien cerrada."</p>
+        <div class="quote-author">
+          <strong>Prevención real</strong>
+          <span>Antes del problema</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab2">
+      <div class="tab-left">
+        <h3>Protege tu negocio digital</h3>
+        <p>Si tu cuenta mueve clientes, reputación o campañas, perderla no es un problema pequeño. Por eso trabajamos con medidas simples, claras y útiles.</p>
+        <div class="split-actions">
+          <a class="btn-hero-p" href="#">Quiero proteger mi cuenta</a>
+          <a class="link-arrow" href="#">Ver el proceso →</a>
+        </div>
+        <div class="logos-row">
+          <div class="logo-pill">REPUTACIÓN</div>
+          <div class="logo-pill">INGRESOS</div>
+          <div class="logo-pill">CAMPAÑAS</div>
+        </div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-logo">SERVICIO CLARO</div>
+        <p class="quote-text">"No vendemos humo ni palabras raras. Revisamos, explicamos y aplicamos cambios que ayudan de verdad a reducir las probabilidades de perder la cuenta."</p>
+        <div class="quote-author">
+          <strong>Sin tecnicismos</strong>
+          <span>Más claridad, menos ruido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="perfiles" style="background:#fff">
+  <div class="section-wrap">
+    <h2 class="section-title text-center reveal" style="margin-bottom:40px">Cómo protegemos tu cuenta</h2>
+    <div class="usecases-grid reveal">
+      <div class="uc-card"><div class="uc-icon">🔐</div><div class="uc-title">Protección de cuentas</div></div>
+      <div class="uc-card"><div class="uc-icon">🕵️</div><div class="uc-title">Eliminación de exposición</div></div>
+      <div class="uc-card"><div class="uc-icon">⚙️</div><div class="uc-title">Configuración segura</div></div>
+      <div class="uc-card"><div class="uc-icon">🔄</div><div class="uc-title">Recuperación de cuentas</div></div>
+      <div class="uc-card"><div class="uc-icon">🛡️</div><div class="uc-title">Monitorización continua</div></div>
+      <div class="uc-card"><div class="uc-icon">💬</div><div class="uc-title">Ayuda directa</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="discover reveal">
+  <div class="discover-inner">
+    <div class="disc-item">
+      <div class="disc-icon">🛡️</div>
+      <div class="disc-title">Revisar mi cuenta gratis</div>
+      <p class="disc-text">En 10 minutos te decimos si tu cuenta está en riesgo y qué deberías cambiar.</p>
+      <a class="disc-link" href="#">Revisar mi cuenta gratis →</a>
+    </div>
+    <div class="disc-item">
+      <div class="disc-icon">✦</div>
+      <div class="disc-title">¿Quieres saber si estás en riesgo?</div>
+      <p class="disc-text">Te explicamos tu riesgo con palabras normales y un plan claro, sin auditorías eternas ni jerga.</p>
+      <a class="disc-link" href="#">Ver mi revisión →</a>
+    </div>
+    <div class="disc-item">
+      <div class="disc-icon">💡</div>
+      <div class="disc-title">Habla con nosotros</div>
+      <p class="disc-text">Si tienes una agencia, una marca o una cuenta que genera negocio, te ayudamos a protegerla de forma práctica y rápida.</p>
+      <a class="disc-link" href="#">Hablar ahora →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="logo footer-logo">
+        <div class="logo-box">IP</div>
+        <span class="logo-name">IPGuard Social</span>
+      </div>
+      <div class="footer-contact">
+        <span>Hablar con nosotros</span><br>
+        <a href="#">Auditoría por WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Empezar</h5>
+      <ul>
+        <li>Revisión gratuita</li>
+        <li>Protección para creadores</li>
+        <li>Protección para marcas</li>
+        <li>Cómo funciona</li>
+        <li>Casos</li>
+        <li>Quiero una revisión</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li>Auditoría de cuenta</li>
+        <li>Eliminación de exposición</li>
+        <li>Blindaje y hardening</li>
+        <li>Ayuda y respuesta</li>
+        <li>Qué protegemos</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li>Preguntas frecuentes</li>
+        <li>Contacto</li>
+        <li>WhatsApp</li>
+        <li>Instagram</li>
+        <li>Disponibilidad</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Proceso simple</h5>
+      <ul>
+        <li>Riesgo claro</li>
+        <li>Proceso simple</li>
+        <li>Privacidad</li>
+        <li>Seguridad responsable</li>
+        <li>Transparencia</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>FAQ</h5>
+      <ul>
+        <li>Sobre IPGuard Social</li>
+        <li>Qué protegemos</li>
+        <li>Equipo</li>
+        <li>Recursos</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 IPGuard Social, Inc. · <a href="#" style="color:rgba(255,255,255,.45)">Política de privacidad</a> · <a href="#" style="color:rgba(255,255,255,.45)">Condiciones del servicio</a></span>
+    <div class="social-row">
+      <a class="social-btn" href="#">in</a>
+      <a class="social-btn" href="#">𝕏</a>
+      <a class="social-btn" href="#">▶</a>
+      <a class="social-btn" href="#">ig</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let lastY = window.scrollY;
+const nav = document.getElementById('nav');
+const topbar = document.getElementById('topbar');
+
+function updateNav() {
+  const y = window.scrollY;
+
+  if (y > 70) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+
+  if (y > 36) {
+    topbar.style.transform = 'translateY(-100%)';
+    nav.style.top = '0';
+  } else {
+    topbar.style.transform = 'translateY(0)';
+    nav.style.top = '34px';
+  }
+
+  if (y > lastY && y > 160) nav.classList.add('hidden');
+  else if (y < lastY) nav.classList.remove('hidden');
+
+  lastY = y;
+}
+
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function switchTab(i) {
+  document.querySelectorAll('.tab-content').forEach((t,idx) => t.classList.toggle('active', idx === i));
+  document.querySelectorAll('.tab-btn').forEach((b,idx) => b.classList.toggle('active', idx === i));
+}
+</script>
+</body>
+</html>

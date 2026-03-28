@@ -15,96 +15,121 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid bg-primary py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white pl-3" href="sign-in.html">Soporte</a>
-                        <a class="text-white pl-3" href="contact.html">Auditoría</a>
-                        <a class="text-white pl-3" href="contact.html">Emergencias</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="https://www.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="text-white px-3" href="#contacto"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+
+    <!-- TOP BAR -->
+    <div class="container-fluid topbar-custom">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="contact.html" style="text-decoration: underline;">Auditoría gratuita con el registro</a>
+           </div>
+            <div class="topbar-right">
+                <a href="https://www.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#contacto"><i class="fab fa-instagram"></i></a>
+                <a href="#contacto"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-secondary"><span class="text-primary">IP</span>Guard</h1>
+    <!-- NAVBAR -->
+    <div class="nav-shell">
+        <div class="navbar-custom">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light">
+
+                <!-- LOGO -->
+                <a href="#" class="navbar-brand">
+                    <h1 class="m-0 text-secondary">
+                        <span class="text-primary">IP</span>Guard
+                    </h1>
                 </a>
+
+                <!-- MOBILE -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Ciberseguridad</a>
-                        <a href="ia.html" class="nav-item nav-link">IA & Automatización</a>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+                    <!-- LINKS -->
+                    <div class="navbar-nav mx-auto">
+                        <a href="funcionalidades.html" class="nav-item nav-link">Funcionalidades</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog</a>
-                                <a href="single.html" class="dropdown-item">Artículo</a>
+                                <a href="service.html" class="dropdown-item">Ciberseguridad</a>
+                                <a href="ia.html" class="dropdown-item">IA & Automatización</a>
+                                <!--<a href="about.html" class="nav-item nav-link"> Sobre Nosotros</a>-->
                             </div>
                         </div>
+                        <a href="pricing.html" class="nav-item nav-link">Precios</a>
                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
+
+                    <!-- RIGHT -->
+                    <div class="nav-right">
+                        <a href="#" class="nav-link">Login</a>
+                        <a href="#" class="nav-link">Pide tu demo</a>
+                        <a href="#" class="btn btn-primary btn-pill">Registro</a>
+                    </div>
+
                 </div>
             </nav>
         </div>
     </div>
-    <!-- Navbar End -->
 
-    <div class="container-fluid p-0">
+    <!-- HERO CAROUSEL -->
+    <div class="hero-carousel-wrap">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-3.jpg" alt="Protección de cuentas sociales">
+                    <img src="img/carousel-3.jpg" alt="Protección de cuentas sociales">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 950px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Ciberseguridad para Instagram, TikTok, WhatsApp, X, YouTube, Facebook y LinkedIn</h4>
-                            <h1 class="display-3 text-white mb-md-4">Protege cuentas, contenido e ingresos</h1>
-                            <a href="#servicios" class="btn btn-primary py-md-3 px-md-5 mt-2">Ver servicios</a>
+                        <div class="hero-caption-box text-center">
+                            <h4 class="text-white text-uppercase">
+                                Ciberseguridad para Instagram, TikTok, WhatsApp, X, YouTube, Facebook y LinkedIn
+                            </h4>
+                            <h1 class="text-white">
+                                Protege cuentas, contenido e ingresos
+                            </h1>
+                            <a href="#servicios" class="btn btn-primary mt-2">Ver servicios</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img class="w-100" src="img/11.png" alt="Recuperación y continuidad digital">
+                    <img src="img/11.png" alt="Recuperación y continuidad digital">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 950px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Prevención + respuesta a incidentes</h4>
-                            <h1 class="display-3 text-white mb-md-4">Si tu cuenta cae, tu negocio también</h1>
-                            <a href="contact.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Solicitar auditoría</a>
+                        <div class="hero-caption-box text-center">
+                            <h4 class="text-white text-uppercase">
+                                Prevención + respuesta a incidentes
+                            </h4>
+                            <h1 class="text-white">
+                                Si tu cuenta cae, tu negocio también
+                            </h1>
+                            <a href="contact.html" class="btn btn-primary mt-2">Solicitar auditoría</a>
                         </div>
                     </div>
                 </div>
+
             </div>
+
             <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-secondary" style="width: 45px; height: 45px;">
+                <div class="btn btn-secondary">
                     <span class="carousel-control-prev-icon mb-n2"></span>
                 </div>
             </a>
+
             <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-secondary" style="width: 45px; height: 45px;">
+                <div class="btn btn-secondary">
                     <span class="carousel-control-next-icon mb-n2"></span>
                 </div>
             </a>
         </div>
     </div>
 
-    <div class="container-fluid contact-info mt-5 mb-4">
+    <!-- CONTACT INFO -->
+    <div class="container-fluid contact-info">
         <div class="container" style="padding: 0 30px;">
             <div class="row">
                 <div class="col-md-4 d-flex align-items-center justify-content-center bg-secondary mb-4 mb-lg-0" style="height: 100px;">
@@ -121,7 +146,7 @@
                         <i class="fa fa-2x fa-envelope text-white m-0 mr-3"></i>
                         <div class="d-flex flex-column">
                             <h5 class="text-white font-weight-medium">Email</h5>
-                            <p class="m-0 text-white">info@ipguard.es</p>
+                            <p class="m-0 text-white">jesus@ipguard.es</p>
                         </div>
                     </div>
                 </div>
