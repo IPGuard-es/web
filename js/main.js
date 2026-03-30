@@ -83,6 +83,17 @@
             }
         }
     });
+
+    // Pricing tabs
+    $('.pricing-segment-tab').on('click', function () {
+        var target = $(this).data('pricing-target');
+
+        $('.pricing-segment-tab').removeClass('active');
+        $(this).addClass('active');
+
+        $('.pricing-panel').removeClass('active');
+        $('.pricing-panel[data-pricing-panel="' + target + '"]').addClass('active');
+    });
     
 })(jQuery);
 

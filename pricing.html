@@ -1,456 +1,315 @@
-<!DOCTYPE html>
-<html lang="en">
-
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title>IPGuard | Planes</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ciberseguridad, planes, auditoria, firewall, vpn, hardening, SOC, monitorizacion, pentesting" name="keywords">
-    <meta content="Planes de IPGuard: soluciones de ciberseguridad y redes adaptadas a tu empresa." name="description">
-
-    <!-- Favicon -->
+    <meta content="ciberseguridad, planes, auditoria, hardening, monitorizacion, proteccion de cuentas" name="keywords">
+    <meta content="Planes de IPGuard para proteger cuentas, accesos y continuidad digital según el nivel de criticidad de tu negocio." name="description">
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<body class="pricing-page">
 
-
-    <!-- TOP BAR MODIFICAR CUANDO EL REGISTRO ESTE OPERATIVO-->
     <div class="container-fluid topbar-custom">
         <div class="topbar-inner">
             <div class="topbar-left">
-                <a href="https://wa.ipguard.es" style="text-decoration: underline;">Auditoría gratuita con el registro</a>           </div>
+                <a href="https://wa.ipguard.es" style="text-decoration: underline;">Auditoría gratuita con el registro</a>
+            </div>
             <div class="topbar-right">
-                <a href="https://www.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#contacto"><i class="fab fa-instagram"></i></a>
+                <a href="https://es.linkedin.com/company/ip-guard-es"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/ipguard.es/"><i class="fab fa-instagram"></i></a>
                 <a href="#contacto"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- NAVBAR -->
     <div class="nav-shell">
         <div class="navbar-custom">
             <nav class="navbar navbar-expand-lg bg-white navbar-light">
-
-                <!-- LOGO -->
-                <a href="#" class="navbar-brand">
-                    <h1 class="m-0 text-secondary">
-                        <span class="text-primary">IP</span>Guard
-                    </h1>
+                <a href="index.html" class="navbar-brand brand-logo-link">
+                    <img src="img/logo/IPGb.png" alt="Logo de IPGuard" class="brand-logo-img">
                 </a>
 
-                <!-- MOBILE -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- MENU -->
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-
-                    <!-- LINKS -->
                     <div class="navbar-nav mx-auto">
-                        <a href="index.html" class="nav-item nav-link active">Producto</a>
-                        <a href="funcionalidades.html" class="nav-item nav-link">Funcionalidades</a>
+                        <a href="producto.html" class="nav-item nav-link">Producto</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
                                 <a href="ciberseguridad.html" class="dropdown-item">Ciberseguridad</a>
                                 <a href="ia.html" class="dropdown-item">IA & Automatización</a>
-                                <!--<a href="about.html" class="nav-item nav-link"> Sobre Nosotros</a>-->
                             </div>
                         </div>
-                        <a href="casos.html" class="nav-item nav-link">Casos</a>
-                        <a href="pricing.html" class="nav-item nav-link">Precios</a>
+                        <a href="pricing.html" class="nav-item nav-link active">Planes</a>
                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
 
-                    <!-- RIGHT MODIFICAR CUANDO ESTE OPERATIVO-->
                     <div class="nav-right">
                         <a href="https://wa.ipguard.es" class="nav-link">Login</a>
                         <a href="https://wa.ipguard.es" class="nav-link">Pide tu demo</a>
                         <a href="https://wa.ipguard.es" class="btn btn-primary btn-pill">Registro</a>
                     </div>
-
                 </div>
             </nav>
         </div>
     </div>
 
+    <div class="container-fluid pricing-showcase-section">
+        <div class="container pricing-showcase-container">
+            <div class="pricing-showcase-header text-center">
+                <h1>Precios a tu medida</h1>
+                <p>
+                    Empieza con una auditoría gratuita y elige el nivel de protección según el impacto real que tienen tus cuentas en tu negocio.
+                </p>
+            </div>
 
+            <div class="pricing-segment-tabs" role="tablist" aria-label="Tipos de cliente">
+                <button type="button" class="pricing-segment-tab" data-pricing-target="creadores">Creadores</button>
+                <button type="button" class="pricing-segment-tab active" data-pricing-target="empresas">Empresas</button>
+                <button type="button" class="pricing-segment-tab" data-pricing-target="agencias">Agencias</button>
+            </div>
 
-    <!-- Pricing Plan Start -->
-<div class="container-fluid pt-5 pb-3">
-    <div class="container">
-        <h6 class="text-secondary text-uppercase text-center font-weight-medium mb-3">Planes de Protección</h6>
-        <h1 class="display-4 text-center mb-4">Protección para cuentas que generan ingresos</h1>
-        <p class="text-center mb-5" style="max-width: 900px; margin: 0 auto;">
-            Elige el nivel de protección según lo críticas que sean tus cuentas sociales para tu negocio.
-            Empieza con una auditoría gratuita y escala solo si necesitas más control, monitorización o soporte.
-        </p>
-
-        <div class="row">
-
-            <!-- PLAN GRATIS -->
-            <div class="col-lg-3 mb-4">
-                <div class="bg-light text-center mb-2 pt-4 shadow-sm h-100">
-                    <div class="d-inline-flex flex-column align-items-center justify-content-center bg-secondary rounded-circle shadow mt-2 mb-4"
-                         style="width: 190px; height: 190px; border: 15px solid #ffffff;">
-                        <h3 class="text-white">Gratis</h3>
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>0
-                        </h1>
+            <div class="pricing-panel active" data-pricing-panel="empresas">
+                <div class="row pricing-card-grid">
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-basic">
+                            <div class="pricing-card-top">
+                                <h3>Básico</h3>
+                                <p>Protección esencial para empresas que necesitan ordenar cuentas y reducir el riesgo inicial.</p>
+                                <div class="pricing-amount">0 €<span>/ auditoría</span></div>
+                                <div class="pricing-saving">Diagnóstico inicial sin coste</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Auditoría gratuita inicial</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión básica de riesgo</div>
+                                <div><i class="fa fa-check-circle"></i> Puntos débiles prioritarios</div>
+                                <div><i class="fa fa-check-circle"></i> Recomendaciones de mejora</div>
+                                <div><i class="fa fa-times"></i> Configuración avanzada</div>
+                                <div><i class="fa fa-times"></i> Monitorización continua</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column align-items-center py-3">
-                        <p><strong>1.</strong> Auditoría gratuita</p>
-                        <p class="text-muted mb-1">Diagnóstico inicial</p>
-                        <p class="text-muted mb-1">Revisión básica de riesgo</p>
-                        <p class="text-muted mb-1">Detección de puntos débiles</p>
-                        <p class="text-muted">Propuesta de mejora</p>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-standard">
+                            <div class="pricing-card-top">
+                                <h3>Protección</h3>
+                                <p>Refuerzo real de accesos y configuración para reducir el riesgo de compromiso.</p>
+                                <div class="pricing-amount">50 €<span>/ pago único</span></div>
+                                <div class="pricing-saving">Ideal para ordenar accesos y asegurar la base</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Todo lo del plan básico</div>
+                                <div><i class="fa fa-check-circle"></i> Configuración MFA / 2FA</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión de accesos y roles</div>
+                                <div><i class="fa fa-check-circle"></i> Configuración base segura</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión inicial de Meta Business</div>
+                                <div><i class="fa fa-times"></i> Soporte continuo mensual</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <a href="contact.html" class="btn btn-secondary py-2 px-4 mb-4">Solicitar auditoría</a>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-advanced">
+                            <div class="pricing-card-top">
+                                <div class="pricing-badge">Popular</div>
+                                <h3>Monitorización</h3>
+                                <p>Seguimiento continuo y alertas para cuentas que no se pueden permitir una caída.</p>
+                                <div class="pricing-amount">10 €<span>/ mes</span></div>
+                                <div class="pricing-saving">100 €/año en modalidad anual</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Todo lo del plan protección</div>
+                                <div><i class="fa fa-check-circle"></i> Vigilancia de cambios críticos</div>
+                                <div><i class="fa fa-check-circle"></i> Alertas de riesgo</div>
+                                <div><i class="fa fa-check-circle"></i> Seguimiento continuo</div>
+                                <div><i class="fa fa-check-circle"></i> Visibilidad para cuentas prioritarias</div>
+                                <div><i class="fa fa-check-circle"></i> Escalable a soporte avanzado</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- PLAN PROTECCIÓN -->
-            <div class="col-lg-3 mb-4">
-                <div class="bg-light text-center mb-2 pt-4 shadow-sm h-100">
-                    <div class="d-inline-flex flex-column align-items-center justify-content-center bg-secondary rounded-circle shadow mt-2 mb-4"
-                         style="width: 190px; height: 190px; border: 15px solid #ffffff;">
-                        <h3 class="text-white">Protección</h3>
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>50
-                        </h1>
-                        <small class="text-white mt-1">pago único</small>
+            <div class="pricing-panel" data-pricing-panel="creadores">
+                <div class="row pricing-card-grid">
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-basic">
+                            <div class="pricing-card-top">
+                                <h3>Starter</h3>
+                                <p>Para creadores que quieren una revisión inicial y asegurar su cuenta principal.</p>
+                                <div class="pricing-amount">0 €<span>/ auditoría</span></div>
+                                <div class="pricing-saving">Empieza entendiendo tu riesgo real</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Auditoría inicial</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión de accesos</div>
+                                <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
+                                <div><i class="fa fa-times"></i> Soporte continuo</div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="d-flex flex-column align-items-center py-3">
-                        <p><strong>1.</strong> Auditoría gratuita</p>
-                        <p><strong>2.</strong> Configuración de seguridad</p>
-                        <p class="text-muted mb-1">MFA / 2FA</p>
-                        <p class="text-muted mb-1">Revisión de accesos</p>
-                        <p class="text-muted">Configuración base segura</p>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-standard">
+                            <div class="pricing-card-top">
+                                <h3>Creator Protect</h3>
+                                <p>Protección reforzada para creadores que dependen de su perfil para colaborar o vender.</p>
+                                <div class="pricing-amount">29 €<span>/ mes</span></div>
+                                <div class="pricing-saving">Más control sobre acceso y recuperación</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Hardening de cuenta</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión de correo y MFA</div>
+                                <div><i class="fa fa-check-circle"></i> Backup básico de continuidad</div>
+                                <div><i class="fa fa-times"></i> Soporte 24/7</div>
+                            </div>
+                        </div>
                     </div>
-
-                    <a href="contact.html" class="btn btn-secondary py-2 px-4 mb-4">Elegir plan</a>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-advanced">
+                            <div class="pricing-card-top">
+                                <div class="pricing-badge">Popular</div>
+                                <h3>Creator Plus</h3>
+                                <p>Para creadores con ingresos recurrentes que necesitan vigilancia y ayuda rápida.</p>
+                                <div class="pricing-amount">59 €<span>/ mes</span></div>
+                                <div class="pricing-saving">Más tranquilidad operativa y respuesta rápida</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Todo lo anterior</div>
+                                <div><i class="fa fa-check-circle"></i> Monitorización de riesgo</div>
+                                <div><i class="fa fa-check-circle"></i> Ayuda ante incidentes</div>
+                                <div><i class="fa fa-check-circle"></i> Priorización por impacto</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- PLAN MONITORIZACIÓN -->
-            <div class="col-lg-3 mb-4">
-                <div class="bg-light text-center mb-2 pt-4 shadow-sm h-100">
-                    <div class="d-inline-flex flex-column align-items-center justify-content-center bg-primary rounded-circle shadow mt-2 mb-4"
-                         style="width: 190px; height: 190px; border: 15px solid #ffffff;">
-                        <h3 class="text-white">Monitorización</h3>
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>10
-                        </h1>
-                        <small class="text-white mt-1">/ mes</small>
+            <div class="pricing-panel" data-pricing-panel="agencias">
+                <div class="row pricing-card-grid">
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-basic">
+                            <div class="pricing-card-top">
+                                <h3>Agency Base</h3>
+                                <p>Para agencias que quieren ordenar accesos y reducir el riesgo operativo con clientes.</p>
+                                <div class="pricing-amount">49 €<span>/ mes</span></div>
+                                <div class="pricing-saving">Pensado para entornos con varios roles</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Revisión de roles y accesos</div>
+                                <div><i class="fa fa-check-circle"></i> Hardening base</div>
+                                <div><i class="fa fa-check-circle"></i> Recomendaciones por cliente</div>
+                                <div><i class="fa fa-times"></i> Soporte prioritario</div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="d-flex flex-column align-items-center py-3">
-                        <p><strong>1.</strong> Auditoría gratuita</p>
-                        <p><strong>2.</strong> Configuración de seguridad</p>
-                        <p><strong>3.</strong> Monitorización</p>
-                        <p class="text-muted mb-1">Vigilancia de cambios críticos</p>
-                        <p class="text-muted mb-1">Alertas de riesgo</p>
-                        <p class="text-muted">100 €/año en pago anual</p>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-standard">
+                            <div class="pricing-card-top">
+                                <h3>Agency Protect</h3>
+                                <p>Para agencias que gestionan varias cuentas críticas y necesitan visibilidad continua.</p>
+                                <div class="pricing-amount">99 €<span>/ mes</span></div>
+                                <div class="pricing-saving">Más control sobre equipo, clientes y activos</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Todo lo del plan base</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión de Meta Business</div>
+                                <div><i class="fa fa-check-circle"></i> Monitorización mensual</div>
+                                <div><i class="fa fa-check-circle"></i> Procedimientos de continuidad</div>
+                            </div>
+                        </div>
                     </div>
-
-                    <a href="contact.html" class="btn btn-primary py-2 px-4 mb-4">Elegir plan</a>
+                    <div class="col-lg-4 mb-4">
+                        <div class="pricing-showcase-card pricing-accent-advanced">
+                            <div class="pricing-card-top">
+                                <div class="pricing-badge">Popular</div>
+                                <h3>Agency Advanced</h3>
+                                <p>Para agencias con alta exposición, múltiples gestores y necesidad de soporte ágil.</p>
+                                <div class="pricing-amount">149 €<span>/ mes</span></div>
+                                <div class="pricing-saving">Escala con clientes y cuentas prioritarias</div>
+                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                            </div>
+                            <div class="pricing-card-features">
+                                <div><i class="fa fa-check-circle"></i> Todo lo anterior</div>
+                                <div><i class="fa fa-check-circle"></i> Soporte prioritario</div>
+                                <div><i class="fa fa-check-circle"></i> Respuesta a incidentes</div>
+                                <div><i class="fa fa-check-circle"></i> Acompañamiento continuo</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- PLAN CONTINUIDAD -->
-            <div class="col-lg-3 mb-4">
-                <div class="bg-light text-center mb-2 pt-4 shadow-sm h-100">
-                    <div class="d-inline-flex flex-column align-items-center justify-content-center bg-secondary rounded-circle shadow mt-2 mb-4"
-                         style="width: 190px; height: 190px; border: 15px solid #ffffff;">
-                        <h3 class="text-white">Continuidad</h3>
-                        <h1 class="display-4 text-white mb-0">
-                            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>30
-                        </h1>
-                        <small class="text-white mt-1">/ mes</small>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center py-3">
-                        <p><strong>1.</strong> Auditoría gratuita</p>
-                        <p><strong>2.</strong> Configuración de seguridad</p>
-                        <p><strong>3.</strong> Monitorización</p>
-                        <p><strong>4.</strong> Soporte 24/7</p>
-                        <p><strong>5.</strong> Disaster recovery</p>
-                        <p class="text-muted">300 €/año en pago anual</p>
-                    </div>
-
-                    <a href="contact.html" class="btn btn-secondary py-2 px-4 mb-4">Elegir plan</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Pricing Plan End -->
-
-<!-- More Plans Start -->
-<div class="container-fluid pt-2 pb-5">
-  <div class="container">
-    <h6 class="text-secondary text-uppercase text-center font-weight-medium mb-3">Más planes</h6>
-    <h2 class="text-center mb-5">Elige por necesidad (no por “pack”)</h2>
-
-    <div class="row">
-      <!-- Plan 1 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Starter</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>29
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Revisión básica web y DNS</p>
-            <p>Checklist hardening rápido</p>
-            <p>Recomendaciones prioritarias</p>
-            <p>Soporte por email</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 2 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">OSINT Shield</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>59
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Superficie de ataque externa</p>
-            <p>Exposición de servicios / puertos</p>
-            <p>Alertas mensuales</p>
-            <p>Informe ejecutivo</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 3 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Hardening</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>79
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Hardening servicios públicos</p>
-            <p>Cabeceras, TLS, exposición</p>
-            <p>Revisión de accesos</p>
-            <p>Soporte técnico</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 4 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Firewall Care</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>99
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Revisión reglas y objetos</p>
-            <p>VPN / MFA recomendaciones</p>
-            <p>Backups y control cambios</p>
-            <p>Mejoras de rendimiento</p>
-          </div>
-          <a href="contact.html" class="btn btn-primary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 5 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Pentest Light</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>129
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Escaneo + validación manual</p>
-            <p>Prioridades de remediación</p>
-            <p>Informe técnico + ejecutivo</p>
-            <p>Re-test (1 vez)</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 6 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">SOC Monitor</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>199
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Monitorización de logs (básica)</p>
-            <p>Alertas y triage inicial</p>
-            <p>Recomendaciones mensuales</p>
-            <p>Escalado ante incidente</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 7 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Email Security</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>39
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>SPF/DKIM/DMARC</p>
-            <p>Mejora de entregabilidad</p>
-            <p>Revisión suplantación (spoof)</p>
-            <p>Recomendaciones anti-phishing</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 8 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">Compliance</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>149
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mes</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Baseline ENS / NIS2 (light)</p>
-            <p>Plan de mejoras por fases</p>
-            <p>Políticas y checklist</p>
-            <p>Seguimiento mensual</p>
-          </div>
-          <a href="contact.html" class="btn btn-secondary py-2 px-4">Solicitar</a>
-        </div>
-      </div>
-
-      <!-- Plan 9 -->
-      <div class="col-lg-4 mb-4">
-        <div class="bg-light text-center mb-2 pt-4">
-          <h3 class="text-secondary">On-Demand</h3>
-          <h1 class="display-4 mb-0">
-            <small class="align-top" style="font-size: 22px; line-height: 45px;">€</small>0
-            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">a medida</small>
-          </h1>
-          <div class="d-flex flex-column align-items-center py-3">
-            <p>Proyecto a medida</p>
-            <p>IA / Cloud / Red / Seguridad</p>
-            <p>Horas de consultoría</p>
-            <p>Roadmap técnico</p>
-          </div>
-          <a href="contact.html" class="btn btn-primary py-2 px-4">Pedir presupuesto</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- More Plans End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href=""><h1 class="text-secondary mb-3"><span class="text-white">IP</span>Guard</h1></a>
-                <p>IPGuard es una consultora especializada en ciberseguridad y telecomunicaciones. Protegemos infraestructuras empresariales con soluciones técnicas avanzadas y enfoque estratégico.</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white mb-4">Contacto</h4>
-                <p>¿Quieres mejorar tu postura de seguridad o diseñar una red más robusta? Escríbenos y lo vemos.</p>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Barcelona, España</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+34 636 224 398</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@ipguard.es</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white mb-4">Enlaces</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
-                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                    <a class="text-white mb-2" href="pricing.html"><i class="fa fa-angle-right mr-2"></i>Planes</a>
-                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white mb-4">Newsletter</h4>
-                <form action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control border-0" placeholder="Tu Nombre" required="required" />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control border-0" placeholder="Tu Email" required="required" />
-                    </div>
-                    <div>
-                        <button class="btn btn-lg btn-secondary btn-block border-0" type="submit">Suscribirse</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
-        <p class="m-0 text-center text-white">
-            &copy; <a class="text-white font-weight-medium" href="#">IPGuard</a>. Todos los derechos reservados. Diseñado a partir de una plantilla de
-            <a class="text-white font-weight-medium" href="https://htmlcodex.com">HTML Codex</a>
-        </p>
-    </div>
-    <!-- Footer End -->
 
+    <footer id="contacto" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="site-footer-brand">
+                        <img src="img/logo/IPGb.png" alt="Logo de IPGuard" class="site-footer-logo">
+                        <p>Protección de cuentas, accesos y continuidad digital para marcas, eCommerce, agencias y creadores que dependen de sus canales online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="site-footer-title">Navegación</h4>
+                    <div class="site-footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="producto.html">Producto</a>
+                        <a href="pricing.html">Planes</a>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <h4 class="site-footer-title">Contacto</h4>
+                    <div class="site-footer-contact">
+                        <p>Barcelona, España</p>
+                        <a href="tel:+34636224398">+34 636 224 398</a>
+                        <a href="mailto:info@ipguard.es">info@ipguard.es</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="site-footer-cta">
+                        <h4 class="site-footer-title">¿Hablamos?</h4>
+                        <p>Si no sabes qué plan encaja contigo, te ayudamos a elegirlo según el riesgo real.</p>
+                        <a href="contact.html" class="btn btn-secondary py-3 px-4">Hablar con nosotros</a>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
+                &copy; <a href="index.html">IPGuard</a>. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
 
-    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
+
+
+
