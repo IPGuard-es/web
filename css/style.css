@@ -5308,12 +5308,59 @@ input[type="button"].btn-block {
     }
 
     .index-story-media img{
-        height: 340px;
+        height: 250px;
     }
 
     .tilt-right,
     .tilt-left{
         transform: none;
+    }
+
+    .caas-hero-section{
+        padding:40px 0 48px;
+    }
+
+    .caas-app-header{
+        margin-bottom:22px;
+    }
+
+    .caas-app-header h1{
+        font-size:clamp(28px, 9vw, 40px);
+    }
+
+    .caas-app-header p,
+    .caas-flow-copy p{
+        font-size:.98rem;
+        line-height:1.7;
+    }
+
+    .caas-app-visual,
+    .caas-app-visual-large,
+    .caas-export-card{
+        padding:10px;
+        border-radius:18px;
+    }
+
+    .caas-app-visual-large{
+        margin-bottom:22px;
+    }
+
+    .caas-flow-section{
+        margin-top:24px;
+    }
+
+    .caas-flow-copy h3{
+        font-size:clamp(24px, 8vw, 32px);
+        margin-bottom:12px;
+    }
+
+    .caas-story-block{
+        padding:20px 18px;
+        border-radius:18px;
+    }
+
+    .caas-export-card{
+        min-height:auto;
     }
 
     .contact-hero-section{
@@ -5383,6 +5430,16 @@ input[type="button"].btn-block {
 
     .contact-reference-shell{
         padding:18px 16px 14px;
+    }
+
+    .about-img{
+        height:240px;
+        border-radius:16px;
+    }
+
+    .about-img2{
+        height:260px;
+        border-radius:16px;
     }
 
     .pricing-showcase-section{
