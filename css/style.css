@@ -5611,26 +5611,54 @@ input[type="button"].btn-block {
     }
 
     .pricing-segment-tabs{
+        display:grid;
+        grid-template-columns:repeat(3, minmax(0, 1fr));
         gap:8px;
         padding:8px;
         max-width:100%;
+        border-radius:18px;
     }
 
     .pricing-segment-tab{
-        width:100%;
+        width:auto;
         text-align:center;
+        padding:11px 10px;
+        font-size:13px;
+        border-radius:12px;
     }
 
     .creator-pricing-controls{
         grid-template-columns:1fr;
+        gap:14px;
     }
 
     .creator-network-grid{
         grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:10px;
     }
 
     .creator-control-block{
-        padding:20px;
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .creator-pricing-intro{
+        margin-bottom:20px;
+    }
+
+    .creator-pricing-intro h3{
+        font-size:28px;
+    }
+
+    .creator-network-option span{
+        min-height:48px;
+        padding:10px 8px;
+        font-size:13px;
+    }
+
+    .creator-network-option span i,
+    .creator-network-option span strong{
+        margin-right:6px;
     }
 
     .pricing-card-top,
@@ -5639,8 +5667,22 @@ input[type="button"].btn-block {
         padding-right:22px;
     }
 
+    .pricing-card-top p{
+        min-height:auto;
+    }
+
     .pricing-amount{
-        font-size:46px;
+        font-size:38px;
+    }
+
+    .pricing-amount span{
+        font-size:18px;
+    }
+
+    .pricing-badge{
+        position:static;
+        display:inline-block;
+        margin-bottom:14px;
     }
 
     .site-footer{
@@ -5655,6 +5697,16 @@ input[type="button"].btn-block {
 .custom-range::-ms-fill-upper {
   margin-right: 15px;
   background-color: #dee2e6;
+}
+
+@media (max-width: 420px){
+    .pricing-segment-tabs{
+        grid-template-columns:1fr;
+    }
+
+    .creator-network-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 .custom-range:disabled::-webkit-slider-thumb {

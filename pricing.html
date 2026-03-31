@@ -73,12 +73,12 @@
             </div>
 
             <div class="pricing-segment-tabs" role="tablist" aria-label="Tipos de cliente">
-                <button type="button" class="pricing-segment-tab" data-pricing-target="creadores">Creadores</button>
-                <button type="button" class="pricing-segment-tab active" data-pricing-target="empresas">Empresas</button>
+                <button type="button" class="pricing-segment-tab active" data-pricing-target="creadores">Creadores</button>
+                <button type="button" class="pricing-segment-tab" data-pricing-target="empresas">Empresas</button>
                 <button type="button" class="pricing-segment-tab" data-pricing-target="agencias">Agencias</button>
             </div>
 
-            <div class="pricing-panel active" data-pricing-panel="empresas">
+            <div class="pricing-panel" data-pricing-panel="empresas">
                 <div class="creator-pricing-builder business-pricing-builder" data-pricing-scope="empresas">
                     <div class="creator-pricing-intro">
                         <h3>Cuéntanos el alcance de tu empresa</h3>
@@ -138,18 +138,16 @@
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-basic">
                             <div class="pricing-card-top">
-                                <h3>Básico</h3>
-                                <p>Protección esencial para empresas que necesitan ordenar cuentas y reducir el riesgo inicial.</p>
-                                <div class="pricing-saving">Diagnóstico inicial sin coste</div>
-                                <a href="contact.html?segment=empresas&service=auditoria&price=A%20medida&period=auditoria" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="auditoria" data-price="A medida" data-period="auditoria">Empieza ahora</a>
+                                <h3>Configuración inicial</h3>
+                                <p>Pago único para ordenar accesos, hardening, roles y base segura de tus cuentas.</p>
+                                <div class="pricing-saving">Propuesta a medida segun alcance, equipo y riesgo</div>
+                                <a href="contact.html?segment=empresas&service=configuracion%20inicial&price=A%20medida&period=pago%20unico" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="configuracion inicial" data-price="A medida" data-period="pago unico">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Auditoría gratuita inicial</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión básica de riesgo</div>
-                                <div><i class="fa fa-check-circle"></i> Puntos débiles prioritarios</div>
-                                <div><i class="fa fa-check-circle"></i> Recomendaciones de mejora</div>
-                                <div><i class="fa fa-times"></i> Configuración avanzada</div>
-                                <div><i class="fa fa-times"></i> Monitorización continua</div>
+                                <div><i class="fa fa-check-circle"></i> Revisión de accesos y roles</div>
+                                <div><i class="fa fa-check-circle"></i> Buenas prácticas</div>
+                                <div><i class="fa fa-check-circle"></i> Ajustes iniciales por red</div>
+                                <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
                             </div>
                         </div>
                     </div>
@@ -157,18 +155,16 @@
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-standard">
                             <div class="pricing-card-top">
-                                <h3>Protección</h3>
-                                <p>Refuerzo real de accesos y configuración para reducir el riesgo de compromiso.</p>
-                                <div class="pricing-saving">Ideal para ordenar accesos y asegurar la base</div>
-                                <a href="contact.html?segment=empresas&service=proteccion&price=A%20medida&period=pago%20unico" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="proteccion" data-price="A medida" data-period="pago unico">Empieza ahora</a>
+                                <h3>Mantenimiento</h3>
+                                <p>Monitorización, alertas, backups, visibilidad y soporte operativo recurrente.</p>
+                                <div class="pricing-saving">Se define a medida y requiere configuración inicial</div>
+                                <a href="contact.html?segment=empresas&service=mantenimiento&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="mantenimiento" data-price="A medida" data-period="mes" data-requires-setup="si">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Todo lo del plan básico</div>
-                                <div><i class="fa fa-check-circle"></i> Configuración MFA / 2FA</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión de accesos y roles</div>
-                                <div><i class="fa fa-check-circle"></i> Configuración base segura</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión inicial de Meta Business</div>
-                                <div><i class="fa fa-times"></i> Soporte continuo mensual</div>
+                                <div><i class="fa fa-check-circle"></i> Monitorización y alertas</div>
+                                <div><i class="fa fa-check-circle"></i> Seguimiento de riesgos</div>
+                                <div><i class="fa fa-check-circle"></i> Backups y continuidad</div>
+                                <div><i class="fa fa-check-circle"></i> Soporte periódico</div>
                             </div>
                         </div>
                     </div>
@@ -176,25 +172,24 @@
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-advanced">
                             <div class="pricing-card-top">
-                                <div class="pricing-badge">Popular</div>
-                                <h3>Monitorización</h3>
-                                <p>Seguimiento continuo y alertas para cuentas que no se pueden permitir una caída.</p>
-                                <a href="contact.html?segment=empresas&service=monitorizacion&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="monitorizacion" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
+                                <div class="pricing-badge">Crítico</div>
+                                <h3>Recuperación de cuenta robada</h3>
+                                <p>Intervención puntual cuando necesitas recuperar acceso, datos y capacidad operativa.</p>
+                                <div class="pricing-saving">Servicio a medida y requiere configuración inicial</div>
+                                <a href="contact.html?segment=empresas&service=recuperacion&price=A%20medida&period=incidente&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="recuperacion" data-price="A medida" data-period="incidente" data-requires-setup="si">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Todo lo del plan protección</div>
-                                <div><i class="fa fa-check-circle"></i> Vigilancia de cambios críticos</div>
-                                <div><i class="fa fa-check-circle"></i> Alertas de riesgo</div>
-                                <div><i class="fa fa-check-circle"></i> Seguimiento continuo</div>
-                                <div><i class="fa fa-check-circle"></i> Visibilidad para cuentas prioritarias</div>
-                                <div><i class="fa fa-check-circle"></i> Escalable a soporte avanzado</div>
+                                <div><i class="fa fa-check-circle"></i> Análisis del incidente</div>
+                                <div><i class="fa fa-check-circle"></i> Recuperación guiada</div>
+                                <div><i class="fa fa-check-circle"></i> Reordenación posterior</div>
+                                <div><i class="fa fa-check-circle"></i> Evidencias y escalado</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="pricing-panel" data-pricing-panel="creadores">
+            <div class="pricing-panel active" data-pricing-panel="creadores">
                 <div class="creator-pricing-builder">
                     <div class="creator-pricing-intro">
                         <h3>Calcula tu precio como influencer o creador</h3>
@@ -261,7 +256,7 @@
                                 </div>
                                 <div class="pricing-card-features">
                                     <div><i class="fa fa-check-circle"></i> Revisión de accesos y roles</div>
-                                    <div><i class="fa fa-check-circle"></i> Hardening y MFA / 2FA</div>
+                                    <div><i class="fa fa-check-circle"></i>  Buenas prácticas</div>
                                     <div><i class="fa fa-check-circle"></i> Ajustes iniciales por red</div>
                                     <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
                                 </div>
@@ -271,7 +266,7 @@
                         <div class="col-lg-4 mb-4">
                             <div class="pricing-showcase-card pricing-accent-standard">
                                 <div class="pricing-card-top">
-                                    <h3>Mantenimiento mensual</h3>
+                                    <h3>Mantenimiento</h3>
                                     <p>Monitorización, alertas, backups, visibilidad y soporte operativo recurrente.</p>
                                     <div class="pricing-amount" id="creatorMonthlyPrice">45 €<span>/ mes</span></div>
                                     <div class="pricing-saving" id="creatorMonthlyNote">Pensado para mantener control y continuidad. Requiere configuración inicial</div>
@@ -368,49 +363,49 @@
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-basic">
                             <div class="pricing-card-top">
-                                <h3>Agency Base</h3>
-                                <p>Para agencias que quieren ordenar accesos y reducir el riesgo operativo con clientes.</p>
-                                <div class="pricing-saving">Pensado para entornos con varios roles</div>
-                                <a href="contact.html?segment=agencias&service=agency%20base&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency base" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
+                                <h3>Configuración inicial</h3>
+                                <p>Pago único para ordenar accesos, hardening, roles y base segura de las cuentas que gestionáis.</p>
+                                <div class="pricing-saving">Propuesta a medida para cartera, equipo y criticidad</div>
+                                <a href="contact.html?segment=agencias&service=configuracion%20inicial&price=A%20medida&period=pago%20unico" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="configuracion inicial" data-price="A medida" data-period="pago unico">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Revisión de roles y accesos</div>
-                                <div><i class="fa fa-check-circle"></i> Hardening base</div>
-                                <div><i class="fa fa-check-circle"></i> Recomendaciones por cliente</div>
-                                <div><i class="fa fa-times"></i> Soporte prioritario</div>
+                                <div><i class="fa fa-check-circle"></i> Buenas prácticas</div>
+                                <div><i class="fa fa-check-circle"></i> Ajustes iniciales por red</div>
+                                <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-standard">
                             <div class="pricing-card-top">
-                                <h3>Agency Protect</h3>
-                                <p>Para agencias que gestionan varias cuentas críticas y necesitan visibilidad continua.</p>
-                                <div class="pricing-saving">Más control sobre equipo, clientes y activos</div>
-                                <a href="contact.html?segment=agencias&service=agency%20protect&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency protect" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
+                                <h3>Mantenimiento</h3>
+                                <p>Monitorización, alertas, backups, visibilidad y soporte operativo recurrente.</p>
+                                <div class="pricing-saving">Se define a medida y requiere configuración inicial</div>
+                                <a href="contact.html?segment=agencias&service=mantenimiento&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="mantenimiento" data-price="A medida" data-period="mes" data-requires-setup="si">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Todo lo del plan base</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión de Meta Business</div>
-                                <div><i class="fa fa-check-circle"></i> Monitorización mensual</div>
-                                <div><i class="fa fa-check-circle"></i> Procedimientos de continuidad</div>
+                                <div><i class="fa fa-check-circle"></i> Monitorización y alertas</div>
+                                <div><i class="fa fa-check-circle"></i> Seguimiento de riesgos</div>
+                                <div><i class="fa fa-check-circle"></i> Backups y continuidad</div>
+                                <div><i class="fa fa-check-circle"></i> Soporte periódico</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-advanced">
                             <div class="pricing-card-top">
-                                <div class="pricing-badge">Popular</div>
-                                <h3>Agency Advanced</h3>
-                                <p>Para agencias con alta exposición, múltiples gestores y necesidad de soporte ágil.</p>
-                                <div class="pricing-saving">Escala con clientes y cuentas prioritarias</div>
-                                <a href="contact.html?segment=agencias&service=agency%20advanced&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency advanced" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
+                                <div class="pricing-badge">Crítico</div>
+                                <h3>Recuperación de cuenta robada</h3>
+                                <p>Intervención puntual cuando necesitas recuperar acceso, datos y capacidad operativa.</p>
+                                <div class="pricing-saving">Servicio a medida y requiere configuración inicial</div>
+                                <a href="contact.html?segment=agencias&service=recuperacion&price=A%20medida&period=incidente&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="recuperacion" data-price="A medida" data-period="incidente" data-requires-setup="si">Solicitar propuesta</a>
                             </div>
                             <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Todo lo anterior</div>
-                                <div><i class="fa fa-check-circle"></i> Soporte prioritario</div>
-                                <div><i class="fa fa-check-circle"></i> Respuesta a incidentes</div>
-                                <div><i class="fa fa-check-circle"></i> Acompañamiento continuo</div>
+                                <div><i class="fa fa-check-circle"></i> Análisis del incidente</div>
+                                <div><i class="fa fa-check-circle"></i> Recuperación guiada</div>
+                                <div><i class="fa fa-check-circle"></i> Reordenación posterior</div>
+                                <div><i class="fa fa-check-circle"></i> Evidencias y escalado</div>
                             </div>
                         </div>
                     </div>
@@ -470,6 +465,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
 
 
