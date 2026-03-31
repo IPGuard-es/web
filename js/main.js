@@ -141,12 +141,22 @@
         return Math.max(step, Math.round(value / step) * step);
     }
 
+    function addVat(value) {
+        return value * 1.21;
+    }
+
     function formatEuro(value) {
-        return value.toLocaleString('es-ES') + ' &euro;';
+        return value.toLocaleString('es-ES', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }) + ' &euro;';
     }
 
     function formatEuroText(value) {
-        return value.toLocaleString('es-ES') + ' EUR';
+        return value.toLocaleString('es-ES', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }) + ' EUR';
     }
 
     function formatNetworkList(networks) {
@@ -192,6 +202,10 @@
         monthlyPrice = Math.max(45, rawMonthlyPrice);
         recoveryPrice = Math.max(800, rawRecoveryPrice);
 
+        setupPrice = addVat(setupPrice);
+        monthlyPrice = addVat(monthlyPrice);
+        recoveryPrice = addVat(recoveryPrice);
+
         if (rawSetupPrice < 145 || rawMonthlyPrice < 45 || rawRecoveryPrice < 800) {
             floorMessage = ' Con los minimos definidos, algunas redes pueden compartir el mismo precio final en tramos bajos.';
         }
@@ -204,13 +218,13 @@
             'Estimacion para ' + networkLabel + ' y un perfil con ' + selectedTier.label + '. A mayor exposicion, mayor esfuerzo de configuracion, seguimiento y respuesta.' + floorMessage
         );
         $('#creatorSetupNote').text(
-            'Incluye hardening, orden de accesos y configuracion inicial segun las redes que hayas marcado.'
+            'Incluye hardening, orden de accesos y configuracion inicial segun las redes que hayas marcado. IVA incluido.'
         );
         $('#creatorMonthlyNote').text(
-            'Calculado con monitorizacion, alertas, backups y mantenimiento continuo. Requiere configuracion inicial.'
+            'Calculado con monitorizacion, alertas, backups y mantenimiento continuo. Requiere configuracion inicial. IVA incluido.'
         );
         $('#creatorRecoveryNote').text(
-            'La recuperacion depende del alcance y la criticidad de la cuenta. Requiere configuracion inicial.'
+            'La recuperacion depende del alcance y la criticidad de la cuenta. Requiere configuracion inicial. IVA incluido.'
         );
 
         $('.creator-contact-link[data-service="setup"]').attr(
