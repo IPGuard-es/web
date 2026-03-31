@@ -79,15 +79,69 @@
             </div>
 
             <div class="pricing-panel active" data-pricing-panel="empresas">
+                <div class="creator-pricing-builder business-pricing-builder" data-pricing-scope="empresas">
+                    <div class="creator-pricing-intro">
+                        <h3>Cuéntanos el alcance de tu empresa</h3>
+                        <p>
+                            Selecciona las redes sociales y el volumen aproximado de seguidores para que preparemos una propuesta ajustada al nivel de exposición de tu marca.
+                        </p>
+                    </div>
+
+                    <div class="creator-pricing-controls">
+                        <div class="creator-control-block">
+                            <span class="creator-control-label">Redes sociales a proteger</span>
+                            <div class="creator-network-grid">
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="instagram" checked>
+                                    <span><i class="fab fa-instagram"></i> Instagram</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="tiktok">
+                                    <span><i class="fab fa-tiktok"></i> TikTok</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="youtube">
+                                    <span><i class="fab fa-youtube"></i> YouTube</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="whatsapp">
+                                    <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="linkedin">
+                                    <span><i class="fab fa-linkedin-in"></i> LinkedIn</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="empresas" value="x">
+                                    <span><strong>X</strong> X / Twitter</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="creator-control-block">
+                            <label for="companyFollowers" class="creator-control-label">Volumen aproximado de seguidores</label>
+                            <select id="companyFollowers" class="creator-select business-followers-select" data-business-segment="empresas">
+                                <option value="nano">Hasta 10.000</option>
+                                <option value="growth">10.000 - 50.000</option>
+                                <option value="pro">50.000 - 250.000</option>
+                                <option value="major">250.000 - 1.000.000</option>
+                                <option value="elite">Más de 1.000.000</option>
+                            </select>
+                            <p class="creator-helper-copy" id="companyPricingSummary">
+                                La propuesta para empresa se calcula a medida según redes, equipo y exposición.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row pricing-card-grid">
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-basic">
                             <div class="pricing-card-top">
                                 <h3>Básico</h3>
                                 <p>Protección esencial para empresas que necesitan ordenar cuentas y reducir el riesgo inicial.</p>
-                                <div class="pricing-amount">0 €<span>/ auditoría</span></div>
                                 <div class="pricing-saving">Diagnóstico inicial sin coste</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=empresas&service=auditoria&price=A%20medida&period=auditoria" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="auditoria" data-price="A medida" data-period="auditoria">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Auditoría gratuita inicial</div>
@@ -105,9 +159,8 @@
                             <div class="pricing-card-top">
                                 <h3>Protección</h3>
                                 <p>Refuerzo real de accesos y configuración para reducir el riesgo de compromiso.</p>
-                                <div class="pricing-amount">50 €<span>/ pago único</span></div>
                                 <div class="pricing-saving">Ideal para ordenar accesos y asegurar la base</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=empresas&service=proteccion&price=A%20medida&period=pago%20unico" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="proteccion" data-price="A medida" data-period="pago unico">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Todo lo del plan básico</div>
@@ -126,9 +179,7 @@
                                 <div class="pricing-badge">Popular</div>
                                 <h3>Monitorización</h3>
                                 <p>Seguimiento continuo y alertas para cuentas que no se pueden permitir una caída.</p>
-                                <div class="pricing-amount">10 €<span>/ mes</span></div>
-                                <div class="pricing-saving">100 €/año en modalidad anual</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=empresas&service=monitorizacion&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="empresas" data-service="monitorizacion" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Todo lo del plan protección</div>
@@ -144,56 +195,113 @@
             </div>
 
             <div class="pricing-panel" data-pricing-panel="creadores">
-                <div class="row pricing-card-grid">
-                    <div class="col-lg-4 mb-4">
-                        <div class="pricing-showcase-card pricing-accent-basic">
-                            <div class="pricing-card-top">
-                                <h3>Starter</h3>
-                                <p>Para creadores que quieren una revisión inicial y asegurar su cuenta principal.</p>
-                                <div class="pricing-amount">0 €<span>/ auditoría</span></div>
-                                <div class="pricing-saving">Empieza entendiendo tu riesgo real</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
-                            </div>
-                            <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Auditoría inicial</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión de accesos</div>
-                                <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
-                                <div><i class="fa fa-times"></i> Soporte continuo</div>
+                <div class="creator-pricing-builder">
+                    <div class="creator-pricing-intro">
+                        <h3>Calcula tu precio como influencer o creador</h3>
+                        <p>
+                            El precio cambia según las redes que quieras proteger y el volumen de seguidores. Cuantas más cuentas críticas y más exposición tengas, más trabajo requiere la configuración, el mantenimiento y una posible recuperación.
+                        </p>
+                    </div>
+
+                    <div class="creator-pricing-controls">
+                        <div class="creator-control-block">
+                            <span class="creator-control-label">Redes sociales a proteger</span>
+                            <div class="creator-network-grid">
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="instagram" checked>
+                                    <span><i class="fab fa-instagram"></i> Instagram</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="tiktok">
+                                    <span><i class="fab fa-tiktok"></i> TikTok</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="youtube">
+                                    <span><i class="fab fa-youtube"></i> YouTube</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="whatsapp">
+                                    <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="linkedin">
+                                    <span><i class="fab fa-linkedin-in"></i> LinkedIn</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="creator-network-input" value="x">
+                                    <span><strong>X</strong> X / Twitter</span>
+                                </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="pricing-showcase-card pricing-accent-standard">
-                            <div class="pricing-card-top">
-                                <h3>Creator Protect</h3>
-                                <p>Protección reforzada para creadores que dependen de su perfil para colaborar o vender.</p>
-                                <div class="pricing-amount">29 €<span>/ mes</span></div>
-                                <div class="pricing-saving">Más control sobre acceso y recuperación</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
-                            </div>
-                            <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Hardening de cuenta</div>
-                                <div><i class="fa fa-check-circle"></i> Revisión de correo y MFA</div>
-                                <div><i class="fa fa-check-circle"></i> Backup básico de continuidad</div>
-                                <div><i class="fa fa-times"></i> Soporte 24/7</div>
-                            </div>
+
+                        <div class="creator-control-block">
+                            <label for="creatorFollowers" class="creator-control-label">Número aproximado de seguidores</label>
+                            <select id="creatorFollowers" class="creator-select">
+                                <option value="nano">Hasta 10.000</option>
+                                <option value="growth">10.000 - 50.000</option>
+                                <option value="pro">50.000 - 250.000</option>
+                                <option value="major">250.000 - 1.000.000</option>
+                                <option value="elite">Más de 1.000.000</option>
+                            </select>
+                            <p class="creator-helper-copy" id="creatorPricingSummary">
+                                Estimación base para una cuenta principal con exposición media.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="pricing-showcase-card pricing-accent-advanced">
-                            <div class="pricing-card-top">
-                                <div class="pricing-badge">Popular</div>
-                                <h3>Creator Plus</h3>
-                                <p>Para creadores con ingresos recurrentes que necesitan vigilancia y ayuda rápida.</p>
-                                <div class="pricing-amount">59 €<span>/ mes</span></div>
-                                <div class="pricing-saving">Más tranquilidad operativa y respuesta rápida</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+
+                    <div class="row pricing-card-grid creator-pricing-results">
+                        <div class="col-lg-4 mb-4">
+                            <div class="pricing-showcase-card pricing-accent-basic">
+                                <div class="pricing-card-top">
+                                    <h3>Configuración inicial</h3>
+                                    <p>Pago único para ordenar accesos, hardening, roles y base segura de tus cuentas.</p>
+                                    <div class="pricing-amount" id="creatorSetupPrice">145 €<span>/ pago único</span></div>
+                                    <div class="pricing-saving" id="creatorSetupNote">Ideal para dejar todo bien configurado desde el principio</div>
+                                    <a href="contact.html" class="btn pricing-card-btn pricing-contact-link creator-contact-link" data-segment="creadores" data-service="setup" data-period="pago unico">Solicitar setup</a>
+                                </div>
+                                <div class="pricing-card-features">
+                                    <div><i class="fa fa-check-circle"></i> Revisión de accesos y roles</div>
+                                    <div><i class="fa fa-check-circle"></i> Hardening y MFA / 2FA</div>
+                                    <div><i class="fa fa-check-circle"></i> Ajustes iniciales por red</div>
+                                    <div><i class="fa fa-check-circle"></i> Prioridades de mejora</div>
+                                </div>
                             </div>
-                            <div class="pricing-card-features">
-                                <div><i class="fa fa-check-circle"></i> Todo lo anterior</div>
-                                <div><i class="fa fa-check-circle"></i> Monitorización de riesgo</div>
-                                <div><i class="fa fa-check-circle"></i> Ayuda ante incidentes</div>
-                                <div><i class="fa fa-check-circle"></i> Priorización por impacto</div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="pricing-showcase-card pricing-accent-standard">
+                                <div class="pricing-card-top">
+                                    <h3>Mantenimiento mensual</h3>
+                                    <p>Monitorización, alertas, backups, visibilidad y soporte operativo recurrente.</p>
+                                    <div class="pricing-amount" id="creatorMonthlyPrice">45 €<span>/ mes</span></div>
+                                    <div class="pricing-saving" id="creatorMonthlyNote">Pensado para mantener control y continuidad. Requiere configuración inicial</div>
+                                    <a href="contact.html" class="btn pricing-card-btn pricing-contact-link creator-contact-link" data-segment="creadores" data-service="mantenimiento" data-period="mes">Solicitar mantenimiento</a>
+                                </div>
+                                <div class="pricing-card-features">
+                                    <div><i class="fa fa-check-circle"></i> Monitorización y alertas</div>
+                                    <div><i class="fa fa-check-circle"></i> Seguimiento de riesgos</div>
+                                    <div><i class="fa fa-check-circle"></i> Backups y continuidad</div>
+                                    <div><i class="fa fa-check-circle"></i> Soporte periódico</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="pricing-showcase-card pricing-accent-advanced">
+                                <div class="pricing-card-top">
+                                    <div class="pricing-badge">Crítico</div>
+                                    <h3>Recuperación de cuenta robada</h3>
+                                    <p>Intervención puntual cuando necesitas recuperar acceso, datos y capacidad operativa.</p>
+                                    <div class="pricing-amount" id="creatorRecoveryPrice">800 €<span>/ incidente</span></div>
+                                    <div class="pricing-saving" id="creatorRecoveryNote">La recuperación requiere configuración inicial y sube con la complejidad</div>
+                                    <a href="contact.html" class="btn pricing-card-btn pricing-contact-link creator-contact-link" data-segment="creadores" data-service="recuperacion" data-period="incidente">Solicitar recuperación</a>
+                                </div>
+                                <div class="pricing-card-features">
+                                    <div><i class="fa fa-check-circle"></i> Análisis del incidente</div>
+                                    <div><i class="fa fa-check-circle"></i> Recuperación guiada</div>
+                                    <div><i class="fa fa-check-circle"></i> Reordenación posterior</div>
+                                    <div><i class="fa fa-check-circle"></i> Evidencias y escalado</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -201,15 +309,69 @@
             </div>
 
             <div class="pricing-panel" data-pricing-panel="agencias">
+                <div class="creator-pricing-builder business-pricing-builder" data-pricing-scope="agencias">
+                    <div class="creator-pricing-intro">
+                        <h3>Cuéntanos el alcance de tu agencia</h3>
+                        <p>
+                            Marca las redes y el volumen de seguidores de las cuentas que gestionáis para que podamos orientaros hacia el producto adecuado.
+                        </p>
+                    </div>
+
+                    <div class="creator-pricing-controls">
+                        <div class="creator-control-block">
+                            <span class="creator-control-label">Redes sociales a proteger</span>
+                            <div class="creator-network-grid">
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="instagram" checked>
+                                    <span><i class="fab fa-instagram"></i> Instagram</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="tiktok">
+                                    <span><i class="fab fa-tiktok"></i> TikTok</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="youtube">
+                                    <span><i class="fab fa-youtube"></i> YouTube</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="whatsapp">
+                                    <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="linkedin">
+                                    <span><i class="fab fa-linkedin-in"></i> LinkedIn</span>
+                                </label>
+                                <label class="creator-network-option">
+                                    <input type="checkbox" class="business-network-input" data-business-segment="agencias" value="x">
+                                    <span><strong>X</strong> X / Twitter</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="creator-control-block">
+                            <label for="agencyFollowers" class="creator-control-label">Volumen aproximado de seguidores</label>
+                            <select id="agencyFollowers" class="creator-select business-followers-select" data-business-segment="agencias">
+                                <option value="nano">Hasta 10.000</option>
+                                <option value="growth">10.000 - 50.000</option>
+                                <option value="pro">50.000 - 250.000</option>
+                                <option value="major">250.000 - 1.000.000</option>
+                                <option value="elite">Más de 1.000.000</option>
+                            </select>
+                            <p class="creator-helper-copy" id="agencyPricingSummary">
+                                En agencias el precio se define según cartera, criticidad y número de gestores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row pricing-card-grid">
                     <div class="col-lg-4 mb-4">
                         <div class="pricing-showcase-card pricing-accent-basic">
                             <div class="pricing-card-top">
                                 <h3>Agency Base</h3>
                                 <p>Para agencias que quieren ordenar accesos y reducir el riesgo operativo con clientes.</p>
-                                <div class="pricing-amount">49 €<span>/ mes</span></div>
                                 <div class="pricing-saving">Pensado para entornos con varios roles</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=agencias&service=agency%20base&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency base" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Revisión de roles y accesos</div>
@@ -224,9 +386,8 @@
                             <div class="pricing-card-top">
                                 <h3>Agency Protect</h3>
                                 <p>Para agencias que gestionan varias cuentas críticas y necesitan visibilidad continua.</p>
-                                <div class="pricing-amount">99 €<span>/ mes</span></div>
                                 <div class="pricing-saving">Más control sobre equipo, clientes y activos</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=agencias&service=agency%20protect&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency protect" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Todo lo del plan base</div>
@@ -242,9 +403,8 @@
                                 <div class="pricing-badge">Popular</div>
                                 <h3>Agency Advanced</h3>
                                 <p>Para agencias con alta exposición, múltiples gestores y necesidad de soporte ágil.</p>
-                                <div class="pricing-amount">149 €<span>/ mes</span></div>
                                 <div class="pricing-saving">Escala con clientes y cuentas prioritarias</div>
-                                <a href="contact.html" class="btn pricing-card-btn">Empieza ahora</a>
+                                <a href="contact.html?segment=agencias&service=agency%20advanced&price=A%20medida&period=mes&requires_setup=si" class="btn pricing-card-btn pricing-contact-link" data-segment="agencias" data-service="agency advanced" data-price="A medida" data-period="mes" data-requires-setup="si">Empieza ahora</a>
                             </div>
                             <div class="pricing-card-features">
                                 <div><i class="fa fa-check-circle"></i> Todo lo anterior</div>
