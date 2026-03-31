@@ -4877,6 +4877,18 @@ input[type="button"].btn-block {
     margin-right:6px;
 }
 
+.contact-social-link .fa-whatsapp{
+    color:#25d366;
+}
+
+.contact-social-link .fa-instagram{
+    color:#e4405f;
+}
+
+.contact-social-link .fa-linkedin-in{
+    color:#0a66c2;
+}
+
 .contact-hero-section{
     padding:90px 0 40px;
     background:
