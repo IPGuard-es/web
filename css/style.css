@@ -4045,8 +4045,9 @@ input[type="button"].btn-block {
     justify-content:center;
     gap:10px;
     margin:0 auto 38px;
-    padding:10px;
-    max-width:680px;
+    padding:8px;
+    width:100%;
+    max-width:460px;
     border:1px solid rgba(22, 32, 47, 0.10);
     border-radius:22px;
     background:linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%);
@@ -4056,7 +4057,7 @@ input[type="button"].btn-block {
 .pricing-segment-tab{
     border:none;
     background:rgba(255,255,255,0.72);
-    padding:13px 24px;
+    padding:13px 26px;
     border-radius:14px;
     color:#384251;
     font-size:15px;

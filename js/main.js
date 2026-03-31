@@ -166,7 +166,11 @@
         var setupPrice;
         var monthlyPrice;
         var recoveryPrice;
+        var rawSetupPrice;
+        var rawMonthlyPrice;
+        var rawRecoveryPrice;
         var networkSummary;
+        var floorMessage = '';
 
         if (!selectedNetworks.length) {
             networkWeight = 1;
@@ -180,16 +184,24 @@
             networkSummary = formatNetworkList(selectedNetworks);
         }
 
-        setupPrice = Math.max(145, roundToStep(120 * networkWeight * selectedTier.multiplier, 5));
-        monthlyPrice = Math.max(45, roundToStep(37 * networkWeight * selectedTier.multiplier, 5));
-        recoveryPrice = Math.max(800, roundToStep(800 * networkWeight * selectedTier.multiplier, 10));
+        rawSetupPrice = roundToStep(120 * networkWeight * selectedTier.multiplier, 5);
+        rawMonthlyPrice = roundToStep(37 * networkWeight * selectedTier.multiplier, 5);
+        rawRecoveryPrice = roundToStep(800 * networkWeight * selectedTier.multiplier, 10);
+
+        setupPrice = Math.max(145, rawSetupPrice);
+        monthlyPrice = Math.max(45, rawMonthlyPrice);
+        recoveryPrice = Math.max(800, rawRecoveryPrice);
+
+        if (rawSetupPrice < 145 || rawMonthlyPrice < 45 || rawRecoveryPrice < 800) {
+            floorMessage = ' Con los minimos definidos, algunas redes pueden compartir el mismo precio final en tramos bajos.';
+        }
 
         $('#creatorSetupPrice').html(formatEuro(setupPrice) + '<span>/ pago unico</span>');
         $('#creatorMonthlyPrice').html(formatEuro(monthlyPrice) + '<span>/ mes</span>');
         $('#creatorRecoveryPrice').html(formatEuro(recoveryPrice) + '<span>/ incidente</span>');
 
         $('#creatorPricingSummary').text(
-            'Estimacion para ' + networkLabel + ' y un perfil con ' + selectedTier.label + '. A mayor exposicion, mayor esfuerzo de configuracion, seguimiento y respuesta.'
+            'Estimacion para ' + networkLabel + ' y un perfil con ' + selectedTier.label + '. A mayor exposicion, mayor esfuerzo de configuracion, seguimiento y respuesta.' + floorMessage
         );
         $('#creatorSetupNote').text(
             'Incluye hardening, orden de accesos y configuracion inicial segun las redes que hayas marcado.'
@@ -305,7 +317,7 @@
             );
 
             if (iframe && iframe.dataset.baseSrc) {
-                iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeYsfFoKC0K_6ON_bc7iuPO5HRndD-es0oaL2bMt7ouCeaTdg/viewform?embedded=true&usp=pp_url&entry.271351298=' + encodeURIComponent(budgetText);
+                iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeYsfFoKC0K_6ON_bc7iuPO5HRndD-es0oaL2bMt7ouCeaTdg/viewform?usp=pp_url&entry.271351298=' + encodeURIComponent(budgetText) + '&embedded=true&budget_ts=' + Date.now();
             }
         }
     }
