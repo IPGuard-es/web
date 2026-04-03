@@ -4404,6 +4404,11 @@ input[type="button"].btn-block {
     text-align:center;
     color:rgba(255,255,255,0.58);
     font-size:14px;
+    line-height:1.9;
+}
+
+.site-footer-bottom a{
+    margin:0 6px;
 }
 
 .social-x-icon{
@@ -11450,4 +11455,93 @@ body {
 h1, h2, h3, h4, h5, h6,
 .display-1, .display-2, .display-3, .display-4 {
   font-family: "Le Jour Serif", "PT Serif", serif !important;
+}
+
+.legal-page{
+  background:#f7f4ef;
+  color:#2a2521;
+}
+
+.legal-nav-shell{
+  padding-top:18px;
+}
+
+.legal-nav-actions{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.legal-hero{
+  padding:56px 0 20px;
+}
+
+.legal-kicker{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#8b7868;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.legal-hero h1{
+  margin-bottom:12px;
+}
+
+.legal-hero p{
+  max-width:720px;
+  color:#6f6760;
+  line-height:1.7;
+}
+
+.legal-content{
+  padding:0 0 72px;
+}
+
+.legal-content-shell{
+  max-width:900px;
+  padding:32px 34px;
+  border:1px solid rgba(58,55,54,0.08);
+  border-radius:24px;
+  background:rgba(255,255,255,0.9);
+  box-shadow:0 18px 40px rgba(34,30,28,0.06);
+}
+
+.legal-content-shell h2{
+  margin-top:26px;
+  margin-bottom:10px;
+  font-size:28px;
+}
+
+.legal-content-shell h2:first-of-type{
+  margin-top:0;
+}
+
+.legal-content-shell p{
+  margin-bottom:16px;
+  line-height:1.8;
+  color:#453f3a;
+}
+
+.legal-note{
+  margin-top:26px;
+  color:#7f756d;
+  font-size:14px;
+}
+
+@media (max-width: 767.98px){
+  .legal-nav-actions{
+    gap:10px;
+  }
+
+  .legal-content-shell{
+    padding:24px 20px;
+    border-radius:18px;
+  }
+
+  .legal-content-shell h2{
+    font-size:24px;
+  }
 }
