@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://ipguard.es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/"/>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/producto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/producto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/producto.html"/>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/funcionalidades.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/funcionalidades.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/funcionalidades.html"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/pricing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/pricing.html"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/contact.html"/>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://ipguard.es/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/"/>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/en/producto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/producto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/producto.html"/>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/en/funcionalidades.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/funcionalidades.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/funcionalidades.html"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/en/pricing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/pricing.html"/>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ipguard.es/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ipguard.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ipguard.es/en/contact.html"/>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
