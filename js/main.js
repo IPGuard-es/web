@@ -102,7 +102,11 @@
         youtube: 1.20,
         whatsapp: 1.20,
         linkedin: 1.10,
-        x: 1.00
+        x: 1.00,
+        twitch: 1.15,
+        web: 1.10,
+        email: 0.90,
+        telegram: 0.90
     };
 
     var creatorNetworkNames = {
@@ -111,7 +115,11 @@
         youtube: 'YouTube',
         whatsapp: 'WhatsApp',
         linkedin: 'LinkedIn',
-        x: 'X / Twitter'
+        x: 'X / Twitter',
+        twitch: 'Twitch',
+        web: 'Página web',
+        email: 'Email',
+        telegram: 'Telegram'
     };
 
     var creatorFollowerTiers = {
@@ -215,29 +223,29 @@
         $('#creatorRecoveryPrice').html(formatEuro(recoveryPrice) + '<span>/ incidente</span>');
 
         $('#creatorPricingSummary').text(
-            'Estimacion para ' + networkLabel + ' y un perfil con ' + selectedTier.label + '. A mayor exposicion, mayor esfuerzo de configuracion, seguimiento y respuesta.' + floorMessage
+            'Estimacion para ' + networkLabel + ' y un perfil con ' + selectedTier.label + '. Cuantas mas cuentas y mas seguidores, mas trabajo de proteccion, vigilancia y recuperacion.' + floorMessage
         );
         $('#creatorSetupNote').text(
-            'Incluye hardening, orden de accesos y configuracion inicial segun las redes que hayas marcado. IVA incluido.'
+            'Incluye blindaje de cuentas, orden de accesos y configuracion inicial segun las redes que hayas marcado. IVA incluido.'
         );
         $('#creatorMonthlyNote').text(
-            'Calculado con monitorizacion, alertas, backups y mantenimiento continuo. Requiere configuracion inicial. IVA incluido.'
+            'Incluye vigilancia 24/7, alertas, copias de seguridad y mantenimiento continuo. Requiere configuracion inicial. IVA incluido.'
         );
         $('#creatorRecoveryNote').text(
-            'La recuperacion depende del alcance y la criticidad de la cuenta. Requiere configuracion inicial. IVA incluido.'
+            'La recuperacion depende del tipo de ataque y la importancia de la cuenta. Requiere configuracion inicial. IVA incluido.'
         );
 
         $('.creator-contact-link[data-service="setup"]').attr(
             'href',
-            'contact.html?segment=creadores&service=setup&price=' + encodeURIComponent(formatEuroText(setupPrice)) + '&period=pago%20unico&followers=' + encodeURIComponent(selectedTier.label) + '&networks=' + encodeURIComponent(networkSummary)
+            'https://auth.ipguard.es/authorize?client_id=7nKxsVALb0CtAvOTXNwfVKkFffywM8T3&redirect_uri=https://ipguardaccess.cloudflareaccess.com/cdn-cgi/access/callback&response_type=code&scope=openid%20email%20profile&screen_hint=signup'
         );
         $('.creator-contact-link[data-service="mantenimiento"]').attr(
             'href',
-            'contact.html?segment=creadores&service=mantenimiento&price=' + encodeURIComponent(formatEuroText(monthlyPrice)) + '&period=mes&followers=' + encodeURIComponent(selectedTier.label) + '&networks=' + encodeURIComponent(networkSummary) + '&requires_setup=si'
+            'https://auth.ipguard.es/authorize?client_id=7nKxsVALb0CtAvOTXNwfVKkFffywM8T3&redirect_uri=https://ipguardaccess.cloudflareaccess.com/cdn-cgi/access/callback&response_type=code&scope=openid%20email%20profile&screen_hint=signup'
         );
         $('.creator-contact-link[data-service="recuperacion"]').attr(
             'href',
-            'contact.html?segment=creadores&service=recuperacion&price=' + encodeURIComponent(formatEuroText(recoveryPrice)) + '&period=incidente&followers=' + encodeURIComponent(selectedTier.label) + '&networks=' + encodeURIComponent(networkSummary) + '&requires_setup=si'
+            'https://auth.ipguard.es/authorize?client_id=7nKxsVALb0CtAvOTXNwfVKkFffywM8T3&redirect_uri=https://ipguardaccess.cloudflareaccess.com/cdn-cgi/access/callback&response_type=code&scope=openid%20email%20profile&screen_hint=signup'
         );
     }
 
@@ -255,27 +263,11 @@
         }
 
         $(helperId).text(
-            'Solicitud a medida para ' + networkSummary + ' y un perfil con ' + selectedTier.label + '. El equipo comercial ajustara el alcance segun criticidad, accesos y operativa.'
+            'Solicitud a medida para ' + networkSummary + ' y un perfil con ' + selectedTier.label + '. Nuestro equipo te preparara una propuesta segun tus cuentas, equipo y nivel de riesgo.'
         );
 
         $('.pricing-contact-link[data-segment="' + segment + '"]').each(function () {
-            var service = $(this).data('service');
-            var period = $(this).data('period') || 'a medida';
-            var requiresSetup = $(this).data('requires-setup');
-            var href =
-                'contact.html?segment=' + encodeURIComponent(segment) +
-                '&service=' + encodeURIComponent(service) +
-                '&product=' + encodeURIComponent(service) +
-                '&price=' + encodeURIComponent('A medida') +
-                '&period=' + encodeURIComponent(period) +
-                '&followers=' + encodeURIComponent(selectedTier.label) +
-                '&networks=' + encodeURIComponent(networkSummary);
-
-            if (requiresSetup) {
-                href += '&requires_setup=si';
-            }
-
-            $(this).attr('href', href);
+            $(this).attr('href', 'https://auth.ipguard.es/authorize?client_id=7nKxsVALb0CtAvOTXNwfVKkFffywM8T3&redirect_uri=https://ipguardaccess.cloudflareaccess.com/cdn-cgi/access/callback&response_type=code&scope=openid%20email%20profile&screen_hint=signup');
         });
     }
 
