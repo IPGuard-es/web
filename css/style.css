@@ -4352,6 +4352,278 @@ input[type="button"].btn-block {
     color:#9b7b57;
 }
 
+/* ── New pricing extras (volume discounts, SLA, platforms, why) ── */
+.pricing-card-featured{
+    transform:scale(1.03);
+    border:2px solid #9b7b57 !important;
+    box-shadow:0 24px 60px rgba(155, 123, 87, 0.20) !important;
+    position:relative;
+    z-index:2;
+}
+
+.pricing-badge-popular{
+    background:#9b7b57;
+    color:#fff !important;
+    border-color:#9b7b57 !important;
+}
+
+.pricing-extra-block{
+    margin-top:64px;
+    padding:48px 36px;
+    background:#fff;
+    border:1px solid #e5ddd3;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(26,26,26,0.04);
+}
+
+.pricing-extra-block h2{
+    font-family:"PT Serif", serif;
+    color:#171412;
+    font-size:clamp(28px, 3vw, 40px);
+}
+
+/* Volume discounts */
+.pricing-volume-grid{
+    margin:0;
+}
+
+.pricing-volume-card{
+    background:#f7f3ec;
+    border:1px solid #e5ddd3;
+    border-radius:14px;
+    padding:24px 16px;
+    text-align:center;
+    transition:all .25s ease;
+}
+
+.pricing-volume-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(155, 123, 87, 0.15);
+}
+
+.pricing-volume-card-best{
+    background:linear-gradient(135deg, #171412, #2a2422);
+    border-color:#171412;
+    color:#f5efe6;
+}
+
+.pricing-volume-card-best .pricing-volume-num,
+.pricing-volume-card-best .pricing-volume-label{
+    color:#f5efe6;
+}
+
+.pricing-volume-card-best .pricing-volume-discount{
+    color:#e5ddd3;
+}
+
+.pricing-volume-num{
+    font-family:"PT Serif", serif;
+    font-size:48px;
+    font-weight:800;
+    line-height:1;
+    color:#171412;
+    margin-bottom:4px;
+}
+
+.pricing-volume-label{
+    font-size:14px;
+    color:#5a534d;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.pricing-volume-discount{
+    display:inline-block;
+    background:#9b7b57;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:14px;
+}
+
+/* SLA table */
+.pricing-sla-table-wrap{
+    overflow-x:auto;
+}
+
+.pricing-sla-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+.pricing-sla-table th{
+    background:#171412;
+    color:#f5efe6;
+    padding:16px 20px;
+    text-align:left;
+    font-weight:700;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
+
+.pricing-sla-table th:first-child{
+    border-radius:10px 0 0 0;
+}
+
+.pricing-sla-table th:last-child{
+    border-radius:0 10px 0 0;
+}
+
+.pricing-sla-table td{
+    padding:18px 20px;
+    border-bottom:1px solid #f0eae0;
+    color:#171412;
+    font-size:15px;
+}
+
+.pricing-sla-table td:first-child strong{
+    display:block;
+    margin-bottom:2px;
+}
+
+.pricing-sla-table td:first-child span{
+    font-size:12px;
+    color:#8a847f;
+}
+
+.pricing-sla-table td:not(:first-child){
+    font-weight:700;
+    color:#9b7b57;
+}
+
+.pricing-sla-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.pricing-sla-table tbody tr:hover{
+    background:#faf6ef;
+}
+
+/* Platforms grid */
+.pricing-platforms-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.pricing-platform-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    background:#f7f3ec;
+    border:1px solid #e5ddd3;
+    padding:32px 20px;
+    border-radius:16px;
+    transition:all .25s ease;
+}
+
+.pricing-platform-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(155, 123, 87, 0.15);
+    border-color:#9b7b57;
+}
+
+.pricing-platform-item i,
+.pricing-x-icon{
+    font-size:2.4rem;
+    line-height:1;
+}
+
+.pricing-x-icon{
+    font-family:"PT Serif", serif;
+    color:#171412;
+    font-weight:700;
+}
+
+.pricing-platform-item span:not(.pricing-x-icon){
+    font-weight:600;
+    color:#171412;
+    font-size:14px;
+    text-align:center;
+}
+
+@media (max-width: 767px){
+    .pricing-platforms-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:14px;
+    }
+    .pricing-platform-item{
+        padding:24px 14px;
+    }
+    .pricing-platform-item i,
+    .pricing-x-icon{
+        font-size:2rem;
+    }
+}
+
+/* Why IPGuard */
+.pricing-why-grid{
+    margin:0;
+}
+
+.pricing-why-item{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    padding:20px;
+    background:#f7f3ec;
+    border:1px solid #e5ddd3;
+    border-radius:14px;
+    height:100%;
+}
+
+.pricing-why-item > i{
+    font-size:1.5rem;
+    color:#9b7b57;
+    flex-shrink:0;
+    margin-top:4px;
+    width:30px;
+    text-align:center;
+}
+
+.pricing-why-item strong{
+    display:block;
+    color:#171412;
+    margin-bottom:6px;
+    font-size:16px;
+}
+
+.pricing-why-item p{
+    color:#5a534d;
+    font-size:14px;
+    line-height:1.55;
+    margin:0;
+}
+
+.pricing-notes{
+    margin-top:48px;
+    padding:24px;
+    color:#8a847f;
+    font-size:14px;
+}
+
+.pricing-notes p{
+    margin:0;
+}
+
+@media (max-width: 991px){
+    .pricing-card-featured{
+        transform:none;
+    }
+    .pricing-extra-block{
+        padding:36px 20px;
+    }
+}
+
 .pricing-card-features i.fa-times{
     margin-top:4px;
     color:#b3bac5;

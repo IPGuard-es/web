@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"</div>$\\\\|</section>\\\\|</body>\\\\|footer\" \"c:/Users/Jeora/Documents/GitHub/web/pricing.html\")"
+    ]
+  }
+}
