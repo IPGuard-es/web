@@ -4073,6 +4073,61 @@ input[type="button"].btn-block {
     line-height:1.7;
 }
 
+/* Pricing ticker banner */
+.pricing-ticker{
+    background:#171412;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:10px 0;
+}
+
+.pricing-ticker-track{
+    display:inline-flex;
+    animation:tickerScroll 40s linear infinite;
+}
+
+.pricing-ticker-track span{
+    display:inline-flex;
+    align-items:center;
+    padding:0 28px;
+    color:#f5efe6;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.02em;
+}
+
+.pricing-ticker-track span::before{
+    content:"★";
+    color:#9b7b57;
+    margin-right:10px;
+    font-size:10px;
+}
+
+@keyframes tickerScroll{
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-50%); }
+}
+
+.pricing-ticker:hover .pricing-ticker-track{
+    animation-play-state:paused;
+}
+
+.pricing-block-header{
+    text-align:center;
+    margin-bottom:32px;
+}
+
+.pricing-block-header h2{
+    font-family:"PT Serif", serif;
+    color:#171412;
+    font-size:clamp(24px, 3vw, 36px);
+    margin-bottom:0;
+}
+
+.pricing-block-header h6{
+    margin-bottom:10px;
+}
+
 .pricing-segment-tabs{
     display:flex;
     flex-wrap:wrap;
@@ -4382,66 +4437,116 @@ input[type="button"].btn-block {
     font-size:clamp(28px, 3vw, 40px);
 }
 
-/* Volume discounts */
-.pricing-volume-grid{
-    margin:0;
+/* Volume discounts banner */
+.pricing-volume-banner{
+    background:linear-gradient(135deg, #171412, #2a2422);
+    border-radius:20px;
+    padding:40px 44px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-top:50px;
+    margin-bottom:20px;
 }
 
-.pricing-volume-card{
-    background:#f7f3ec;
-    border:1px solid #e5ddd3;
+.pricing-volume-banner-left{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    flex:1;
+}
+
+.pricing-volume-banner-left > i{
+    font-size:2.4rem;
+    color:#9b7b57;
+    margin-top:4px;
+    flex-shrink:0;
+}
+
+.pricing-volume-banner-left h3{
+    color:#f5efe6;
+    font-family:"PT Serif", serif;
+    font-size:clamp(20px, 2.5vw, 28px);
+    margin-bottom:8px;
+    line-height:1.2;
+}
+
+.pricing-volume-banner-left p{
+    color:rgba(245, 239, 230, .6);
+    margin:0;
+    font-size:15px;
+}
+
+.pricing-volume-banner-cards{
+    display:flex;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.pricing-volume-pill{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
     border-radius:14px;
-    padding:24px 16px;
+    padding:18px 20px;
     text-align:center;
+    min-width:80px;
     transition:all .25s ease;
 }
 
-.pricing-volume-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(155, 123, 87, 0.15);
+.pricing-volume-pill:hover{
+    background:rgba(255,255,255,.14);
+    transform:translateY(-3px);
 }
 
-.pricing-volume-card-best{
-    background:linear-gradient(135deg, #171412, #2a2422);
-    border-color:#171412;
-    color:#f5efe6;
+.pricing-volume-pill-best{
+    background:rgba(155, 123, 87, .2);
+    border-color:#9b7b57;
 }
 
-.pricing-volume-card-best .pricing-volume-num,
-.pricing-volume-card-best .pricing-volume-label{
-    color:#f5efe6;
-}
-
-.pricing-volume-card-best .pricing-volume-discount{
-    color:#e5ddd3;
-}
-
-.pricing-volume-num{
+.pricing-volume-pill-num{
+    display:block;
     font-family:"PT Serif", serif;
-    font-size:48px;
+    font-size:28px;
     font-weight:800;
     line-height:1;
-    color:#171412;
-    margin-bottom:4px;
+    color:#f5efe6;
+    margin-bottom:2px;
 }
 
-.pricing-volume-label{
-    font-size:14px;
-    color:#5a534d;
+.pricing-volume-pill-label{
+    display:block;
+    font-size:11px;
+    color:rgba(245, 239, 230, .5);
     text-transform:uppercase;
     letter-spacing:.06em;
     font-weight:600;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
-.pricing-volume-discount{
+.pricing-volume-pill-pct{
     display:inline-block;
     background:#9b7b57;
     color:#fff;
-    padding:6px 14px;
+    padding:4px 12px;
     border-radius:8px;
     font-weight:700;
-    font-size:14px;
+    font-size:13px;
+}
+
+@media (max-width: 991px){
+    .pricing-volume-banner{
+        flex-direction:column;
+        padding:32px 28px;
+        text-align:center;
+    }
+    .pricing-volume-banner-left{
+        flex-direction:column;
+        align-items:center;
+    }
+    .pricing-volume-banner-cards{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 }
 
 /* SLA table */
