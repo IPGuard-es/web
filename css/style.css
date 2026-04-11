@@ -4079,28 +4079,31 @@ input[type="button"].btn-block {
     overflow:hidden;
     white-space:nowrap;
     padding:10px 0;
+    height:38px;
+    line-height:18px;
 }
 
 .pricing-ticker-track{
     display:inline-flex;
-    animation:tickerScroll 40s linear infinite;
+    flex-wrap:nowrap;
+    animation:tickerScroll 35s linear infinite;
 }
 
 .pricing-ticker-track span{
-    display:inline-flex;
-    align-items:center;
-    padding:0 28px;
+    display:inline-block;
+    white-space:nowrap;
+    padding:0 20px;
     color:#f5efe6;
     font-size:13px;
     font-weight:600;
     letter-spacing:.02em;
+    border-right:1px solid rgba(155,123,87,.3);
 }
 
 .pricing-ticker-track span::before{
-    content:"★";
+    content:"★ ";
     color:#9b7b57;
-    margin-right:10px;
-    font-size:10px;
+    font-size:9px;
 }
 
 @keyframes tickerScroll{
