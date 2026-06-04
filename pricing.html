@@ -265,5 +265,19 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- Auto-redirect to app if session is active on app.ipguard.es -->
+    <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        if (params.get("stay") === "1") return;
+        if (document.referrer.indexOf("app.ipguard.es") !== -1) return;
+        fetch("https://app.ipguard.es/api/appliance/device/session-status", { credentials: "include", cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) { if (d && d.authenticated) location.replace(d.app || "https://app.ipguard.es"); })
+          .catch(function () {});
+      } catch (e) {}
+    })();
+    </script>
 </body>
 </html>
