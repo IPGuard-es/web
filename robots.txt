@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ipguard.es/sitemap-index.xml

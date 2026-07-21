@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <circle cx="120" cy="120" r="120" fill="#0b0b0b"/>
+  <g transform="translate(15,60)" fill="#ffffff">
+    <polygon points="54,8 26,112 54,112" />
+    <path d="M64,8 H196 V40 H64 Z" />
+    <path d="M64,86 H196 V112 H64 Z" />
+    <path d="M178,8 H196 V112 H178 Z" />
+    <path d="M196,55 V71 H92 L78,63 L92,55 Z" />
+  </g>
+</svg>
