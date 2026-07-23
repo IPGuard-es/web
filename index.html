@@ -28,7 +28,7 @@
     --mark:#FFC94A;
     --mark-deep:#A87510;
     --red:#D8543E;
-    --maxw:1120px;
+    --maxw:1260px;
   }
   *{box-sizing:border-box}
   body{
@@ -40,16 +40,21 @@
   p{margin:0 0 1em}
   a{color:inherit}
   button{font-family:inherit}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  .sec{padding:92px 0}
-  @media(max-width:700px){.sec{padding:60px 0}}
-  .h2{font-size:clamp(29px,4.4vw,46px);max-width:19ch}
-  .sub{font-size:18.5px;max-width:54ch;margin-top:18px;color:#3C505F}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  @media(max-width:700px){.wrap{padding:0 22px}}
+  .sec{padding:108px 0}
+  @media(max-width:700px){.sec{padding:64px 0}}
+  /* Cabecera de sección: título a la izquierda, entradilla a la derecha (llena el ancho) */
+  .sec-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px 56px;align-items:end;margin-bottom:8px}
+  @media(max-width:820px){.sec-head{grid-template-columns:1fr;gap:14px}}
+  .sec-head .sub{margin-top:0}
+  .h2{font-size:clamp(30px,4.1vw,50px);max-width:24ch}
+  .sub{font-size:19px;max-width:56ch;margin-top:18px;color:#3C505F;line-height:1.5}
   .on-dark .sub{color:#A9C2D2}
   .eyebrow{
     font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
     text-transform:uppercase;color:var(--mark-deep);
-    display:flex;align-items:center;gap:10px;margin:0 0 20px;
+    display:flex;align-items:center;gap:10px;margin:0 0 16px;
   }
   .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;flex:none}
   .on-dark .eyebrow{color:var(--mark)}
@@ -522,9 +527,13 @@
 <!-- ============ SISTEMA / IPGUARD ============ -->
 <section class="sec" id="sistema" style="background:var(--paper-2)">
   <div class="wrap">
-    <p class="eyebrow">La plataforma</p>
-    <h2 class="h2">No empiezas de cero. Montamos sobre One.</h2>
-    <p class="sub"><b>One es nuestra plataforma</b>: más de 50 apps que ya funcionan y hablan entre ellas — ventas, facturación, proyectos, soporte, equipo, archivos y ciberseguridad. No la alquilamos a nadie, es nuestra. Por eso podemos construirte encima lo que tu negocio necesita y no existe en ningún programa.</p>
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">La plataforma</p>
+        <h2 class="h2">No empiezas de cero. Montamos sobre One.</h2>
+      </div>
+      <p class="sub"><b>One es nuestra plataforma</b>: más de 50 apps que ya funcionan y hablan entre ellas — ventas, facturación, proyectos, soporte, equipo, archivos y ciberseguridad. No la alquilamos a nadie, es nuestra. Por eso podemos construirte encima lo que tu negocio necesita y no existe en ningún programa.</p>
+    </div>
 
     <div class="mods-head">
       <span class="key"><i></i>Ya viene montado</span>
@@ -601,9 +610,13 @@
 <!-- ============ DETERMINISMO ============ -->
 <section class="sec blueprint on-dark" id="fiabilidad">
   <div class="wrap">
-    <p class="eyebrow">Por qué es fiable</p>
-    <h2 class="h2" style="color:#fff">La IA no hace el trabajo. Lo hace el sistema.</h2>
-    <p class="sub">Casi todo lo que pasa en una empresa son reglas, no criterio. Si están escritas, el sistema las ejecuta igual siempre. La IA se reserva para lo que de verdad necesita cabeza.</p>
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Por qué es fiable</p>
+        <h2 class="h2" style="color:#fff">La IA no hace el trabajo. Lo hace el sistema.</h2>
+      </div>
+      <p class="sub">Casi todo lo que pasa en una empresa son reglas, no criterio. Si están escritas, el sistema las ejecuta igual siempre. La IA se reserva para lo que de verdad necesita cabeza.</p>
+    </div>
 
     <div class="det-head">
       <div class="legend">
@@ -728,7 +741,7 @@
     <p class="eyebrow">Siguiente paso</p>
     <h2>Media hora de conversación y te digo si te aporta.</h2>
     <p class="sub" style="margin-bottom:32px">Si no lo veo claro, te lo digo y no perdemos el tiempo ninguno de los dos.</p>
-    <a class="btn" href="mailto:hola@ipguard.es?subject=Diagn%C3%B3stico&body=Empresa%3A%0ASector%3A%0APersonas%3A%0AHerramientas%20que%20us%C3%A1is%3A%0ALo%20que%20m%C3%A1s%20duele%20hoy%3A%0A">Escribir un correo</a>
+    <a class="btn" href="/cdn-cgi/l/email-protection#7c15121a133c150c1b091d0e1852190f430f091e16191f084138151d1b12593f4f593e4f0f08151f135a1e1318054139110c0e190f1d594f3d594c3d2f191f08130e594f3d594c3d2c190e0f13121d0f594f3d594c3d34190e0e1d11151912081d0f594e4c0d0919594e4c090f593f4f593d4d150f594f3d594c3d3013594e4c0d0919594e4c11593f4f593d4d0f594e4c1809191019594e4c141305594f3d594c3d">Escribir un correo</a>
     <div class="contact-list">
       <span><a href="tel:+34973266569">973 26 65 69</a></span>
       <span><a href="https://wa.me/34636224398?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20arquitectura%20de%20empresa.">WhatsApp 636 224 398</a></span>
@@ -740,7 +753,7 @@
 
 <footer><div class="wrap foot"><span>IPGuard — Arquitectura de empresa e IA aplicada</span><span>One, nuestra plataforma · <a href="https://app.ipguard.es">app.ipguard.es</a></span></div></footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   /* ---- PLANO ---- */
   var plan=document.getElementById('plan'),
