@@ -100,11 +100,7 @@
   .mobile-menu a{display:block;padding:12px 16px;border-radius:12px;font-size:15px;font-weight:600;color:rgba(16,24,32,.82)}
   .mobile-menu a:hover{background:rgba(255,255,255,.85);color:var(--ink)}
 
-  /* Rótulos gigantes por sección (blanco grabado, como /one). El título negro (.h2) se oculta: manda el blanco. */
-  .wm{position:absolute;left:50%;top:2px;transform:translateX(-50%);z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none;white-space:nowrap;font-family:"Futura","Jost",sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1;font-size:clamp(62px,15.5vw,188px);color:rgba(255,255,255,.9);text-shadow:0 22px 40px rgba(45,55,80,.14),0 2px 2px rgba(255,255,255,.6)}
-  section.blk{position:relative;overflow:hidden}
-  section.blk>.wrap{position:relative;z-index:1}
-  section.blk .h2{display:none}
+  /* Sin eyebrows verdes (petición) — manda el título en primer plano. */
   .eyebrow{display:none}
 
   /* HERO */
@@ -540,7 +536,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#056c6b636a456c7562706477612b6076"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="acc5c2cac3ecc5dccbd9cddec882c9df">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#cba2a5ada48ba2bbacbeaab9afe5aeb8"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="b8d1d6ded7f8d1c8dfcdd9cadc96ddcb">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -577,7 +573,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#620b0c040d220b1205170310064c0711"><span class="__cf_email__" data-cfemail="a2cbccc4cde2cbd2c5d7c3d0c68cc7d1">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#cfa6a1a9a08fa6bfa8baaebdabe1aabc"><span class="__cf_email__" data-cfemail="b8d1d6ded7f8d1c8dfcdd9cadc96ddcb">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -701,14 +697,6 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.14});
     reveals.forEach(function(el,i){el.dataset.d=(i%4)*80;io.observe(el)});
   } else { reveals.forEach(function(el){el.classList.add('in')}); }
-
-  /* ---- RÓTULOS POR SECCIÓN (marca de agua, como /one) ---- */
-  var WM=['MÉTODO','ARQUITECTURA','FIABLE','MCP','CONECTA','PLATAFORMA','CONTACTO','DUDAS'];
-  [].forEach.call(document.querySelectorAll('section.blk'),function(s,i){
-    if(!WM[i])return;
-    var w=document.createElement('div');w.className='wm';w.setAttribute('aria-hidden','true');w.textContent=WM[i];
-    s.insertBefore(w,s.firstChild);
-  });
 
   /* ---- BARRA /one: scroll-spy + menú móvil ---- */
   var nlinks=[].slice.call(document.querySelectorAll('.nav-pill a[data-target]'));
