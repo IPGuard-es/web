@@ -317,24 +317,8 @@
   </div>
 </section>
 
-<!-- BANDA DE CIFRAS -->
-<section style="padding:6px 0 10px">
-  <div class="wrap">
-    <div class="facts card" id="facts"></div>
-  </div>
-</section>
-
-<!-- PUNTO DE PARTIDA -->
-<section class="blk" style="padding-top:80px">
-  <div class="wrap">
-    <p class="eyebrow">El punto de partida</p>
-    <h2 class="h2" style="max-width:20ch">¿Has dicho alguna de estas este mes?</h2>
-    <div class="chips" id="chips"></div>
-  </div>
-</section>
-
 <!-- QUE HACEMOS -->
-<section id="que-hacemos" class="blk" style="padding-top:20px">
+<section id="que-hacemos" class="blk" style="padding-top:64px">
   <div class="wrap">
     <p class="eyebrow">Qué hacemos</p>
     <h2 class="h2" style="max-width:18ch">Estrategia primero, sistema después.</h2>
@@ -384,10 +368,6 @@
       <p class="eyebrow">Por qué acierta más y cuesta menos</p>
       <h2 class="h2" style="max-width:18ch">Casi todo son reglas. La IA solo entra donde hace falta cabeza.</h2>
       <p class="sub">Con la estructura montada, el sistema resuelve la mayoría —siempre igual y sin coste—. La IA recibe el dato exacto, no el archivo entero: acierta más y gasta menos.</p>
-      <div class="kit glass">
-        <div class="lab">Kit IA local</div>
-        <p>La IA corre dentro de tu oficina. Tus datos no salen y no pagas por uso.</p>
-      </div>
     </div>
     <div class="det-card card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -459,7 +439,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#066f686069466f766173677462286375"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="31585f575e71584156445043551f5442">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#e881868e87a881988f9d899a8cc68d9b"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="e58c8b838aa58c958290849781cb8096">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -487,7 +467,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#abc2c5cdc4ebc2dbccdecad9cf85ced8"><span class="__cf_email__" data-cfemail="93fafdf5fcd3fae3f4e6f2e1f7bdf6e0">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#442d2a222b042d3423312536206a2137"><span class="__cf_email__" data-cfemail="f49d9a929bb49d849381958690da9187">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -517,15 +497,6 @@
   nodes.forEach(function(n){n.querySelector('rect').style.transition='fill .6s,stroke .6s';n.style.transition='transform .9s cubic-bezier(.65,.02,.25,1)';});
   bH.onclick=function(){place(false)}; bD.onclick=function(){place(true)};
   place(reduce); if(!reduce) setTimeout(function(){place(true)},2200);
-
-  /* ---- FACTS ---- */
-  var FACTS=[['30 días','al primer resultado en uso'],['ISO · NIS2 · ENS · RGPD','cumplimiento de serie'],['Plataforma propia','construimos lo que no existe'],['IA local','tus datos no salen de tu oficina']];
-  $('#facts').innerHTML=FACTS.map(function(f){return '<div class="fact"><b>'+f[0]+'</b><span>'+f[1]+'</span></div>'}).join('');
-
-  /* ---- SIGNALS ---- */
-  var SIG=['«Se nos escapó una renovación.»','«El informe del mes lo monto a mano.»','«Cada uno saca un dato distinto.»','«Si falta Jordi, esto se para.»','«El pedido llega por WhatsApp y alguien lo pasa.»','«Pago nueve herramientas y sigo a mano.»'];
-  $('#chips').innerHTML=SIG.map(function(t){return '<button class="chip" type="button" aria-pressed="false"><span class="box">✓</span><span>'+t+'</span></button>'}).join('');
-  [].forEach.call(document.querySelectorAll('.chip'),function(c){c.onclick=function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')}});
 
   /* ---- STEPS ---- */
   var STEPS=[['01','Decidimos','Cómo tiene que funcionar tu empresa. Sacamos a la luz las reglas repartidas en la cabeza de tu gente y las dejamos escritas.'],['02','Montamos','El sistema que las sostiene: un sitio donde vive la verdad, con permisos, avisos y rastro, conectado a lo que ya usas.'],['03','Sostenemos','Formación, ajuste y alguien con nombre y contrato que responde cuando algo se rompe.']];
