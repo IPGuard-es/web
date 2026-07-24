@@ -127,11 +127,19 @@
 
   /* STEPS */
   .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:42px}
-  .step{padding:30px}
+  .step{padding:0;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease}
+  .step:hover{transform:translateY(-5px);box-shadow:0 30px 56px -30px rgba(16,24,32,.5)}
+  .step-viz{background:linear-gradient(180deg,#eef4f1 0%,#e3ede9 100%);padding:24px;border-bottom:1px solid var(--line)}
+  .step-viz svg{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 22px rgba(16,24,32,.1))}
+  .step-body{padding:24px 28px 30px}
   .step-h{display:flex;align-items:center;gap:12px}
-  .step-n{width:42px;height:42px;border-radius:11px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-family:"Futura","Jost",sans-serif;font-weight:700;font-size:17px}
+  .step-n{width:40px;height:40px;border-radius:11px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:"Futura","Jost",sans-serif;font-weight:700;font-size:16px}
   .step h3{font-size:21px;margin:0}
   .step p{font-size:15px;color:var(--muted);margin:16px 0 0}
+  /* entrada animada al entrar en pantalla */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
   /* ARQUITECTURA */
   .arch-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:42px}
@@ -322,7 +330,73 @@
   <div class="wrap">
     <p class="eyebrow">Qué hacemos</p>
     <h2 class="h2" style="max-width:18ch">Estrategia primero, sistema después.</h2>
-    <div class="grid3" id="steps"></div>
+    <div class="grid3">
+
+      <!-- 01 Decidimos: reglas escritas -->
+      <div class="step card reveal">
+        <div class="step-viz">
+          <svg viewBox="0 0 300 168" aria-hidden="true">
+            <rect x="14" y="16" width="272" height="136" rx="14" fill="#fff" stroke="rgba(16,24,32,.08)"/>
+            <rect x="40" y="40" width="200" height="10" rx="5" fill="#cdd9d3"/>
+            <rect x="40" y="60" width="150" height="10" rx="5" fill="#dbe4df"/>
+            <rect x="40" y="94" width="22" height="22" rx="6" fill="#101820"/>
+            <path d="M46 105 l4 4 L58 100" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="74" y="99" width="160" height="10" rx="5" fill="#101820"/>
+            <rect x="40" y="126" width="22" height="22" rx="6" fill="#101820"/>
+            <path d="M46 137 l4 4 L58 132" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="74" y="131" width="128" height="10" rx="5" fill="#101820"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <div class="step-h"><span class="step-n">01</span><h3>Decidimos</h3></div>
+          <p>Cómo tiene que funcionar tu empresa. Sacamos a la luz las reglas repartidas en la cabeza de tu gente y las dejamos escritas.</p>
+        </div>
+      </div>
+
+      <!-- 02 Montamos: núcleo montado -->
+      <div class="step card reveal">
+        <div class="step-viz">
+          <svg viewBox="0 0 300 168" aria-hidden="true">
+            <rect x="14" y="16" width="272" height="136" rx="14" fill="#fff" stroke="rgba(16,24,32,.08)"/>
+            <g stroke="#101820" stroke-width="1.8">
+              <line x1="150" y1="84" x2="80" y2="52"/><line x1="150" y1="84" x2="220" y2="52"/>
+              <line x1="150" y1="84" x2="80" y2="116"/><line x1="150" y1="84" x2="220" y2="116"/>
+            </g>
+            <g fill="#fff" stroke="#b3c1bc" stroke-width="1.8">
+              <circle cx="80" cy="52" r="13"/><circle cx="220" cy="52" r="13"/><circle cx="80" cy="116" r="13"/><circle cx="220" cy="116" r="13"/>
+            </g>
+            <rect x="126" y="70" width="48" height="28" rx="8" fill="#101820"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <div class="step-h"><span class="step-n">02</span><h3>Montamos</h3></div>
+          <p>El sistema que las sostiene: un sitio donde vive la verdad, con permisos, avisos y rastro, conectado a lo que ya usas.</p>
+        </div>
+      </div>
+
+      <!-- 03 Sostenemos: soporte con persona -->
+      <div class="step card reveal">
+        <div class="step-viz">
+          <svg viewBox="0 0 300 168" aria-hidden="true">
+            <rect x="14" y="16" width="272" height="136" rx="14" fill="#fff" stroke="rgba(16,24,32,.08)"/>
+            <circle cx="52" cy="56" r="18" fill="#e3ede9"/>
+            <circle cx="52" cy="50" r="7" fill="#8aa39a"/>
+            <path d="M39 69 a13 11 0 0 1 26 0 z" fill="#8aa39a"/>
+            <circle cx="65" cy="66" r="5" fill="#22a06b" stroke="#fff" stroke-width="2"/>
+            <rect x="84" y="46" width="118" height="10" rx="5" fill="#cdd9d3"/>
+            <rect x="84" y="64" width="80" height="9" rx="4.5" fill="#dbe4df"/>
+            <rect x="34" y="100" width="232" height="34" rx="10" fill="#eef4f1"/>
+            <circle cx="52" cy="117" r="5" fill="#22a06b"/>
+            <text x="66" y="121" fill="#101820" style="font-family:Montserrat,sans-serif;font-weight:600;font-size:12px">Disponible cuando algo se rompe</text>
+          </svg>
+        </div>
+        <div class="step-body">
+          <div class="step-h"><span class="step-n">03</span><h3>Sostenemos</h3></div>
+          <p>Formación, ajuste y alguien con nombre y contrato que responde cuando algo se rompe.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -399,15 +473,6 @@
   </div>
 </section>
 
-<!-- COMO TRABAJAMOS -->
-<section class="blk" style="padding-top:20px">
-  <div class="wrap">
-    <p class="eyebrow">Cómo trabajamos</p>
-    <h2 class="h2" style="max-width:18ch">Por fases. Sin compromisos largos.</h2>
-    <div class="grid3" id="fases"></div>
-  </div>
-</section>
-
 <!-- PLATAFORMA -->
 <section id="plataforma" class="blk" style="padding-top:20px">
   <div class="wrap">
@@ -439,7 +504,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#0c65626a634c657c6b796d7e6822697f"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="127b7c747d527b6275677360763c7761">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#7a13141c153a130a1d0f1b081e541f09"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="86efe8e0e9c6eff6e1f3e7f4e2a8e3f5">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -467,7 +532,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#70191e161f30190017051102145e1503"><span class="__cf_email__" data-cfemail="224b4c444d624b5245574350460c4751">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#6900070f062900190e1c081b0d470c1a"><span class="__cf_email__" data-cfemail="92fbfcf4fdd2fbe2f5e7f3e0f6bcf7e1">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -498,9 +563,12 @@
   bH.onclick=function(){place(false)}; bD.onclick=function(){place(true)};
   place(reduce); if(!reduce) setTimeout(function(){place(true)},2200);
 
-  /* ---- STEPS ---- */
-  var STEPS=[['01','Decidimos','Cómo tiene que funcionar tu empresa. Sacamos a la luz las reglas repartidas en la cabeza de tu gente y las dejamos escritas.'],['02','Montamos','El sistema que las sostiene: un sitio donde vive la verdad, con permisos, avisos y rastro, conectado a lo que ya usas.'],['03','Sostenemos','Formación, ajuste y alguien con nombre y contrato que responde cuando algo se rompe.']];
-  $('#steps').innerHTML=STEPS.map(function(s){return '<div class="step card"><div class="step-h"><span class="step-n">'+s[0]+'</span><h3>'+s[1]+'</h3></div><p>'+s[2]+'</p></div>'}).join('');
+  /* ---- ENTRADA ANIMADA (reveal al entrar en pantalla) ---- */
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.18});
+    reveals.forEach(function(el,i){el.dataset.d=(i%3)*90;io.observe(el)});
+  } else { reveals.forEach(function(el){el.classList.add('in')}); }
 
   /* ---- ARQUITECTURA PTS ---- */
   var APTS=['Conectar no es ordenar: la misma empresa se llama de tres formas hasta que alguien decide cuál es la buena.','Los procesos se pueden deshacer si uno falla a mitad.','Queda registrado quién hizo qué, cuándo y por orden de quién.'];
@@ -537,10 +605,6 @@
   ];
   var lg=LOGOS.concat(LOGOS);
   $('#logos').innerHTML=lg.map(function(s){return '<span class="logo">'+s+'</span>'}).join('');
-
-  /* ---- FASES ---- */
-  var FASES=[['FASE 1','Diagnóstico','Levantamos el mapa real: dónde están los datos, qué se hace a mano y cuánto cuesta.','Sesión de llamada'],['FASE 2','Implantación','Empezamos por lo que más duele. Sistema montado, datos limpios y equipo formado.','1 semana'],['FASE 3','Operación','Ajustes, procesos nuevos según creces y respuesta cuando algo falla.','Ilimitada']];
-  $('#fases').innerHTML=FASES.map(function(f){return '<div class="fase card"><div class="k">'+f[0]+'</div><h3>'+f[1]+'</h3><p>'+f[2]+'</p><div class="when">'+f[3]+'</div></div>'}).join('');
 
   /* ---- PLATAFORMA: apps reales (iconos Font Awesome + color de marca, como /one) ---- */
   var APPS=[
