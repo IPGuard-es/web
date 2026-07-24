@@ -77,18 +77,34 @@
   .btn-light:hover{background:#fff;border-color:rgba(16,24,32,.22)}
   .btn-sm{padding:10px 20px;font-size:14px}
 
-  /* HEADER */
-  header{position:sticky;top:0;z-index:50;background:rgba(242,246,244,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .nav{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:"Futura","Jost",sans-serif;font-weight:800;font-size:20px;color:var(--ink)}
-  .nav-links{display:flex;gap:26px;align-items:center;font-family:"Montserrat",sans-serif;font-size:14px;font-weight:600;color:var(--muted)}
-  .nav-links a:hover{color:var(--ink)}
-  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+  /* HEADER estilo /one: logo · pastilla de cristal centrada · Iniciar sesión / Registrarse */
+  header{position:sticky;top:0;z-index:50;padding:14px 0}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:"Montserrat",sans-serif}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Futura","Jost",sans-serif;font-weight:800;font-size:19px;color:var(--ink)}
+  .nav-pill{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.55);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(255,255,255,.6);box-shadow:0 12px 32px -16px rgba(45,55,80,.35);border-radius:999px;padding:6px}
+  .nav-pill a{font-size:14px;font-weight:600;color:rgba(16,24,32,.78);padding:9px 15px;border-radius:999px;transition:.18s}
+  .nav-pill a:hover{color:var(--ink);background:rgba(255,255,255,.7)}
+  .nav-pill a.active{background:var(--ink);color:#fff}
+  @media(max-width:980px){.nav-pill{display:none}}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .nav-right .login{font-size:14px;font-weight:600;color:rgba(16,24,32,.8);padding:10px 16px;border-radius:999px}
+  .nav-right .login:hover{color:var(--ink)}
+  @media(max-width:560px){.nav-right .login{display:none}}
+  .btn-reg{font-size:14px;font-weight:700;color:#2b3346;background:linear-gradient(180deg,#fff,#eef1f6);box-shadow:0 10px 24px -10px rgba(45,55,80,.45),inset 0 1px 0 #fff;border-radius:999px;padding:11px 20px}
+  .btn-reg:hover{background:linear-gradient(180deg,#fff,#e6eaf1)}
+  .menu-btn{display:none;width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.6);color:var(--ink);place-items:center;font-size:18px}
+  @media(max-width:980px){.menu-btn{display:grid}}
+  .mobile-menu{max-width:var(--maxw);margin:6px auto 0;padding:0 24px;display:none}
+  .mobile-menu.open{display:block}
+  .mobile-menu .inner{background:rgba(255,255,255,.72);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.6);border-radius:18px;padding:8px;box-shadow:0 20px 50px -20px rgba(45,55,80,.35)}
+  .mobile-menu a{display:block;padding:12px 16px;border-radius:12px;font-size:15px;font-weight:600;color:rgba(16,24,32,.82)}
+  .mobile-menu a:hover{background:rgba(255,255,255,.85);color:var(--ink)}
 
-  /* Rótulos gigantes por sección (marca de agua, como /one) */
-  .wm{position:absolute;left:50%;top:4px;transform:translateX(-50%);z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none;white-space:nowrap;font-family:"Futura","Jost",sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1;font-size:clamp(60px,15vw,178px);color:rgba(255,255,255,.72);text-shadow:0 18px 34px rgba(45,55,80,.16),0 2px 2px rgba(255,255,255,.55)}
+  /* Rótulos gigantes por sección (blanco grabado, como /one). El título negro (.h2) se oculta: manda el blanco. */
+  .wm{position:absolute;left:50%;top:2px;transform:translateX(-50%);z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none;white-space:nowrap;font-family:"Futura","Jost",sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1;font-size:clamp(62px,15.5vw,188px);color:rgba(255,255,255,.9);text-shadow:0 22px 40px rgba(45,55,80,.14),0 2px 2px rgba(255,255,255,.6)}
   section.blk{position:relative;overflow:hidden}
   section.blk>.wrap{position:relative;z-index:1}
+  section.blk .h2{display:none}
 
   /* HERO */
   .hero{padding:74px 0 40px}
@@ -259,15 +275,30 @@
 
 <header>
   <nav class="nav">
-    <a class="brand" href="#top"><img src="/logo-light.png" alt="IPGuard" width="30" height="30" style="display:block"> IPGuard</a>
-    <div class="nav-links">
+    <a class="brand" href="#top"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
+    <div class="nav-pill">
+      <a class="nav-link active" href="#top" data-target="#top">Inicio</a>
+      <a class="nav-link" href="#que-hacemos" data-target="#que-hacemos">Qué hacemos</a>
+      <a class="nav-link" href="#arquitectura" data-target="#arquitectura">Arquitectura</a>
+      <a class="nav-link" href="#plataforma" data-target="#plataforma">Plataforma</a>
+      <a class="nav-link" href="#faq" data-target="#faq">Dudas</a>
+    </div>
+    <div class="nav-right">
+      <a class="login" href="https://app.ipguard.es/login">Iniciar sesión</a>
+      <a class="btn-reg" href="https://app.ipguard.es/register">Registrarse</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="inner">
       <a href="#que-hacemos">Qué hacemos</a>
       <a href="#arquitectura">Arquitectura</a>
       <a href="#plataforma">Plataforma</a>
       <a href="#faq">Dudas</a>
-      <a class="btn btn-dark btn-sm" href="#contacto">Pedir diagnóstico</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://app.ipguard.es/login">Iniciar sesión</a>
     </div>
-  </nav>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -508,7 +539,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#01686f676e41687166746073652f6472"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="ddb4b3bbb29db4adbaa8bcafb9f3b8ae">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#c7aea9a1a887aeb7a0b2a6b5a3e9a2b4"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="cea7a0a8a18ea7bea9bbafbcaae0abbd">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -545,7 +576,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#70191e161f30190017051102145e1503"><span class="__cf_email__" data-cfemail="1e777078715e776e796b7f6c7a307b6d">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#85ecebe3eac5ecf5e2f0e4f7e1abe0f6"><span class="__cf_email__" data-cfemail="365f585059765f465143574452185345">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -678,6 +709,18 @@
     s.insertBefore(w,s.firstChild);
   });
 
+  /* ---- BARRA /one: scroll-spy + menú móvil ---- */
+  var nlinks=[].slice.call(document.querySelectorAll('.nav-pill a[data-target]'));
+  var ntargets=nlinks.map(function(l){return document.querySelector(l.getAttribute('data-target'))}).filter(Boolean);
+  function setActive(id){nlinks.forEach(function(l){l.classList.toggle('active',l.getAttribute('data-target')===id)})}
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setActive('#'+e.target.id)})},{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    ntargets.forEach(function(t){so.observe(t)});
+  }
+  nlinks.forEach(function(l){l.addEventListener('click',function(){setActive(l.getAttribute('data-target'))})});
+  var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
+  if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open')});
+    [].forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});}
 })();
 </script>
 </body>
