@@ -177,6 +177,15 @@
   .gain .tick{width:34px;height:34px;flex:none;border-radius:10px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-weight:800}
   .gain span:last-child{font-size:16px;font-weight:600}
 
+  /* MCP — tarjetas con icono */
+  .mcp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+  @media(max-width:1000px){.mcp-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.mcp-grid{grid-template-columns:1fr}}
+  .mcp-c{padding:26px}
+  .mcp-c .ic{width:44px;height:44px;border-radius:12px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-size:18px}
+  .mcp-c h3{font-size:18px;margin:18px 0 0}
+  .mcp-c p{font-size:14.5px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+
   /* LOGOS MARQUEE */
   .marquee{position:relative;margin-top:34px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
   .marquee-row{display:flex;gap:16px;align-items:center;width:max-content;animation:marquee 42s linear infinite}
@@ -349,7 +358,7 @@
         </div>
         <div class="step-body">
           <div class="step-h"><span class="step-n">01</span><h3>Decidimos</h3></div>
-          <p>Cómo tiene que funcionar tu empresa. Sacamos a la luz las reglas repartidas en la cabeza de tu gente y las dejamos escritas.</p>
+          <p>Sacamos las reglas que hoy viven en la cabeza de tu gente y las dejamos escritas.</p>
         </div>
       </div>
 
@@ -370,7 +379,7 @@
         </div>
         <div class="step-body">
           <div class="step-h"><span class="step-n">02</span><h3>Montamos</h3></div>
-          <p>El sistema que las sostiene: un sitio donde vive la verdad, con permisos, avisos y rastro, conectado a lo que ya usas.</p>
+          <p>Un sitio donde vive la verdad, con permisos y avisos, conectado a lo que ya usas.</p>
         </div>
       </div>
 
@@ -392,7 +401,7 @@
         </div>
         <div class="step-body">
           <div class="step-h"><span class="step-n">03</span><h3>Sostenemos</h3></div>
-          <p>Formación, ajuste y alguien con nombre y contrato que responde cuando algo se rompe.</p>
+          <p>Formación y alguien con nombre que responde cuando algo se rompe.</p>
         </div>
       </div>
 
@@ -419,7 +428,7 @@
           </g>
           <g fill="#fff" stroke="#b3c1bc" stroke-width="1.6"><circle cx="150" cy="26" r="14"/><circle cx="221" cy="67" r="14"/><circle cx="221" cy="151" r="14"/><circle cx="150" cy="192" r="14"/><circle cx="79" cy="151" r="14"/><circle cx="79" cy="67" r="14"/></g>
         </svg>
-        <p>Cada app con cada app. La misma empresa se llama de tres formas en tres programas y ningún sitio sabe quién es el cliente de verdad.</p>
+        <p>Cada app con cada app. El mismo cliente aparece de tres formas y nadie sabe cuál es la buena.</p>
       </div>
       <div class="arch-c card hi">
         <div class="lab">Ordenar</div>
@@ -428,7 +437,7 @@
           <g fill="#fff" stroke="#b3c1bc" stroke-width="1.6"><circle cx="150" cy="26" r="14"/><circle cx="221" cy="67" r="14"/><circle cx="221" cy="151" r="14"/><circle cx="150" cy="192" r="14"/><circle cx="79" cy="151" r="14"/><circle cx="79" cy="67" r="14"/></g>
           <circle cx="150" cy="105" r="24" fill="#e6efeb" stroke="#2f6b5e" stroke-width="2"/>
         </svg>
-        <p>Una conexión por app contra un núcleo. Identidad, permisos y registro en un solo sitio. La IA es un cliente más, con su rol y sus límites.</p>
+        <p>Cada app contra un núcleo. Identidad, permisos y registro en un sitio. La IA entra ahí, con su rol y sus límites.</p>
       </div>
     </div>
     <div class="arch-pts" id="archPts"></div>
@@ -441,7 +450,7 @@
     <div>
       <p class="eyebrow">Por qué acierta más y cuesta menos</p>
       <h2 class="h2" style="max-width:18ch">Casi todo son reglas. La IA solo entra donde hace falta cabeza.</h2>
-      <p class="sub">Con la estructura montada, el sistema resuelve la mayoría —siempre igual y sin coste—. La IA recibe el dato exacto, no el archivo entero: acierta más y gasta menos.</p>
+      <p class="sub">El sistema resuelve la mayoría: siempre igual y gratis. La IA solo recibe el dato justo, no el archivo entero. Acierta más y gasta menos.</p>
     </div>
     <div class="det-card card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -455,12 +464,13 @@
   </div>
 </section>
 
-<!-- LO QUE GANAS -->
+<!-- CONECTAR CON MCP NO BASTA -->
 <section class="blk" style="padding-top:20px">
   <div class="wrap">
-    <p class="eyebrow">Lo que ganas</p>
-    <h2 class="h2" style="max-width:20ch">Lo que cambia desde el primer mes.</h2>
-    <div class="gains" id="gains"></div>
+    <p class="eyebrow">El límite de conectar con IA</p>
+    <h2 class="h2" style="max-width:15ch">Conectar todo con MCP no basta.</h2>
+    <p class="sub">MCP enchufa tus apps a la IA. Sin infraestructura debajo, la comunicación se pierde y no hay quien responda.</p>
+    <div class="mcp-grid" id="mcpGrid"></div>
   </div>
 </section>
 
@@ -480,20 +490,11 @@
       <div>
         <p class="eyebrow">La plataforma</p>
         <h2>ONE, nuestra plataforma propia.</h2>
-        <p>Más de 50 apps que ya funcionan y hablan entre ellas. Tenerla en propiedad es lo que nos deja construir lo que tu negocio necesita y no existe en ningún programa.</p>
+        <p>Más de 50 apps que ya hablan entre ellas. Es nuestra: por eso construimos lo que tu negocio necesita y no existe.</p>
         <a class="btn btn-dark" style="margin-top:22px" href="https://ipguard.es/one" target="_blank" rel="noopener">Ver ONE <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="apps-grid" id="appsGrid"></div>
     </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="blk" style="padding-top:20px">
-  <div class="wrap faq">
-    <p class="eyebrow">Dudas razonables</p>
-    <h2 class="h2" style="margin-bottom:30px">Lo que siempre nos preguntan.</h2>
-    <div id="faqs"></div>
   </div>
 </section>
 
@@ -504,7 +505,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#1a73747c755a736a7d6f7b687e347f69"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="90f9fef6ffd0f9e0f7e5f1e2f4bef5e3">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#1e777078715e776e796b7f6c7a307b6d"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="88e1e6eee7c8e1f8effde9faeca6edfb">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -523,6 +524,15 @@
   </div>
 </section>
 
+<!-- FAQ (Dudas) — al final -->
+<section id="faq" class="blk" style="padding-top:20px">
+  <div class="wrap faq">
+    <p class="eyebrow">Dudas razonables</p>
+    <h2 class="h2" style="margin-bottom:30px">Lo que siempre nos preguntan.</h2>
+    <div id="faqs"></div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -532,7 +542,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#345d5a525b745d4453415546501a5147"><span class="__cf_email__" data-cfemail="563f383039163f263123372432783325">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#462f282029062f362133273422682335"><span class="__cf_email__" data-cfemail="91f8fff7fed1f8e1f6e4f0e3f5bff4e2">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -563,15 +573,8 @@
   bH.onclick=function(){place(false)}; bD.onclick=function(){place(true)};
   place(reduce); if(!reduce) setTimeout(function(){place(true)},2200);
 
-  /* ---- ENTRADA ANIMADA (reveal al entrar en pantalla) ---- */
-  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
-  if('IntersectionObserver' in window && !reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.18});
-    reveals.forEach(function(el,i){el.dataset.d=(i%3)*90;io.observe(el)});
-  } else { reveals.forEach(function(el){el.classList.add('in')}); }
-
   /* ---- ARQUITECTURA PTS ---- */
-  var APTS=['Conectar no es ordenar: la misma empresa se llama de tres formas hasta que alguien decide cuál es la buena.','Los procesos se pueden deshacer si uno falla a mitad.','Queda registrado quién hizo qué, cuándo y por orden de quién.'];
+  var APTS=['Conectar no es ordenar: alguien decide cuál es el dato bueno.','Si un paso falla a mitad, el proceso se deshace.','Queda registrado quién hizo qué y cuándo.'];
   $('#archPts').innerHTML=APTS.map(function(a){return '<div class="apt card"><span class="tick">✓</span><span>'+a+'</span></div>'}).join('');
 
   /* ---- REGLAS ---- */
@@ -588,9 +591,18 @@
   dA.onclick=function(){setDet(true)}; dB.onclick=function(){setDet(false)};
   setDet(!reduce?true:false); if(!reduce) setTimeout(function(){setDet(false)},3000);
 
-  /* ---- GAINS ---- */
-  var GAINS=['No se pierde información','Se acaba el trabajo manual','Decides con todo el contexto','La IA acierta más y gasta menos','Queda registrado quién hizo qué','Creces sin ampliar administración'];
-  $('#gains').innerHTML=GAINS.map(function(g){return '<div class="gain card"><span class="tick">✓</span><span>'+g+'</span></div>'}).join('');
+  /* ---- MCP (por qué conectar no basta) ---- */
+  var MCP=[
+    ['list-check','Reglas que deciden','La mayoría se resuelve con reglas fijas. El modelo no decide cada vez.'],
+    ['lock','Conectado, no público','La IA entra con su rol y sus límites, como una persona. No ve toda la empresa.'],
+    ['rotate-left','Se deshace si falla','Si un paso falla a mitad, se revierte. No queda un pedido en el aire.'],
+    ['database','Logs y copias','Quién hizo qué, cuándo y por orden de quién. Con copia de seguridad.'],
+    ['shield-halved','Responsables y legal','Alguien con contrato responde cuando algo sale mal. RGPD de serie.'],
+    ['bell','Avisos cuando algo falla','El sistema avisa en el momento, no cuando ya es tarde.'],
+    ['link','Apps que se hablan sin IA','Lo rutinario pasa de una app a otra directamente, sin gastar IA.'],
+    ['square-plus','Crear lo que no existe','Construimos en tu infraestructura lo que ningún programa te da hecho.']
+  ];
+  $('#mcpGrid').innerHTML=MCP.map(function(m){return '<div class="mcp-c card reveal"><span class="ic"><i class="fa-solid fa-'+m[0]+'"></i></span><h3>'+m[1]+'</h3><p>'+m[2]+'</p></div>'}).join('');
 
   /* ---- LOGOS ---- */
   var LOGOS=[
@@ -621,11 +633,11 @@
 
   /* ---- FAQ ---- */
   var FAQ=[
-    ['¿Esto no lo hace ya la IA?','Hace una parte. Pero ejecuta reglas, y en tu empresa esas reglas no están escritas. Decidirlas se hace contigo.'],
-    ['Ya conectamos apps con IA, ¿qué añade?','Conectado no es ordenado. Si el cliente se llama de tres formas en tres programas, seguirán siendo tres clientes.'],
-    ['Tenemos programadores en casa.','Mejor. Dejan de fabricar infraestructura genérica y construyen sobre el núcleo que montamos.'],
-    ['¿Qué pasa con nuestros datos?','Permisos por persona, registro de accesos y retención alineada al RGPD. Con Kit IA local, ni salen de tu oficina.'],
-    ['¿Y si el equipo no lo usa?','Es el riesgo real. Empezamos por algo pequeño que le quite trabajo a alguien desde el primer día. Y la formación va incluida.']
+    ['¿Esto no lo hace ya la IA?','Una parte. La IA ejecuta reglas, y en tu empresa no están escritas. Eso lo decidimos contigo.'],
+    ['Ya conectamos apps con IA, ¿qué añade?','Conectar no es ordenar. Si el cliente aparece de tres formas, seguirán siendo tres clientes.'],
+    ['Tenemos programadores en casa.','Mejor. Construyen sobre el núcleo que montamos, no infraestructura desde cero.'],
+    ['¿Qué pasa con nuestros datos?','Permisos por persona y registro de accesos, alineado al RGPD. Con Kit IA local, ni salen de tu oficina.'],
+    ['¿Y si el equipo no lo usa?','Empezamos por algo pequeño que le quite trabajo a alguien desde el primer día. La formación va incluida.']
   ];
   $('#faqs').innerHTML=FAQ.map(function(q){return '<div class="q card"><button type="button"><span>'+q[0]+'</span><span class="mk">+</span></button><div class="ans"><div style="padding-bottom:2px">'+q[1]+'</div></div></div>'}).join('');
   [].forEach.call(document.querySelectorAll('.q'),function(q){
@@ -647,6 +659,13 @@
       .catch(function(){estado('No se pudo enviar. Escríbenos a info@ipguard.es o al 973 26 65 69.',false)})
       .then(function(){btn.disabled=false; btn.textContent='Enviar';});
   });
+
+  /* ---- ENTRADA ANIMADA (reveal al entrar en pantalla; tras inyectar todo) ---- */
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.14});
+    reveals.forEach(function(el,i){el.dataset.d=(i%4)*80;io.observe(el)});
+  } else { reveals.forEach(function(el){el.classList.add('in')}); }
 })();
 </script>
 </body>
