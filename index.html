@@ -241,6 +241,25 @@
   .app-tile:hover .ico{transform:translateY(-3px) scale(1.05)}
   .app-tile small{font-size:11px;color:var(--muted);line-height:1.15;max-width:72px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
+  /* GAMA — bloques de producto estilo Apple */
+  .prod{padding:100px 0;text-align:center;position:relative;overflow:hidden}
+  @media(max-width:640px){.prod{padding:64px 0}}
+  .plabel{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin:0}
+  .prod-h{font-size:clamp(32px,4.6vw,58px);font-weight:700;letter-spacing:-.03em;line-height:1.04;margin:10px auto 0;max-width:20ch}
+  .prod-claim{font-size:clamp(17px,2vw,22px);color:var(--muted);margin:16px auto 0;max-width:40ch;line-height:1.5}
+  .prod-cta{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:24px;font-family:"Montserrat",sans-serif;font-size:15px;font-weight:700}
+  .prod-cta a{color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+  .prod-cta a.link{color:var(--accent)}
+  .prod-cta a:hover{opacity:.75}
+  .prod-viz{margin:48px auto 0;max-width:760px;padding:34px}
+  .prod-viz svg,.prod-viz .apps-grid{display:block;width:100%;height:auto}
+  /* mini dashboard (Vision) */
+  .dash{display:grid;gap:16px}
+  .dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .kpi{background:#f6f9f7;border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:left}
+  .kpi b{display:block;font-family:"Futura","Jost",sans-serif;font-size:22px;letter-spacing:-.02em}
+  .kpi span{font-family:"Montserrat",sans-serif;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
   /* FAQ */
   .faq{max-width:900px;margin:0 auto}
   .q{border-radius:16px;margin-bottom:10px;overflow:hidden}
@@ -287,10 +306,10 @@
   <nav class="nav">
     <a class="brand" href="#top"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
     <div class="nav-pill">
-      <a class="nav-link active" href="#top" data-target="#top">Inicio</a>
-      <a class="nav-link" href="#que-hacemos" data-target="#que-hacemos">Qué hacemos</a>
-      <a class="nav-link" href="#plataforma" data-target="#plataforma">Plataforma</a>
-      <a class="nav-link" href="#faq" data-target="#faq">Dudas</a>
+      <a class="nav-link active" href="#top" data-target="#top">Axis</a>
+      <a class="nav-link" href="#plataforma" data-target="#plataforma">One</a>
+      <a class="nav-link" href="#vision" data-target="#vision">Vision</a>
+      <a class="nav-link" href="#kit" data-target="#kit">Kit</a>
     </div>
     <div class="nav-right">
       <a class="btn btn-dark btn-sm" href="#contacto">Pedir diagnóstico</a>
@@ -299,8 +318,10 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <div class="inner">
-      <a href="#que-hacemos">Qué hacemos</a>
-      <a href="#plataforma">Plataforma</a>
+      <a href="#top">Axis</a>
+      <a href="#plataforma">One</a>
+      <a href="#vision">Vision</a>
+      <a href="#kit">Kit</a>
       <a href="#faq">Dudas</a>
       <a href="#contacto">Pedir diagnóstico</a>
     </div>
@@ -311,7 +332,7 @@
 <section id="top" class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Arquitectura de empresa e IA aplicada</p>
+      <p class="plabel">Axis</p>
       <h1>Centraliza tu empresa.</h1>
       <p class="sub">IPGuard es tu aliado en la arquitectura de tu empresa. Te ayudamos en el día a día y disparamos tu productividad, con una IA nuclear en el centro de todo.</p>
       <div class="hero-cta">
@@ -496,12 +517,66 @@
   <div class="wrap">
     <div class="plat card">
       <div>
-        <p class="eyebrow">La plataforma</p>
-        <h2>ONE, nuestra plataforma propia.</h2>
+        <p class="plabel">One</p>
+        <h2>Nuestra plataforma propia.</h2>
         <p>Más de 50 apps que ya hablan entre ellas. Es nuestra: por eso construimos lo que tu negocio necesita y no existe.</p>
         <a class="btn btn-dark" style="margin-top:22px" href="https://ipguard.es/one" target="_blank" rel="noopener">Ver ONE <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="apps-grid" id="appsGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision" class="prod" style="background:linear-gradient(180deg,#eef4f1 0%,#e3ede9 100%)">
+  <div class="wrap">
+    <p class="plabel">Vision</p>
+    <h2 class="prod-h">Todo tu negocio, de un vistazo.</h2>
+    <p class="prod-claim">Cuadros de mando en tiempo real: ventas, caja y productividad con los datos de todas tus apps en un panel.</p>
+    <div class="prod-cta"><a class="link" href="#contacto">Pedir demo →</a></div>
+    <div class="prod-viz card">
+      <div class="dash">
+        <div class="dash-kpis">
+          <div class="kpi"><b>+32%</b><span>Productividad</span></div>
+          <div class="kpi"><b>18.400 €</b><span>Caja</span></div>
+          <div class="kpi"><b>94%</b><span>A tiempo</span></div>
+        </div>
+        <svg viewBox="0 0 620 200" aria-hidden="true">
+          <line x1="24" y1="170" x2="596" y2="170" stroke="#dce4e0" stroke-width="1.5"/>
+          <g fill="#cbd6d0">
+            <rect x="40" y="120" width="40" height="50" rx="5"/><rect x="112" y="108" width="40" height="62" rx="5"/>
+            <rect x="184" y="112" width="40" height="58" rx="5"/><rect x="256" y="96" width="40" height="74" rx="5"/>
+            <rect x="328" y="88" width="40" height="82" rx="5"/><rect x="400" y="80" width="40" height="90" rx="5"/>
+            <rect x="472" y="66" width="40" height="104" rx="5"/><rect x="544" y="50" width="40" height="120" rx="5"/>
+          </g>
+          <polyline points="60,120 132,108 204,112 276,96 348,88 420,80 492,66 564,50" fill="none" stroke="#101820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#101820"><circle cx="60" cy="120" r="4"/><circle cx="204" cy="112" r="4"/><circle cx="348" cy="88" r="4"/><circle cx="492" cy="66" r="4"/><circle cx="564" cy="50" r="4"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIT -->
+<section id="kit" class="prod">
+  <div class="wrap">
+    <p class="plabel">Kit</p>
+    <h2 class="prod-h">Ciberseguridad, dentro de tu empresa.</h2>
+    <p class="prod-claim">Firewall, filtrado web, VPN e IA local en un equipo on-premise. Tus datos no salen de tu oficina.</p>
+    <div class="prod-cta"><a class="link" href="#contacto">Pedir diagnóstico →</a></div>
+    <div class="prod-viz card">
+      <svg viewBox="0 0 620 230" aria-hidden="true">
+        <rect x="222" y="66" width="176" height="118" rx="14" fill="#f6f9f7" stroke="#101820" stroke-width="2.5"/>
+        <circle cx="252" cy="94" r="5" fill="#22a06b"/>
+        <rect x="270" y="90" width="96" height="8" rx="4" fill="#cbd6d0"/>
+        <rect x="244" y="120" width="132" height="7" rx="3.5" fill="#e0e7e3"/>
+        <rect x="244" y="138" width="92" height="7" rx="3.5" fill="#e0e7e3"/>
+        <rect x="244" y="156" width="110" height="7" rx="3.5" fill="#e0e7e3"/>
+        <g transform="translate(348,116)">
+          <path d="M42 2 L78 15 V40 C78 65 61 82 42 88 C23 82 6 65 6 40 V15 Z" fill="#101820"/>
+          <path d="M27 44 l11 11 L59 30" stroke="#fff" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
@@ -514,7 +589,7 @@
     <p class="sub">Conoce el potencial de tu empresa en menos de 30 minutos.</p>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#452c2b232a052c3522302437216b2036"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="325b5c545d725b4255475340561c5741">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#7b12151d143b120b1c0e1a091f551e08"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="30595e565f70594057455142541e5543">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -551,7 +626,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#3851565e577851485f4d594a5c165d4b"><span class="__cf_email__" data-cfemail="b9d0d7dfd6f9d0c9deccd8cbdd97dcca">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#fe97909891be978e998b9f8c9ad09b8d"><span class="__cf_email__" data-cfemail="ec85828a83ac859c8b998d9e88c2899f">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
