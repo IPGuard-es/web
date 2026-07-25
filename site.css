@@ -310,3 +310,25 @@
 .uc .ic{width:46px;height:46px;border-radius:12px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-size:19px}
 .uc h3{font-size:18px;margin:15px 0 0}
 .uc p{font-size:14.5px;color:var(--muted);margin:9px 0 0;line-height:1.5}
+
+/* ===================== PLANES (One) ===================== */
+.cycle{display:inline-flex;background:rgba(16,24,32,.06);border-radius:999px;padding:4px;font-family:"Montserrat",sans-serif}
+.cycle button{border:0;background:transparent;color:var(--muted);font-weight:600;font-size:14px;padding:9px 18px;border-radius:999px;transition:.2s;cursor:pointer}
+.cycle button.on{background:var(--ink);color:#fff}
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;text-align:left;align-items:stretch}
+@media(max-width:900px){.planes{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+.plan-c{display:flex;flex-direction:column;padding:30px 28px}
+.plan-c.pop{border-color:rgba(47,107,94,.45);box-shadow:0 26px 52px -26px rgba(47,107,94,.4)}
+.plan-c .pn{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:30px}
+.plan-c .pname{font-family:"Montserrat",sans-serif;font-weight:700;font-size:14px;background:var(--sage);padding:6px 14px;border-radius:999px}
+.plan-c .badge{font-family:"Montserrat",sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:#fff;padding:5px 11px;border-radius:999px}
+.plan-c .price{display:flex;align-items:baseline;gap:9px;margin-top:20px;flex-wrap:wrap}
+.plan-c .price b{font-family:"Futura","Jost",sans-serif;font-size:42px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.plan-c .price s{color:var(--muted);opacity:.55;font-size:17px;font-weight:600}
+.plan-c .unit{font-size:14px;color:var(--muted);margin-top:3px}
+.plan-c .tag{font-size:14px;font-weight:600;color:var(--muted);margin-top:8px}
+.plan-c .pcta{display:block;text-align:center;margin-top:22px;width:100%;justify-content:center}
+.plan-c ul{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:11px}
+.plan-c li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink)}
+.plan-c li i{color:var(--accent);margin-top:4px;font-size:12px;flex:none}
+.plan-note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:24px;max-width:74ch;margin-left:auto;margin-right:auto;line-height:1.5}
