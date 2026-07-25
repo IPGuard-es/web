@@ -11,9 +11,9 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPGuard — Ordenamos tu empresa para que la IA acierte más y cueste menos</title>
+<title>IPGuard · Ordenamos tu empresa para que la IA acierte más y cueste menos</title>
 <meta name="description" content="IPGuard diseña e implanta la arquitectura sobre la que funciona tu empresa. Estrategia primero, sistema después. Primer resultado en 30 días.">
-<meta property="og:title" content="IPGuard — Arquitectura de empresa e IA aplicada">
+<meta property="og:title" content="IPGuard · Arquitectura de empresa e IA aplicada">
 <meta property="og:description" content="Ordenamos tu empresa para que la IA acierte más y cueste menos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipguard.es">
@@ -177,6 +177,17 @@
   .kit .lab{font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
   .kit p{font-size:15px;color:var(--muted);margin:8px 0 0}
   .det-card{padding:28px}
+  /* Comparación de tokens (barras) */
+  .tk-title{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;color:var(--muted)}
+  .tk-row{margin-top:22px}
+  .tk-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  .tk-name{font-weight:700;font-size:15px}
+  .tk-note{font-family:"Montserrat",sans-serif;font-size:12.5px;color:var(--muted)}
+  .tk-track{height:16px;border-radius:999px;background:#eef2f0;overflow:hidden}
+  .tk-fill{display:block;height:100%;border-radius:999px;transition:width 1s cubic-bezier(.4,0,.2,1)}
+  .tk-fill.big{background:linear-gradient(90deg,#cbd6d0,#aebbb4)}
+  .tk-fill.small{background:var(--ink)}
+  .tk-big{font-family:"Futura","Jost",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;margin-top:24px}
   .dots{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .dot{width:22px;height:22px;flex:none;transition:all .5s cubic-bezier(.4,0,.2,1)}
   .dot.rule{background:var(--ink);border-radius:5px}
@@ -481,16 +492,19 @@
     <div>
       <p class="eyebrow">Optimización de tokens</p>
       <h2 class="h2" style="max-width:20ch">Optimización de uso de tokens.</h2>
-      <p class="sub">Cada respuesta de la IA se paga por <b>tokens</b>: el texto que tiene que leer. Sin orden le pasas el archivo entero —caro y con ruido—. Con la base central recibe el <b>dato exacto y canónico</b>: gasta una fracción de tokens y acierta más.</p>
+      <p class="sub">Cada respuesta de la IA se paga por <b>tokens</b>: el texto que tiene que leer. Sin orden le pasas el archivo entero, caro y con ruido. Con la base central recibe el <b>dato exacto y canónico</b>, así gasta una fracción de tokens y acierta más.</p>
     </div>
     <div class="det-card card">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;color:var(--muted)">Tareas de un mes</span>
-        <div class="seg"><button type="button" id="detSin" aria-pressed="true">Sin</button><button type="button" id="detCon" aria-pressed="false">Con IPGuard</button></div>
+      <span class="tk-title">Lo que lee la IA en cada consulta</span>
+      <div class="tk-row">
+        <div class="tk-top"><span class="tk-name">Sin arquitectura</span><span class="tk-note">el archivo entero</span></div>
+        <div class="tk-track"><span class="tk-fill big" data-w="100" style="width:0"></span></div>
       </div>
-      <div class="dots" id="dots" aria-hidden="true"></div>
-      <p class="det-count" id="detCount"></p>
-      <div class="det-legend"><span><i class="r"></i>Regla del sistema</span><span><i class="a"></i>Decide la IA</span></div>
+      <div class="tk-row">
+        <div class="tk-top"><span class="tk-name">Con IPGuard</span><span class="tk-note">el dato justo</span></div>
+        <div class="tk-track"><span class="tk-fill small" data-w="13" style="width:0"></span></div>
+      </div>
+      <p class="tk-big">Una fracción de los tokens. Y más acierto.</p>
     </div>
   </div>
 </section>
@@ -537,7 +551,7 @@
     <p class="sub">Conoce el potencial de tu empresa en menos de 30 minutos.</p>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#e48d8a828ba48d948391859680ca8197"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="cca5a2aaa38ca5bcabb9adbea8e2a9bf">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#dcb5b2bab39cb5acbba9bdaeb8f2b9af"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="3e575058517e574e594b5f4c5a105b4d">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -574,7 +588,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#b6dfd8d0d9f6dfc6d1c3d7c4d298d3c5"><span class="__cf_email__" data-cfemail="2b42454d446b425b4c5e4a594f054e58">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#224b4c444d624b5245574350460c4751"><span class="__cf_email__" data-cfemail="bcd5d2dad3fcd5ccdbc9ddced892d9cf">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -609,19 +623,15 @@
   var APTS=['Conectar no es ordenar: alguien decide cuál es el dato bueno.','Si un paso falla a mitad, el proceso se deshace.','Queda registrado quién hizo qué y cuándo.'];
   $('#archPts').innerHTML=APTS.map(function(a){return '<div class="apt card"><span class="tick">✓</span><span>'+a+'</span></div>'}).join('');
 
-  /* ---- REGLAS ---- */
-  var TOTAL=30, dotsEl=$('#dots'), dc=$('#detCount'), dA=$('#detSin'), dB=$('#detCon'), dEls=[];
-  for(var i=0;i<TOTAL;i++){var d=document.createElement('span');d.className='dot';dotsEl.appendChild(d);dEls.push(d);}
-  var AI_SIN=[0,1,3,4,6,7,9,10,12,13,15,16,18,19,21,22,24,25,27,28,29], AI_CON=[7,14,21,28];
-  function setDet(sin){
-    var ai=sin?AI_SIN:AI_CON;
-    dEls.forEach(function(d,i){setTimeout(function(){d.className='dot '+(ai.indexOf(i)>-1?'ai':'rule')},i*8)});
-    var n=TOTAL-ai.length;
-    dc.textContent=sin?(n+' de 30 son reglas. El resto va a la IA con todo el contexto: muchos tokens y más fallos.'):(n+' de 30 las resuelve el sistema, sin IA. La IA solo entra con el dato justo: pocos tokens.');
-    dA.setAttribute('aria-pressed',sin); dB.setAttribute('aria-pressed',!sin);
+  /* ---- TOKENS (barras comparativas: crecen al entrar en pantalla) ---- */
+  var tkFills=[].slice.call(document.querySelectorAll('.tk-fill'));
+  function growTk(){tkFills.forEach(function(f){f.style.width=(f.getAttribute('data-w')||0)+'%'})}
+  if(tkFills.length){
+    if('IntersectionObserver' in window && !reduce){
+      var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){growTk();tio.disconnect()}})},{threshold:.4});
+      tio.observe(tkFills[0].closest('.det-card'));
+    } else { growTk(); }
   }
-  dA.onclick=function(){setDet(true)}; dB.onclick=function(){setDet(false)};
-  setDet(!reduce?true:false); if(!reduce) setTimeout(function(){setDet(false)},3000);
 
   /* ---- MCP (por qué conectar no basta) ---- */
   var MCP=[
