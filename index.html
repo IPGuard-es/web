@@ -479,9 +479,9 @@
 <section class="blk" style="padding-top:20px">
   <div class="wrap det-grid">
     <div>
-      <p class="eyebrow">Por qué acierta más y cuesta menos</p>
-      <h2 class="h2" style="max-width:18ch">Casi todo son reglas. La IA solo entra donde hace falta cabeza.</h2>
-      <p class="sub">El sistema resuelve la mayoría: siempre igual y gratis. La IA solo recibe el dato justo, no el archivo entero. Acierta más y gasta menos.</p>
+      <p class="eyebrow">Optimización de tokens</p>
+      <h2 class="h2" style="max-width:20ch">La IA lee solo lo justo. Menos tokens, más acierto.</h2>
+      <p class="sub">Cada respuesta de la IA se paga por <b>tokens</b>: el texto que tiene que leer. Sin orden le pasas el archivo entero —caro y con ruido—. Con la base central recibe el <b>dato exacto y canónico</b>: gasta una fracción de tokens y acierta más.</p>
     </div>
     <div class="det-card card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -536,7 +536,7 @@
     <h2 class="h2" style="max-width:16ch">Media hora y te decimos si te aporta.</h2>
     <div class="contact-grid">
       <div class="ccards">
-        <a class="ccard card" href="/cdn-cgi/l/email-protection#d4bdbab2bb94bda4b3a1b5a6b0fab1a7"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="f1989f979eb198819684908395df9482">[email&#160;protected]</span></span></span></a>
+        <a class="ccard card" href="/cdn-cgi/l/email-protection#771e191118371e071002160513591204"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="b3daddd5dcf3dac3d4c6d2c1d79dd6c0">[email&#160;protected]</span></span></span></a>
         <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
         <a class="ccard card" href="https://ipguard.es/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
       </div>
@@ -573,7 +573,7 @@
         <a href="https://ipguard.es/soporte">Soporte</a>
         <a href="https://app.ipguard.es/legal/politica-privacidad">Privacidad</a>
         <a href="https://app.ipguard.es/legal/terminos-condiciones">Términos</a>
-        <a href="/cdn-cgi/l/email-protection#573e393138173e273022362533793224"><span class="__cf_email__" data-cfemail="dbb2b5bdb49bb2abbcaebaa9bff5bea8">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#741d1a121b341d0413011506105a1107"><span class="__cf_email__" data-cfemail="cfa6a1a9a08fa6bfa8baaebdabe1aabc">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="foot-copy">© 2026 IPGuard · Arquitectura de empresa e IA aplicada · One, nuestra plataforma · <a href="https://app.ipguard.es" style="color:#b7c6c0">app.ipguard.es</a></div>
@@ -616,7 +616,7 @@
     var ai=sin?AI_SIN:AI_CON;
     dEls.forEach(function(d,i){setTimeout(function(){d.className='dot '+(ai.indexOf(i)>-1?'ai':'rule')},i*8)});
     var n=TOTAL-ai.length;
-    dc.textContent=sin?(n+' de 30 son reglas. El resto depende del modelo.'):(n+' de 30 las resuelve el sistema. La IA solo donde hace falta.');
+    dc.textContent=sin?(n+' de 30 son reglas. El resto va a la IA con todo el contexto: muchos tokens y más fallos.'):(n+' de 30 las resuelve el sistema, sin IA. La IA solo entra con el dato justo: pocos tokens.');
     dA.setAttribute('aria-pressed',sin); dB.setAttribute('aria-pressed',!sin);
   }
   dA.onclick=function(){setDet(true)}; dB.onclick=function(){setDet(false)};
