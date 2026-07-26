@@ -70,8 +70,8 @@
 <section class="blk ww" style="padding-top:30px">
   <div class="wrap ww-grid">
     <div class="ww-text">
-      <h2 class="h2">We design your AI architecture.</h2>
-      <p class="sub">We bring order to your company: one central base, permissions and alerts, and AI optimised to spend less and be more accurate. From diagnosis to a tailored system.</p>
+      <h2 class="h2">We design and build your company's foundation.</h2>
+      <p class="sub">So it runs at its best and you save money in the age of AI: one central base, permissions and alerts, and AI optimised to spend less and be more accurate.</p>
       <div class="ww-points">
         <div class="ww-pt"><b>Central base</b><span>A single source of truth: customers, processes and data.</span></div>
         <div class="ww-pt"><b>Optimised AI</b><span>Fewer tokens, more accuracy in every reply.</span></div>
@@ -89,7 +89,8 @@
         <div class="ww-row anim" style="transition-delay:.45s"><span>AI accuracy</span><b>+32%</b></div>
         <div class="ww-row anim" style="transition-delay:.60s"><span>Connected apps</span><b>12</b></div>
       </div>
-      <div class="ww-status anim" style="transition-delay:.85s"><span class="ww-dot"></span> Building your central base…</div>
+      <div class="ww-chart anim" style="transition-delay:.72s"><span style="height:36%"></span><span style="height:50%"></span><span style="height:44%"></span><span style="height:68%"></span><span style="height:82%"></span><span class="hi" style="height:100%"></span></div>
+      <div class="ww-status anim" style="transition-delay:.9s"><span class="ww-dot"></span> Building your central base…</div>
     </div>
   </div>
 </section>
@@ -103,10 +104,7 @@
     <div class="stat"><b>100%</b><span>GDPR and on-premise with the Kit</span></div>
   </div>
 </section>
-<section style="padding:6px 0 40px">
-  <div class="wrap"><p class="marq-label">Trusted by</p></div>
-  <div class="marquee"><div class="marquee-row"><img class="clogo" src="/wiongo.png" alt="Wiongo"><img class="clogo" src="/casatres.png" alt="Casa Très"><img class="clogo" src="/billybrown.png" alt="Billy Brown"><img class="clogo" src="/capittal.png" alt="Capittal"><img class="clogo" src="/hiproteca.png" alt="Hiproteca"><img class="clogo" src="/wiongo.png" alt="Wiongo"><img class="clogo" src="/casatres.png" alt="Casa Très"><img class="clogo" src="/billybrown.png" alt="Billy Brown"><img class="clogo" src="/capittal.png" alt="Capittal"><img class="clogo" src="/hiproteca.png" alt="Hiproteca"></div></div>
-</section>
+
 
 <!-- CÓMO TRABAJAMOS -->
 <section id="como" class="blk" style="padding-top:30px">
@@ -202,23 +200,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="blk" style="padding-top:20px">
-  <div class="wrap faq">
-    <h2 class="h2 wtitle" style="margin-bottom:30px">What people always ask us.</h2>
-    <div id="faqs"></div>
-  </div>
-</section>
-
-<!-- CTA final -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2 class="h2">Organise your company with IPGuard.</h2>
-    <p class="sub">Discover your potential in under 30 minutes, no strings attached.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/en/contacto">Book a diagnosis</a></div>
-  </div>
-</section>
-
 <footer class="rfoot">
   <div class="wrap rfoot-grid">
     <div>
@@ -262,37 +243,6 @@
     bH.onclick=function(){place(false)}; bD.onclick=function(){place(true)};
     place(reduce); if(!reduce) setTimeout(function(){place(true)},2200);
   }
-
-  /* LOGOS oficiales de terceros */
-  var LOGOS=[
-    '<i class="fa-brands fa-whatsapp" style="color:#25D366"></i>',
-    '<i class="fa-brands fa-google-drive" style="color:#1FA463"></i>',
-    '<i class="fa-brands fa-google" style="color:#EA4335"></i>',
-    '<i class="fa-brands fa-microsoft" style="color:#5E5E5E"></i>',
-    '<i class="fa-brands fa-slack" style="color:#4A154B"></i>',
-    '<i class="fa-brands fa-dropbox" style="color:#0061FF"></i>',
-    '<i class="fa-brands fa-trello" style="color:#0079BF"></i>',
-    '<i class="fa-brands fa-hubspot" style="color:#FF7A59"></i>',
-    '<i class="fa-brands fa-mailchimp" style="color:#241C15"></i>',
-    '<i class="fa-brands fa-stripe-s" style="color:#635BFF"></i>',
-    '<svg viewBox="0 0 22 22"><rect width="22" height="22" rx="3" fill="#fff" stroke="#e6e6e6"/><path d="M6.4 16.2V6.6l2.4.3 5 7.4V7.3l-1.2-.3V6.4l3.6.3v.7l-1 .2v9.1l-1.6-.2-5.3-7.9v6.9l1.2.3v.7l-3.6-.3z" fill="#111"/></svg>',
-    '<svg viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#2F5BEA"/><path d="M6.6 5.6h2.5v4.2h3.9V5.6h2.5v10.8h-2.5v-4.3H9.1v4.3H6.6z" fill="#fff"/></svg>'
-  ];
-  var lg=LOGOS.concat(LOGOS);
-  $('#logos').innerHTML=lg.map(function(s){return '<span class="logo">'+s+'</span>'}).join('');
-
-  /* FAQ */
-  var FAQ=[
-    ['Doesn\'t AI already do this?','Partly. AI runs rules, and in your company they aren\'t written down. We decide those with you.'],
-    ['We already connect apps with AI, what does this add?','Connecting isn\'t organising. If a customer shows up three ways, they\'ll still be three customers.'],
-    ['We have developers in-house.','Even better. They build on the base we set up, not infrastructure from scratch.'],
-    ['What happens with our data?','Per-person permissions and access logs, aligned with GDPR. With Kit, they don\'t even leave your office.'],
-    ['What if the team doesn\'t use it?','We start with something small that takes work off someone from day one. Training is included.']
-  ];
-  $('#faqs').innerHTML=FAQ.map(function(q){return '<div class="q card"><button type="button"><span>'+q[0]+'</span><span class="mk">+</span></button><div class="ans"><div style="padding-bottom:2px">'+q[1]+'</div></div></div>'}).join('');
-  [].forEach.call(document.querySelectorAll('.q'),function(q){
-    q.querySelector('button').onclick=function(){var open=q.classList.toggle('open');q.querySelector('.mk').textContent=open?'–':'+';};
-  });
 
   /* REVEAL */
   var reveals=[].slice.call(document.querySelectorAll('.reveal'));

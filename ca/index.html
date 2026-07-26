@@ -70,8 +70,8 @@
 <section class="blk ww" style="padding-top:30px">
   <div class="wrap ww-grid">
     <div class="ww-text">
-      <h2 class="h2">Dissenyem l'arquitectura de la teva IA.</h2>
-      <p class="sub">Posem ordre a la teva empresa: una base central única, permisos i avisos, i la IA optimitzada per gastar menys i encertar més. Del diagnòstic al sistema a mida.</p>
+      <h2 class="h2">Dissenyem i muntem la base de la teva empresa.</h2>
+      <p class="sub">Perquè funcioni de manera òptima i estalviïs diners en l'era de la IA: una base central única, permisos i avisos, i la IA optimitzada per gastar menys i encertar més.</p>
       <div class="ww-points">
         <div class="ww-pt"><b>Base central</b><span>Una sola veritat: clients, processos i dades.</span></div>
         <div class="ww-pt"><b>IA optimitzada</b><span>Menys tokens, més precisió a cada resposta.</span></div>
@@ -89,7 +89,8 @@
         <div class="ww-row anim" style="transition-delay:.45s"><span>Precisió de la IA</span><b>+32%</b></div>
         <div class="ww-row anim" style="transition-delay:.60s"><span>Apps connectades</span><b>12</b></div>
       </div>
-      <div class="ww-status anim" style="transition-delay:.85s"><span class="ww-dot"></span> Muntant la teva base central…</div>
+      <div class="ww-chart anim" style="transition-delay:.72s"><span style="height:36%"></span><span style="height:50%"></span><span style="height:44%"></span><span style="height:68%"></span><span style="height:82%"></span><span class="hi" style="height:100%"></span></div>
+      <div class="ww-status anim" style="transition-delay:.9s"><span class="ww-dot"></span> Muntant la teva base central…</div>
     </div>
   </div>
 </section>
@@ -103,10 +104,7 @@
     <div class="stat"><b>100%</b><span>RGPD i on-premise amb el Kit</span></div>
   </div>
 </section>
-<section style="padding:6px 0 40px">
-  <div class="wrap"><p class="marq-label">Confien en nosaltres</p></div>
-  <div class="marquee"><div class="marquee-row"><img class="clogo" src="/wiongo.png" alt="Wiongo"><img class="clogo" src="/casatres.png" alt="Casa Très"><img class="clogo" src="/billybrown.png" alt="Billy Brown"><img class="clogo" src="/capittal.png" alt="Capittal"><img class="clogo" src="/hiproteca.png" alt="Hiproteca"><img class="clogo" src="/wiongo.png" alt="Wiongo"><img class="clogo" src="/casatres.png" alt="Casa Très"><img class="clogo" src="/billybrown.png" alt="Billy Brown"><img class="clogo" src="/capittal.png" alt="Capittal"><img class="clogo" src="/hiproteca.png" alt="Hiproteca"></div></div>
-</section>
+
 
 <!-- CÓMO TRABAJAMOS -->
 <section id="como" class="blk" style="padding-top:30px">
@@ -202,23 +200,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="blk" style="padding-top:20px">
-  <div class="wrap faq">
-    <h2 class="h2 wtitle" style="margin-bottom:30px">El que sempre ens pregunten.</h2>
-    <div id="faqs"></div>
-  </div>
-</section>
-
-<!-- CTA final -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2 class="h2">Ordena la teva empresa amb IPGuard.</h2>
-    <p class="sub">Descobreix el teu potencial en menys de 30 minuts, sense compromís.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/ca/contacto">Demana un diagnòstic</a></div>
-  </div>
-</section>
-
 <footer class="rfoot">
   <div class="wrap rfoot-grid">
     <div>
@@ -262,37 +243,6 @@
     bH.onclick=function(){place(false)}; bD.onclick=function(){place(true)};
     place(reduce); if(!reduce) setTimeout(function(){place(true)},2200);
   }
-
-  /* LOGOS oficiales de terceros */
-  var LOGOS=[
-    '<i class="fa-brands fa-whatsapp" style="color:#25D366"></i>',
-    '<i class="fa-brands fa-google-drive" style="color:#1FA463"></i>',
-    '<i class="fa-brands fa-google" style="color:#EA4335"></i>',
-    '<i class="fa-brands fa-microsoft" style="color:#5E5E5E"></i>',
-    '<i class="fa-brands fa-slack" style="color:#4A154B"></i>',
-    '<i class="fa-brands fa-dropbox" style="color:#0061FF"></i>',
-    '<i class="fa-brands fa-trello" style="color:#0079BF"></i>',
-    '<i class="fa-brands fa-hubspot" style="color:#FF7A59"></i>',
-    '<i class="fa-brands fa-mailchimp" style="color:#241C15"></i>',
-    '<i class="fa-brands fa-stripe-s" style="color:#635BFF"></i>',
-    '<svg viewBox="0 0 22 22"><rect width="22" height="22" rx="3" fill="#fff" stroke="#e6e6e6"/><path d="M6.4 16.2V6.6l2.4.3 5 7.4V7.3l-1.2-.3V6.4l3.6.3v.7l-1 .2v9.1l-1.6-.2-5.3-7.9v6.9l1.2.3v.7l-3.6-.3z" fill="#111"/></svg>',
-    '<svg viewBox="0 0 22 22"><rect width="22" height="22" rx="5" fill="#2F5BEA"/><path d="M6.6 5.6h2.5v4.2h3.9V5.6h2.5v10.8h-2.5v-4.3H9.1v4.3H6.6z" fill="#fff"/></svg>'
-  ];
-  var lg=LOGOS.concat(LOGOS);
-  $('#logos').innerHTML=lg.map(function(s){return '<span class="logo">'+s+'</span>'}).join('');
-
-  /* FAQ */
-  var FAQ=[
-    ['Això no ho fa ja la IA?','En part. La IA executa regles, i a la teva empresa no estan escrites. Això ho decidim amb tu.'],
-    ['Ja connectem apps amb IA, què hi afegeix?','Connectar no és ordenar. Si el client apareix de tres formes, seguiran sent tres clients.'],
-    ['Tenim programadors a casa.','Millor. Construeixen sobre la base que muntem, no infraestructura des de zero.'],
-    ['Què passa amb les nostres dades?','Permisos per persona i registre d\'accessos, alineat amb el RGPD. Amb Kit, ni surten de la teva oficina.'],
-    ['I si l\'equip no ho fa servir?','Comencem per alguna cosa petita que tregui feina a algú des del primer dia. La formació va inclosa.']
-  ];
-  $('#faqs').innerHTML=FAQ.map(function(q){return '<div class="q card"><button type="button"><span>'+q[0]+'</span><span class="mk">+</span></button><div class="ans"><div style="padding-bottom:2px">'+q[1]+'</div></div></div>'}).join('');
-  [].forEach.call(document.querySelectorAll('.q'),function(q){
-    q.querySelector('button').onclick=function(){var open=q.classList.toggle('open');q.querySelector('.mk').textContent=open?'–':'+';};
-  });
 
   /* REVEAL */
   var reveals=[].slice.call(document.querySelectorAll('.reveal'));

@@ -541,3 +541,8 @@ section.blk{padding:96px 0}
 .rf-col a:hover{color:var(--ink)}
 .rfoot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 .rfoot-bottom a{color:var(--muted)} .rfoot-bottom a:hover{color:var(--ink)}
+
+/* mini-chart del panel de datos */
+.ww-chart{display:flex;align-items:flex-end;gap:7px;height:58px;margin-top:24px}
+.ww-chart span{flex:1;background:#e7ecea;border-radius:4px}
+.ww-chart span.hi{background:var(--ink)}
