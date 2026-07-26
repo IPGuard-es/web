@@ -475,3 +475,6 @@ section.blk{padding:96px 0}
 /* ===================== SÚPER MINIMAL: fuera eyebrows/rótulos ===================== */
 .chero-eyebrow{display:none}
 .plabel{display:none}
+
+/* Titular del home: 2 líneas, más presencia */
+.chero-h{font-weight:500;font-size:clamp(32px,4.4vw,54px);max-width:18ch;text-wrap:balance}
