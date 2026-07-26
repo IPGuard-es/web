@@ -383,3 +383,14 @@ h1,h2,h3,.h2,.prod-h,.ohero h1{text-wrap:balance}
 .logo-tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 44px;box-shadow:0 18px 40px -28px rgba(16,24,32,.4);display:grid;place-items:center;transition:transform .2s}
 .logo-tile:hover{transform:translateY(-3px)}
 .logo-tile img{height:68px;width:auto;display:block}
+
+/* ===================== Footer estilo One + sectores ===================== */
+footer.one-foot{background:linear-gradient(180deg,#f3f7f5,#e9f0ed);padding:10px 0 42px;margin-top:24px}
+.one-foot .bar{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.one-foot .inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:rgba(255,255,255,.5);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border:1px solid rgba(255,255,255,.6);border-radius:18px;padding:20px 26px;color:var(--muted);font-size:14px;box-shadow:0 20px 50px -30px rgba(45,55,80,.35)}
+.one-foot .fb{display:flex;align-items:center;gap:10px;font-family:"Futura","Jost",sans-serif;font-weight:800;color:var(--ink);font-size:16px}
+.one-foot .fl{display:flex;flex-wrap:wrap;gap:20px}
+.one-foot .fl a{color:var(--muted)} .one-foot .fl a:hover{color:var(--ink)}
+.sector-wall{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.sector{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:14px;color:var(--ink)}
+.sector i{color:var(--accent);font-size:14px}
