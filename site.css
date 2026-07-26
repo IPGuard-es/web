@@ -458,3 +458,16 @@ section.blk{padding:96px 0}
 .nav-right .lang span{padding:5px 9px;border-radius:8px;color:rgba(16,24,32,.42);cursor:pointer;transition:.15s}
 .nav-right .lang span.on{color:var(--ink);background:rgba(16,24,32,.07)}
 .nav-right .lang span:hover{color:var(--ink)}
+
+/* selector de idioma como enlaces */
+.nav-right .lang a{padding:5px 9px;border-radius:8px;color:rgba(16,24,32,.42);text-decoration:none;transition:.15s}
+.nav-right .lang a.on{color:var(--ink);background:rgba(16,24,32,.07)}
+.nav-right .lang a:hover{color:var(--ink)}
+
+/* ===================== Menos verde + heroes más compactos (minimal) ===================== */
+.uc .ic,.ccard .ci,.mcp-c .ic{background:#eef1f0}
+.sector i{color:rgba(16,24,32,.5)}
+.q .mk{color:var(--ink)}
+.prod{padding-top:56px}
+.prod-viz{margin:30px auto 0}
+.prod-claim{max-width:44ch}
