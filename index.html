@@ -69,8 +69,7 @@
 <!-- CÓMO TRABAJAMOS -->
 <section id="como" class="blk" style="padding-top:30px">
   <div class="wrap">
-    <p class="plabel accent">Cómo trabajamos</p>
-    <h2 class="h2" style="max-width:20ch">Estrategia primero, sistema después.</h2>
+    <h2 class="h2 wtitle" style="max-width:20ch">Estrategia primero, sistema después.</h2>
     <div class="grid3">
       <div class="step card reveal">
         <div class="step-viz">
@@ -137,8 +136,7 @@
 <!-- CASOS DE ÉXITO -->
 <section id="casos" class="blk" style="padding-top:20px">
   <div class="wrap">
-    <p class="plabel accent">Casos de éxito</p>
-    <h2 class="h2" style="max-width:22ch">Empresas que ya trabajan ordenadas.</h2>
+    <h2 class="h2 wtitle" style="max-width:22ch">Empresas que ya trabajan ordenadas.</h2>
     <div class="cases">
       <div class="case-main card">
         <p class="plabel accent">Wiongo · Hostelería y robótica de servicio</p>
@@ -156,8 +154,7 @@
 <!-- LOGOS -->
 <section class="blk" style="padding-top:20px">
   <div class="wrap center">
-    <p class="plabel accent">Tu software se queda</p>
-    <h2 class="h2" style="max-width:26ch;margin-left:auto;margin-right:auto">Lo que ya funciona se conecta. Lo que no, se retira.</h2>
+    <h2 class="h2 wtitle" style="max-width:26ch;margin-left:auto;margin-right:auto">Lo que ya funciona se conecta. Lo que no, se retira.</h2>
     <div class="marquee"><div class="marquee-row" id="logos"></div></div>
   </div>
 </section>
@@ -165,8 +162,7 @@
 <!-- CONTACTO -->
 <section id="contacto" class="blk" style="padding-top:20px">
   <div class="wrap">
-    <p class="plabel accent">Contacto</p>
-    <h2 class="h2" style="max-width:16ch">Contáctanos.</h2>
+    <h2 class="h2 wtitle" style="max-width:16ch">Contáctanos.</h2>
     <p class="sub">Conoce el potencial de tu empresa en menos de 30 minutos.</p>
     <div class="contact-grid">
       <div class="ccards">
@@ -192,8 +188,7 @@
 <!-- FAQ -->
 <section id="faq" class="blk" style="padding-top:20px">
   <div class="wrap faq">
-    <p class="plabel accent">Dudas razonables</p>
-    <h2 class="h2" style="margin-bottom:30px">Lo que siempre nos preguntan.</h2>
+    <h2 class="h2 wtitle" style="margin-bottom:30px">Lo que siempre nos preguntan.</h2>
     <div id="faqs"></div>
   </div>
 </section>
@@ -289,6 +284,10 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.14});
     reveals.forEach(function(el,i){el.dataset.d=(i%4)*80;io.observe(el)});
   } else { reveals.forEach(function(el){el.classList.add('in')}); }
+
+  /* BARRA: al pulsar, marcar en negro */
+  var pill=[].slice.call(document.querySelectorAll('.nav-pill a'));
+  pill.forEach(function(a){a.addEventListener('click',function(){pill.forEach(function(x){x.classList.remove('active')});a.classList.add('active')})});
 
   /* MENÚ MÓVIL */
   var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
