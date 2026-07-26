@@ -66,6 +66,34 @@
   </div>
 </section>
 
+<!-- QUÉ HACEMOS (panel de datos, estilo Capittal) -->
+<section class="blk ww" style="padding-top:30px">
+  <div class="wrap ww-grid">
+    <div class="ww-text">
+      <h2 class="h2">Diseñamos la arquitectura de tu IA.</h2>
+      <p class="sub">Ponemos orden en tu empresa: una base central única, permisos y avisos, y la IA optimizada para gastar menos y acertar más. Del diagnóstico al sistema a medida.</p>
+      <div class="ww-points">
+        <div class="ww-pt"><b>Base central</b><span>Una sola verdad: clientes, procesos y datos.</span></div>
+        <div class="ww-pt"><b>IA optimizada</b><span>Menos tokens, más precisión en cada respuesta.</span></div>
+        <div class="ww-pt"><b>Sistema a medida</b><span>Lo montamos, lo conectamos y lo sostenemos.</span></div>
+      </div>
+      <a class="btn btn-dark" href="/contacto">Pedir un diagnóstico</a>
+    </div>
+    <div class="ww-panel card">
+      <div class="ww-phead"><span>Diagnóstico · Confidencial</span><span>—</span></div>
+      <div class="ww-co">Tu empresa</div>
+      <div class="ww-cosub">Sector servicios · 40 empleados</div>
+      <div class="ww-rows">
+        <div class="ww-row anim" style="transition-delay:.15s"><span>Fuentes de verdad</span><b>12 &rarr; 1</b></div>
+        <div class="ww-row anim" style="transition-delay:.30s"><span>Tokens por consulta</span><b>&minus;87%</b></div>
+        <div class="ww-row anim" style="transition-delay:.45s"><span>Precisión de la IA</span><b>+32%</b></div>
+        <div class="ww-row anim" style="transition-delay:.60s"><span>Apps conectadas</span><b>12</b></div>
+      </div>
+      <div class="ww-status anim" style="transition-delay:.85s"><span class="ww-dot"></span> Montando tu base central…</div>
+    </div>
+  </div>
+</section>
+
 <!-- CÓMO TRABAJAMOS -->
 <section id="como" class="blk" style="padding-top:30px">
   <div class="wrap">
@@ -258,6 +286,8 @@
   pill.forEach(function(a){a.addEventListener('click',function(){pill.forEach(function(x){x.classList.remove('active')});a.classList.add('active')})});
 
   /* MENÚ MÓVIL */
+  var wp=document.querySelector('.ww-panel');
+  if(wp){ if('IntersectionObserver' in window){var wo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');wo.disconnect();}})},{threshold:.25}); wo.observe(wp);} else { wp.classList.add('show'); } }
   var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
   if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open')});
     [].forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});}

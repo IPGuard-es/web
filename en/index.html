@@ -66,6 +66,34 @@
   </div>
 </section>
 
+<!-- QUÉ HACEMOS (panel de datos, estilo Capittal) -->
+<section class="blk ww" style="padding-top:30px">
+  <div class="wrap ww-grid">
+    <div class="ww-text">
+      <h2 class="h2">We design your AI architecture.</h2>
+      <p class="sub">We bring order to your company: one central base, permissions and alerts, and AI optimised to spend less and be more accurate. From diagnosis to a tailored system.</p>
+      <div class="ww-points">
+        <div class="ww-pt"><b>Central base</b><span>A single source of truth: customers, processes and data.</span></div>
+        <div class="ww-pt"><b>Optimised AI</b><span>Fewer tokens, more accuracy in every reply.</span></div>
+        <div class="ww-pt"><b>Tailored system</b><span>We build it, connect it and sustain it.</span></div>
+      </div>
+      <a class="btn btn-dark" href="/en/contacto">Book a diagnosis</a>
+    </div>
+    <div class="ww-panel card">
+      <div class="ww-phead"><span>Diagnosis · Confidential</span><span>—</span></div>
+      <div class="ww-co">Your company</div>
+      <div class="ww-cosub">Services sector · 40 employees</div>
+      <div class="ww-rows">
+        <div class="ww-row anim" style="transition-delay:.15s"><span>Sources of truth</span><b>12 &rarr; 1</b></div>
+        <div class="ww-row anim" style="transition-delay:.30s"><span>Tokens per query</span><b>&minus;87%</b></div>
+        <div class="ww-row anim" style="transition-delay:.45s"><span>AI accuracy</span><b>+32%</b></div>
+        <div class="ww-row anim" style="transition-delay:.60s"><span>Connected apps</span><b>12</b></div>
+      </div>
+      <div class="ww-status anim" style="transition-delay:.85s"><span class="ww-dot"></span> Building your central base…</div>
+    </div>
+  </div>
+</section>
+
 <!-- CÓMO TRABAJAMOS -->
 <section id="como" class="blk" style="padding-top:30px">
   <div class="wrap">
@@ -258,6 +286,8 @@
   pill.forEach(function(a){a.addEventListener('click',function(){pill.forEach(function(x){x.classList.remove('active')});a.classList.add('active')})});
 
   /* MENÚ MÓVIL */
+  var wp=document.querySelector('.ww-panel');
+  if(wp){ if('IntersectionObserver' in window){var wo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');wo.disconnect();}})},{threshold:.25}); wo.observe(wp);} else { wp.classList.add('show'); } }
   var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
   if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open')});
     [].forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});}
