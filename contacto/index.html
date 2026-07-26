@@ -87,6 +87,7 @@
 <script>
 (function(){
   var $=function(s){return document.querySelector(s)};
+  var _m=new URLSearchParams(location.search).get('m'); if(_m){var _t=$('textarea[name=mensaje]'); if(_t)_t.value=_m;}
   var f=$('#cform'),msg=$('#formMsg'),btn=$('#cbtn');
   function estado(t,ok){msg.style.display='block';msg.textContent=t;msg.style.color=ok?'#127a5b':'#b3261e'}
   f.addEventListener('submit',function(ev){
