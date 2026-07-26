@@ -471,3 +471,7 @@ section.blk{padding:96px 0}
 .prod{padding-top:56px}
 .prod-viz{margin:30px auto 0}
 .prod-claim{max-width:44ch}
+
+/* ===================== SÚPER MINIMAL: fuera eyebrows/rótulos ===================== */
+.chero-eyebrow{display:none}
+.plabel{display:none}
