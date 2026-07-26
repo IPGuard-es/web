@@ -26,11 +26,11 @@
       <a href="/one">One</a>
       <a href="/vision">Vision</a>
       <a href="/kit">Kit</a>
-      <a href="#casos">Casos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/contacto">Contacto</a>
     </div>
     <div class="nav-right">
-      <a class="btn btn-dark btn-sm" href="#contacto">Pedir diagnóstico</a>
+      <a class="btn btn-dark btn-sm" href="/contacto">Pedir diagnóstico</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
@@ -41,7 +41,7 @@
       <a href="/vision">Vision</a>
       <a href="/kit">Kit</a>
       <a href="#faq">Dudas</a>
-      <a href="#contacto">Pedir diagnóstico</a>
+      <a href="/contacto">Pedir diagnóstico</a>
     </div>
   </div>
 </header>
@@ -54,7 +54,7 @@
       <h1>Ordenamos tu empresa para que rinda más.</h1>
       <p class="sub">IPGuard diseña la base sobre la que trabaja tu negocio y tu IA: una sola verdad, permisos y apps que se hablan. Estrategia primero, sistema después.</p>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="#contacto">Pedir un diagnóstico</a>
+        <a class="btn btn-dark" href="/contacto">Pedir un diagnóstico</a>
         <a class="btn btn-light" href="#como">Cómo trabajamos</a>
       </div>
     </div>
@@ -159,37 +159,20 @@
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="blk" style="padding-top:20px">
-  <div class="wrap">
-    <h2 class="h2 wtitle" style="max-width:16ch">Contáctanos.</h2>
-    <p class="sub">Conoce el potencial de tu empresa en menos de 30 minutos.</p>
-    <div class="contact-grid">
-      <div class="ccards">
-        <a class="ccard card" href="mailto:info@ipguard.es"><span class="ci"><i class="fa-solid fa-envelope"></i></span><span><span class="k">Email</span><span class="v">info@ipguard.es</span></span></a>
-        <a class="ccard card" href="tel:+34973266569"><span class="ci"><i class="fa-solid fa-phone"></i></span><span><span class="k">Teléfono</span><span class="v">973 26 65 69</span></span></a>
-        <a class="ccard card" href="/one"><span class="ci"><i class="fa-solid fa-grip"></i></span><span><span class="k">La plataforma</span><span class="v">ipguard.es/one</span></span></a>
-      </div>
-      <form class="cform card" id="cform" autocomplete="off">
-        <div class="row">
-          <label><span class="l">Nombre *</span><input name="nombre" required placeholder="Tu nombre"></label>
-          <label><span class="l">Empresa</span><input name="empresa" placeholder="Tu empresa"></label>
-        </div>
-        <label><span class="l">Email *</span><input name="email" type="email" required placeholder="tucorreo@empresa.com"></label>
-        <label><span class="l">Mensaje *</span><textarea name="mensaje" required rows="4" placeholder="Cuéntanos qué necesitas…"></textarea></label>
-        <input class="honey" type="text" name="website" tabindex="-1" aria-hidden="true">
-        <button class="btn btn-dark" type="submit" id="cbtn" style="width:100%;justify-content:center;margin-top:20px">Enviar</button>
-        <p id="formMsg"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq" class="blk" style="padding-top:20px">
   <div class="wrap faq">
     <h2 class="h2 wtitle" style="margin-bottom:30px">Lo que siempre nos preguntan.</h2>
     <div id="faqs"></div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2 class="h2">Ordena tu empresa con IPGuard.</h2>
+    <p class="sub">Conoce tu potencial en menos de 30 minutos, sin compromiso.</p>
+    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/contacto">Pedir un diagnóstico</a></div>
   </div>
 </section>
 
@@ -263,19 +246,6 @@
   $('#faqs').innerHTML=FAQ.map(function(q){return '<div class="q card"><button type="button"><span>'+q[0]+'</span><span class="mk">+</span></button><div class="ans"><div style="padding-bottom:2px">'+q[1]+'</div></div></div>'}).join('');
   [].forEach.call(document.querySelectorAll('.q'),function(q){
     q.querySelector('button').onclick=function(){var open=q.classList.toggle('open');q.querySelector('.mk').textContent=open?'–':'+';};
-  });
-
-  /* CONTACTO */
-  var f=$('#cform'),msg=$('#formMsg'),btn=$('#cbtn');
-  function estado(t,ok){msg.style.display='block';msg.textContent=t;msg.style.color=ok?'#127a5b':'#b3261e'}
-  f.addEventListener('submit',function(ev){
-    ev.preventDefault(); if(!f.reportValidity())return;
-    var d=new FormData(f); btn.disabled=true; btn.textContent='Enviando…';
-    fetch('https://app.ipguard.es/api/public/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:d.get('nombre'),empresa:d.get('empresa'),email:d.get('email'),mensaje:d.get('mensaje'),website:d.get('website')})})
-      .then(function(r){return r.json().catch(function(){return{}})})
-      .then(function(j){if(!j.ok)throw 0; estado('¡Gracias! Te contestamos enseguida.',true); f.reset();})
-      .catch(function(){estado('No se pudo enviar. Escríbenos a info@ipguard.es o al 973 26 65 69.',false)})
-      .then(function(){btn.disabled=false; btn.textContent='Enviar';});
   });
 
   /* REVEAL */
