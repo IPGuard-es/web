@@ -382,7 +382,7 @@ h1,h2,h3,.h2,.prod-h,.ohero h1{text-wrap:balance}
 .logos-wall{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:center;margin-top:34px}
 .logo-tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 44px;box-shadow:0 18px 40px -28px rgba(16,24,32,.4);display:grid;place-items:center;transition:transform .2s}
 .logo-tile:hover{transform:translateY(-3px)}
-.logo-tile img{height:68px;width:auto;display:block}
+.logo-tile img{height:56px;width:auto;max-width:210px;object-fit:contain;display:block}
 
 /* ===================== Footer estilo One + sectores ===================== */
 footer.one-foot{background:linear-gradient(180deg,#f3f7f5,#e9f0ed);padding:10px 0 42px;margin-top:24px}
