@@ -576,3 +576,12 @@ section.blk{padding:96px 0}
 .step2-n{font-size:22px;font-weight:700;color:#dfe4e2;letter-spacing:.02em}
 .step2 h3{font-size:19px;font-weight:600;margin:0 0 10px;color:var(--ink)}
 .step2 p{font-size:14.5px;line-height:1.6;color:#4a5551;margin:0}
+
+/* ===== Botón CTA del nav: nunca partir en 2 líneas + compacto en móvil ===== */
+.btn{white-space:nowrap}
+.nav .btn{flex-shrink:0}
+.nav-pill{flex-shrink:1;min-width:0}
+@media(max-width:600px){
+  .nav .btn-sm{padding:9px 15px;font-size:13px}
+  .nav{gap:8px;padding:0 16px}
+}
