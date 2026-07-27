@@ -620,3 +620,18 @@ section.blk{padding:96px 0}
 .ex h3{font-size:17px;font-weight:600;margin:0 0 8px;color:var(--ink);display:flex;align-items:center;gap:9px}
 .ex h3 i{color:var(--muted);font-size:14px}
 .ex p{font-size:14px;line-height:1.6;color:#4a5551;margin:0}
+
+/* Sense: reproductor de audio */
+.ex-play{border:none;cursor:pointer;padding:0}
+.call-player{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.call-player .wave{flex:1}
+.ex-play.on{background:#25d366;color:#08331d}
+/* la onda solo se mueve al reproducir; en reposo queda serena */
+.wave span{animation-play-state:paused}
+.playing .wave span,.wave.live span{animation-play-state:running}
+
+/* onda: en reposo estática a su altura; animada solo al reproducir / hero live */
+@keyframes wv2{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.45)}}
+.wave span{animation:wv2 1.05s ease-in-out infinite paused!important}
+.wave.live span,.playing .wave span{animation-play-state:running!important}
+@media(prefers-reduced-motion:reduce){.wave span{animation:none!important}}
