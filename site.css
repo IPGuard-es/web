@@ -635,3 +635,7 @@ section.blk{padding:96px 0}
 .wave span{animation:wv2 1.05s ease-in-out infinite paused!important}
 .wave.live span,.playing .wave span{animation-play-state:running!important}
 @media(prefers-reduced-motion:reduce){.wave span{animation:none!important}}
+
+/* ===== Mapa agéntico (Nexus) ===== */
+.agentmap-wrap{max-width:760px;margin:26px auto 0}
+.agentmap{width:100%;height:auto;display:block;overflow:visible}
