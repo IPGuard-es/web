@@ -638,3 +638,11 @@ section.blk{padding:96px 0}
 /* ===== Mapa agéntico (Nexus) ===== */
 .agentmap-wrap{max-width:760px;margin:26px auto 0}
 .agentmap{width:100%;height:auto;display:block;overflow:visible}
+
+/* Sense · Vista: imagen de deteccion de Vision dentro de la tarjeta */
+#sentidos .uc-grid{align-items:start}
+.vista-card{padding:0;overflow:hidden}
+.vista-card>h3{padding:0 24px}
+.vista-card>p{padding:0 24px 24px}
+.vista-media{position:relative;line-height:0;margin-bottom:16px}
+.vista-media img{display:block;width:100%;height:auto}
