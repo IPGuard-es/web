@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Serveis i equipament · IPGuard</title>
-<meta name="description" content="Lo que no es software también te lo montamos: Sentinel de ciberseguretat, Sentinel IA local, IPGuard OS y servicios profesionales llave en mano.">
-<meta property="og:title" content="Serveis i equipament · IPGuard">
-<meta property="og:description" content="Sentinel de ciberseguretat, Sentinel IA local, IPGuard OS y servicios profesionales.">
+<title>Serveis d'enginyeria de telecomunicació · IPGuard</title>
+<meta name="description" content="Consultoria tecnològica, intel·ligència artificial, programari a mida, ciberseguretat i enginyeria de telecomunicació. Projectes signats per Enginyer de Telecomunicació col·legiat.">
+<meta property="og:title" content="Serveis d'enginyeria de telecomunicació · IPGuard">
+<meta property="og:description" content="De la consultoria i la IA al projecte de telecomunicació signat per enginyer col·legiat. Ho fem tot.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipguard.es/servicios">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Arimo:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="/site.css?v=6">
+<link rel="stylesheet" href="/site.css?v=7">
 </head>
 <body>
 
@@ -22,11 +22,25 @@
   <nav class="nav">
     <a class="brand" href="/ca/"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
     <div class="nav-pill">
-      <a href="/ca/nexus">Nexus</a>
-      <a href="/one">One</a>
-      <a href="/ca/vision">Vision</a>
-      <a href="/ca/kit">Sentinel</a>
-      <a href="/ca/servicios" class="active">Serveis</a>
+      <div class="nav-dd">
+        <a class="nav-dd-btn" href="/#productos">Solucions <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dd-menu">
+          <a href="/ca/nexus"><b>Nexus</b><span>Programari a mida + IA</span></a>
+          <a href="/one"><b>One</b><span>La plataforma, +50 apps</span></a>
+          <a href="/sense"><b>Sense</b><span>Els sentits de la teva IA</span></a>
+          <a href="/ca/kit"><b>Sentinel</b><span>Ciberseguretat + IA local</span></a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a class="nav-dd-btn" href="/ca/servicios">Serveis <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dd-menu">
+          <a href="/servicios#consultoria"><b>Consultoria tecnològica</b><span>Diagnòstic i estratègia</span></a>
+          <a href="/servicios#ia"><b>Intel·ligència artificial</b><span>Agents, visió i veu</span></a>
+          <a href="/servicios#software"><b>Programari a mida</b><span>Apps, CRM, ERP</span></a>
+          <a href="/servicios#seguridad"><b>Ciberseguretat i IA local</b><span>On-premise</span></a>
+          <a href="/servicios#telecom"><b>Enginyeria de telecomunicació</b><span>ICT, xarxes, certificacions</span></a>
+        </div>
+      </div>
       <a href="/ca/contacto">Contacte</a>
     </div>
     <div class="nav-right">
@@ -38,52 +52,73 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <div class="inner">
-      <a href="/ca/nexus">Nexus</a><a href="/one">One</a><a href="/ca/vision">Vision</a><a href="/ca/kit">Sentinel</a>
-      <a href="/ca/servicios">Serveis</a><a href="/ca/contacto">Contacte</a>
+      <span class="mm-group">Solucions</span>
+      <a href="/ca/nexus">Nexus</a><a href="/one">One</a><a href="/sense">Sense</a><a href="/ca/kit">Sentinel</a>
+      <span class="mm-group">Serveis</span>
+      <a href="/servicios#consultoria">Consultoria tecnològica</a><a href="/servicios#ia">Intel·ligència artificial</a><a href="/servicios#software">Programari a mida</a><a href="/servicios#seguridad">Ciberseguretat i IA local</a><a href="/servicios#telecom">Enginyeria de telecomunicació</a>
+      <a href="/ca/contacto" class="mm-contact">Contacte</a>
     </div>
   </div>
 </header>
 
-<section id="top" class="prod" style="padding-top:64px;padding-bottom:10px">
+<section id="top" class="prod" style="padding-top:64px;padding-bottom:6px">
   <div class="wrap">
-    <h1 class="prod-h">Serveis i equipament.</h1>
-    <p class="prod-claim">El que no és programari també t'ho muntem, l'instal·lem i el gestionem nosaltres.</p>
-    <div class="hero-cta" style="justify-content:center"><a class="btn btn-dark" href="https://wa.me/34636224398" target="_blank" rel="noopener">Parla amb nosaltres</a></div>
+    <h1 class="prod-h">Consultoria, IA i enginyeria, de principi a fi.</h1>
+    <p class="prod-claim">Del programari a mida i la IA aplicada al projecte de telecomunicació signat per Enginyer de Telecomunicació col·legiat. El dissenyem, el muntem i el mantenim.</p>
+    <div class="hero-cta" style="justify-content:center"><a class="btn btn-dark" href="/ca/contacto">Demanar un pressupost</a></div>
   </div>
 </section>
 
-<section class="blk" style="padding-top:10px">
+<!-- CREDENCIAL -->
+<section class="blk" style="padding-top:18px">
   <div class="wrap">
-    <div class="serv-grid">
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><span class="price">350 €</span></div><h3>Sentinel de ciberseguretat</h3><p>Un petit equip que protegeix tota la teva xarxa des de dins: tallafoc, filtratge web, VPN i IDS/IPS, amb el correu entrant escanejat i còpies xifrades anti-ransomware.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-microchip"></i></span><span class="price">500 €</span></div><h3>Sentinel IA local</h3><p>Executa la IA dins de la teva oficina: privada, ràpida i sense enviar les teves dades al núvol. Sense cost per ús ni per tokens, per al teu assistent i els teus empleats IA.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-laptop-code"></i></span></div><h3>IPGuard OS</h3><p>Dóna una segona vida als teus PCs vells: un sistema lleuger, segur per defecte i a punt per a IPGuard, sense llicències de Windows. Te l'instal·lem o t'enviem el PC muntat.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-briefcase"></i></span></div><h3>Serveis professionals</h3><p>Clau en mà: ciberseguretat, màrqueting, RH i més. Nosaltres ho muntem i ho gestionem, i tu t'ocupes del teu negoci.</p></div>
+    <div class="cred card">
+      <span class="cred-ic"><i class="fa-solid fa-stamp"></i></span>
+      <div>
+        <h3>Projectes signats per Enginyer de Telecomunicació col·legiat.</h3>
+        <p>Signem, visem i legalitzem els teus projectes davant el col·legi professional i l'administració, amb la competència legal per certificar instal·lacions ICT i de xarxa.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CON EL KIT -->
+<!-- CONSULTORIA / IA / SOFTWARE -->
 <section class="blk" style="padding-top:20px">
   <div class="wrap">
-    <h2 class="h2 wtitle">Tot el que fa el Sentinel.</h2>
-    <p class="sub" style="text-align:center;margin:14px auto 0">Un sol equip a la teva oficina que substitueix diverses eines de seguretat.</p>
-    <div class="uc-grid">
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-fire"></i></span><h3>Tallafoc i filtratge web</h3><p>Controla el trànsit i bloqueja anuncis, rastrejadors i webs de risc.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>IDS/IPS</h3><p>Detecta i bloqueja intrusions en temps real.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-lock"></i></span><h3>VPN corporativa</h3><p>El teu equip connecta a l'oficina des de qualsevol lloc, xifrat.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-envelope-open-text"></i></span><h3>Correu escanejat</h3><p>El correu entrant es revisa abans d'arribar a la teva gent.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-laptop-medical"></i></span><h3>Antivirus / EDR</h3><p>Protecció i postura de seguretat a cada equip.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-database"></i></span><h3>Còpies anti-ransomware</h3><p>Còpia xifrada i immutable, a punt per restaurar.</p></div>
+    <h2 class="h2 wtitle">Consultoria, IA i programari.</h2>
+    <div class="uc-grid" style="margin-top:34px">
+      <div class="uc card reveal" id="consultoria"><span class="ic"><i class="fa-solid fa-compass-drafting"></i></span><h3>Consultoria tecnològica</h3><p>Diagnòstic i estratègia: ordenem la teva empresa i decidim quina tecnologia encaixa, sense fum.</p></div>
+      <div class="uc card reveal" id="ia"><span class="ic"><i class="fa-solid fa-brain"></i></span><h3>Intel·ligència artificial</h3><p>IA aplicada al teu negoci: agents que veuen, senten i parlen, i automatització real.</p></div>
+      <div class="uc card reveal" id="software"><span class="ic"><i class="fa-solid fa-code"></i></span><h3>Programari a mida</h3><p>Apps, CRM, ERP i eines fetes a mida i connectades a la teva IA.</p></div>
+      <div class="uc card reveal" id="seguridad"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>Ciberseguretat i IA local</h3><p>Protecció on-premise i la teva IA funcionant dins de la teva empresa.</p></div>
     </div>
   </div>
 </section>
 
+<!-- INGENIERIA TELECOM -->
+<section id="telecom" class="blk" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="h2 wtitle">Enginyeria de telecomunicació.</h2>
+    <p class="sub" style="text-align:center;margin:14px auto 0;max-width:56ch">Projectes signats i certificats, de la ICT del teu edifici al desplegament de xarxes.</p>
+    <div class="uc-grid" style="margin-top:34px">
+      <div class="uc card reveal" id="ict"><span class="ic"><i class="fa-solid fa-building"></i></span><h3>ICT en edificació</h3><p>Projectes i butlletins ICT per a obra nova i reformes: fibra òptica, RTV, coaxial, telefonia i porters. Legalització i tramitació davant l'administració.</p></div>
+      <div class="uc card reveal" id="redes"><span class="ic"><i class="fa-solid fa-tower-cell"></i></span><h3>Desplegament de xarxes FTTH/5G</h3><p>Fibra fins a la llar, canalitzacions exteriors i estacions base de telefonia mòbil 4G/5G. Del plànol al desplegament.</p></div>
+      <div class="uc card reveal" id="radio"><span class="ic"><i class="fa-solid fa-satellite-dish"></i></span><h3>Certificació radioelèctrica</h3><p>Mesuraments d'emissió d'antenes i certificats radioelèctrics per complir la normativa d'exposició i renovar-los cada any.</p></div>
+      <div class="uc card reveal" id="cctv"><span class="ic"><i class="fa-solid fa-video"></i></span><h3>Seguretat i CCTV</h3><p>Xarxes de videovigilància urbanes o industrials integrades amb centres de control, complint la normativa de seguretat privada.</p></div>
+      <div class="uc card reveal" id="peritajes"><span class="ic"><i class="fa-solid fa-file-contract"></i></span><h3>Peritatges i informes</h3><p>Informes tècnics i peritatges judicials: fallades de sistemes, ciberseguretat, telecomunicacions i disputes tècniques.</p></div>
+      <div class="uc card reveal" id="acustica"><span class="ic"><i class="fa-solid fa-volume-high"></i></span><h3>Acústica i llicències</h3><p>Estudis d'aïllament acústic i projectes per a llicències d'activitat de locals de pública concurrència i indústria.</p></div>
+      <div class="uc card reveal" id="cpd"><span class="ic"><i class="fa-solid fa-server"></i></span><h3>CPD i xarxes privades</h3><p>Centres de dades, xarxes de ràdio crítiques (TETRA/DMR), SAI i climatització de sales de servidors.</p></div>
+      <div class="uc card reveal" id="kit-equip"><span class="ic"><i class="fa-solid fa-microchip"></i></span><h3>Kit i equipament</h3><p>Kit de ciberseguretat, Kit d'IA local i IPGuard OS. Equipament clau en mà, instal·lat i gestionat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-band">
   <div class="wrap">
-    <h2 class="h2">Et muntem l'equip?</h2>
-    <p class="sub">Et diem què encaixa amb la teva empresa en menys de 30 minuts.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/ca/contacto">Demana un diagnòstic</a></div>
+    <h2 class="h2">Tens un projecte?</h2>
+    <p class="sub">Explica'ns-el i et diem com l'abordem i què necessita, sense compromís.</p>
+    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/ca/contacto">Demanar un pressupost</a></div>
   </div>
 </section>
 
@@ -91,14 +126,13 @@
   <div class="wrap rfoot-grid">
     <div>
       <div class="rf-name"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block;border-radius:50%"> IPGuard</div>
-      <p class="rf-desc">Arquitectura d'empresa i IA aplicada. Dissenyem la base sobre la qual treballa el teu negoci i la teva IA, del diagnòstic al sistema a mida.</p>
+      <p class="rf-desc">Arquitectura d'empresa i IA aplicada, i enginyeria de telecomunicació. Del diagnòstic al projecte signat.</p>
       <p class="rf-contact"><i class="fa-solid fa-phone"></i> 973 26 65 69</p>
       <p class="rf-contact"><i class="fa-solid fa-envelope"></i> info@ipguard.es</p>
       <p class="rf-contact"><i class="fa-solid fa-location-dot"></i> Espanya &middot; cobertura nacional</p>
     </div>
-    <div class="rf-col"><h4>Productes</h4><a href="/ca/nexus">Nexus</a><a href="/one">One</a><a href="/ca/vision">Vision</a><a href="/ca/kit">Sentinel</a></div>
+    <div class="rf-col"><h4>Solucions</h4><a href="/ca/nexus">Nexus</a><a href="/one">One</a><a href="/sense">Sense</a><a href="/ca/kit">Sentinel</a></div>
     <div class="rf-col"><h4>Empresa</h4><a href="/ca/servicios">Serveis</a><a href="/#casos">Casos</a><a href="/ca/contacto">Contacte</a></div>
-    <div class="rf-col"><h4>Recursos</h4><a href="https://ipguard.es/soporte">Suport</a><a href="https://app.ipguard.es">La plataforma</a></div>
     <div class="rf-col"><h4>Legal</h4><a href="https://app.ipguard.es/legal/politica-privacidad">Privacitat</a><a href="https://app.ipguard.es/legal/terminos-condiciones">Termes</a></div>
   </div>
   <div class="wrap rfoot-bottom">
@@ -107,19 +141,20 @@
   </div>
 </footer>
 
+<a class="wa-fab" href="https://wa.me/34636224398?text=Hola,%20quiero%20informaci%C3%B3n%20de%20un%20proyecto" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>En parlem?</span></a>
+
 <script>
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var reveals=[].slice.call(document.querySelectorAll('.reveal'));
   if('IntersectionObserver' in window && !reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.14});
-    reveals.forEach(function(el,i){el.dataset.d=(i%4)*80;io.observe(el)});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(+el.dataset.d||0));io.unobserve(el);}})},{threshold:.12});
+    reveals.forEach(function(el,i){el.dataset.d=(i%3)*70;io.observe(el)});
   } else { reveals.forEach(function(el){el.classList.add('in')}); }
   var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
   if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open')});
     [].forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});}
 })();
 </script>
-<a class="wa-fab" href="https://wa.me/34636224398?text=Hola,%20quiero%20informaci%C3%B3n%20de%20IPGuard" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>En parlem?</span></a>
 </body>
 </html>

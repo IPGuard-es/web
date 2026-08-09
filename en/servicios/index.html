@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services and equipment · IPGuard</title>
-<meta name="description" content="Lo que no es software también te lo montamos: Cybersecurity Sentinel, Local AI Sentinel, IPGuard OS y servicios profesionales llave en mano.">
-<meta property="og:title" content="Services and equipment · IPGuard">
-<meta property="og:description" content="Cybersecurity Sentinel, Local AI Sentinel, IPGuard OS y servicios profesionales.">
+<title>Telecom engineering services · IPGuard</title>
+<meta name="description" content="Technology consulting, artificial intelligence, custom software, cybersecurity and telecom engineering. Projects signed by a chartered Telecommunications Engineer.">
+<meta property="og:title" content="Telecom engineering services · IPGuard">
+<meta property="og:description" content="From consulting and AI to the telecom project signed by a chartered engineer. We do it all.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipguard.es/servicios">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Arimo:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="/site.css?v=6">
+<link rel="stylesheet" href="/site.css?v=7">
 </head>
 <body>
 
@@ -22,11 +22,25 @@
   <nav class="nav">
     <a class="brand" href="/en/"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
     <div class="nav-pill">
-      <a href="/en/nexus">Nexus</a>
-      <a href="/one">One</a>
-      <a href="/en/vision">Vision</a>
-      <a href="/en/kit">Sentinel</a>
-      <a href="/en/servicios" class="active">Services</a>
+      <div class="nav-dd">
+        <a class="nav-dd-btn" href="/#productos">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dd-menu">
+          <a href="/en/nexus"><b>Nexus</b><span>Custom software + AI</span></a>
+          <a href="/one"><b>One</b><span>The platform, 50+ apps</span></a>
+          <a href="/sense"><b>Sense</b><span>Your AI's senses</span></a>
+          <a href="/en/kit"><b>Sentinel</b><span>Cybersecurity + local AI</span></a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a class="nav-dd-btn" href="/en/servicios">Services <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dd-menu">
+          <a href="/servicios#consultoria"><b>Technology consulting</b><span>Diagnosis and strategy</span></a>
+          <a href="/servicios#ia"><b>Artificial intelligence</b><span>Agents, vision and voice</span></a>
+          <a href="/servicios#software"><b>Custom software</b><span>Apps, CRM, ERP</span></a>
+          <a href="/servicios#seguridad"><b>Cybersecurity and local AI</b><span>On-premise</span></a>
+          <a href="/servicios#telecom"><b>Telecom engineering</b><span>ICT, networks, certifications</span></a>
+        </div>
+      </div>
       <a href="/en/contacto">Contact</a>
     </div>
     <div class="nav-right">
@@ -38,52 +52,73 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <div class="inner">
-      <a href="/en/nexus">Nexus</a><a href="/one">One</a><a href="/en/vision">Vision</a><a href="/en/kit">Sentinel</a>
-      <a href="/en/servicios">Services</a><a href="/en/contacto">Contact</a>
+      <span class="mm-group">Solutions</span>
+      <a href="/en/nexus">Nexus</a><a href="/one">One</a><a href="/sense">Sense</a><a href="/en/kit">Sentinel</a>
+      <span class="mm-group">Services</span>
+      <a href="/servicios#consultoria">Technology consulting</a><a href="/servicios#ia">Artificial intelligence</a><a href="/servicios#software">Custom software</a><a href="/servicios#seguridad">Cybersecurity and local AI</a><a href="/servicios#telecom">Telecom engineering</a>
+      <a href="/en/contacto" class="mm-contact">Contact</a>
     </div>
   </div>
 </header>
 
-<section id="top" class="prod" style="padding-top:64px;padding-bottom:10px">
+<section id="top" class="prod" style="padding-top:64px;padding-bottom:6px">
   <div class="wrap">
-    <h1 class="prod-h">Services and equipment.</h1>
-    <p class="prod-claim">What isn't software, we also set up, install and manage for you.</p>
-    <div class="hero-cta" style="justify-content:center"><a class="btn btn-dark" href="https://wa.me/34636224398" target="_blank" rel="noopener">Talk to us</a></div>
+    <h1 class="prod-h">Consulting, AI and engineering, end to end.</h1>
+    <p class="prod-claim">From custom software and applied AI to the telecom project signed by a chartered Telecommunications Engineer. We design it, build it and maintain it.</p>
+    <div class="hero-cta" style="justify-content:center"><a class="btn btn-dark" href="/en/contacto">Request a quote</a></div>
   </div>
 </section>
 
-<section class="blk" style="padding-top:10px">
+<!-- CREDENCIAL -->
+<section class="blk" style="padding-top:18px">
   <div class="wrap">
-    <div class="serv-grid">
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><span class="price">350 €</span></div><h3>Cybersecurity Sentinel</h3><p>A small device that protects your whole network from within: firewall, web filtering, VPN and IDS/IPS, with inbound mail scanned and encrypted anti-ransomware backups.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-microchip"></i></span><span class="price">500 €</span></div><h3>Local AI Sentinel</h3><p>Runs AI inside your office: private, fast and without sending your data to the cloud. No cost per use or per token, for your assistant and your AI employees.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-laptop-code"></i></span></div><h3>IPGuard OS</h3><p>Gives your old PCs a second life: a lightweight system, secure by default and ready for IPGuard, with no Windows licences. We install it or ship you the PC ready to go.</p></div>
-      <div class="uc card reveal"><div class="uc-top"><span class="ic"><i class="fa-solid fa-briefcase"></i></span></div><h3>Professional services</h3><p>Turnkey: cybersecurity, marketing, HR and more. We set it up and manage it, and you focus on your business.</p></div>
+    <div class="cred card">
+      <span class="cred-ic"><i class="fa-solid fa-stamp"></i></span>
+      <div>
+        <h3>Projects signed by a chartered Telecommunications Engineer.</h3>
+        <p>We sign, endorse and legalise your projects before the professional body and the administration, with the legal competence to certify ICT and network installations.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CON EL KIT -->
+<!-- CONSULTORIA / IA / SOFTWARE -->
 <section class="blk" style="padding-top:20px">
   <div class="wrap">
-    <h2 class="h2 wtitle">Everything the Sentinel does.</h2>
-    <p class="sub" style="text-align:center;margin:14px auto 0">A single device in your office that replaces several security tools.</p>
-    <div class="uc-grid">
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-fire"></i></span><h3>Firewall and web filtering</h3><p>Controls traffic and blocks ads, trackers and risky sites.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>IDS/IPS</h3><p>Detects and blocks intrusions in real time.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-lock"></i></span><h3>Corporate VPN</h3><p>Your team connects to the office from anywhere, encrypted.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-envelope-open-text"></i></span><h3>Scanned email</h3><p>Inbound mail is checked before it reaches your people.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-laptop-medical"></i></span><h3>Antivirus / EDR</h3><p>Protection and security posture on every device.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-database"></i></span><h3>Anti-ransomware backups</h3><p>Encrypted, immutable backup, ready to restore.</p></div>
+    <h2 class="h2 wtitle">Consulting, AI and software.</h2>
+    <div class="uc-grid" style="margin-top:34px">
+      <div class="uc card reveal" id="consultoria"><span class="ic"><i class="fa-solid fa-compass-drafting"></i></span><h3>Technology consulting</h3><p>Diagnosis and strategy: we organise your company and decide which tech fits, no fluff.</p></div>
+      <div class="uc card reveal" id="ia"><span class="ic"><i class="fa-solid fa-brain"></i></span><h3>Artificial intelligence</h3><p>AI applied to your business: agents that see, hear and speak, and real automation.</p></div>
+      <div class="uc card reveal" id="software"><span class="ic"><i class="fa-solid fa-code"></i></span><h3>Custom software</h3><p>Apps, CRM, ERP and tools built to measure and connected to your AI.</p></div>
+      <div class="uc card reveal" id="seguridad"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>Cybersecurity and local AI</h3><p>On-premise protection and your AI running inside your company.</p></div>
     </div>
   </div>
 </section>
 
+<!-- INGENIERIA TELECOM -->
+<section id="telecom" class="blk" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="h2 wtitle">Telecom engineering.</h2>
+    <p class="sub" style="text-align:center;margin:14px auto 0;max-width:56ch">Signed and certified projects, from your building's ICT to network rollout.</p>
+    <div class="uc-grid" style="margin-top:34px">
+      <div class="uc card reveal" id="ict"><span class="ic"><i class="fa-solid fa-building"></i></span><h3>ICT in buildings</h3><p>ICT projects and certificates for new builds and refurbishments: fibre optics, TV, coax, telephony and door entry. Legalisation and processing with the administration.</p></div>
+      <div class="uc card reveal" id="redes"><span class="ic"><i class="fa-solid fa-tower-cell"></i></span><h3>FTTH/5G network rollout</h3><p>Fibre to the home, outdoor ducting and 4G/5G mobile base stations. From the plan to the rollout.</p></div>
+      <div class="uc card reveal" id="radio"><span class="ic"><i class="fa-solid fa-satellite-dish"></i></span><h3>Radio-frequency certification</h3><p>Antenna emission measurements and radio-frequency certificates to meet exposure regulations and renew them yearly.</p></div>
+      <div class="uc card reveal" id="cctv"><span class="ic"><i class="fa-solid fa-video"></i></span><h3>Security and CCTV</h3><p>Urban or industrial video-surveillance networks integrated with control centres, complying with private-security regulations.</p></div>
+      <div class="uc card reveal" id="peritajes"><span class="ic"><i class="fa-solid fa-file-contract"></i></span><h3>Expert reports</h3><p>Technical reports and court expert opinions: system failures, cybersecurity, telecoms and technical disputes.</p></div>
+      <div class="uc card reveal" id="acustica"><span class="ic"><i class="fa-solid fa-volume-high"></i></span><h3>Acoustics and permits</h3><p>Acoustic insulation studies and projects for activity permits of public venues and industry.</p></div>
+      <div class="uc card reveal" id="cpd"><span class="ic"><i class="fa-solid fa-server"></i></span><h3>Data centres and private networks</h3><p>Data centres, mission-critical radio networks (TETRA/DMR), UPS and server-room cooling.</p></div>
+      <div class="uc card reveal" id="kit-equip"><span class="ic"><i class="fa-solid fa-microchip"></i></span><h3>Kit and equipment</h3><p>Cybersecurity Kit, local-AI Kit and IPGuard OS. Turnkey equipment, installed and managed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-band">
   <div class="wrap">
-    <h2 class="h2">Shall we set up your kit?</h2>
-    <p class="sub">We'll tell you what fits your company in under 30 minutes.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/en/contacto">Book a diagnosis</a></div>
+    <h2 class="h2">Got a project?</h2>
+    <p class="sub">Tell us about it and we'll explain how we'd tackle it and what it needs, no strings attached.</p>
+    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/en/contacto">Request a quote</a></div>
   </div>
 </section>
 
@@ -91,14 +126,13 @@
   <div class="wrap rfoot-grid">
     <div>
       <div class="rf-name"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block;border-radius:50%"> IPGuard</div>
-      <p class="rf-desc">Enterprise architecture and applied AI. We design the base your business and your AI run on, from diagnosis to a tailored system.</p>
+      <p class="rf-desc">Enterprise architecture and applied AI, plus telecom engineering. From diagnosis to a signed project.</p>
       <p class="rf-contact"><i class="fa-solid fa-phone"></i> 973 26 65 69</p>
       <p class="rf-contact"><i class="fa-solid fa-envelope"></i> info@ipguard.es</p>
       <p class="rf-contact"><i class="fa-solid fa-location-dot"></i> Spain &middot; nationwide</p>
     </div>
-    <div class="rf-col"><h4>Products</h4><a href="/en/nexus">Nexus</a><a href="/one">One</a><a href="/en/vision">Vision</a><a href="/en/kit">Sentinel</a></div>
+    <div class="rf-col"><h4>Solutions</h4><a href="/en/nexus">Nexus</a><a href="/one">One</a><a href="/sense">Sense</a><a href="/en/kit">Sentinel</a></div>
     <div class="rf-col"><h4>Company</h4><a href="/en/servicios">Services</a><a href="/#casos">Cases</a><a href="/en/contacto">Contact</a></div>
-    <div class="rf-col"><h4>Resources</h4><a href="https://ipguard.es/soporte">Support</a><a href="https://app.ipguard.es">The platform</a></div>
     <div class="rf-col"><h4>Legal</h4><a href="https://app.ipguard.es/legal/politica-privacidad">Privacy</a><a href="https://app.ipguard.es/legal/terminos-condiciones">Terms</a></div>
   </div>
   <div class="wrap rfoot-bottom">
@@ -107,19 +141,20 @@
   </div>
 </footer>
 
+<a class="wa-fab" href="https://wa.me/34636224398?text=Hola,%20quiero%20informaci%C3%B3n%20de%20un%20proyecto" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Let's talk?</span></a>
+
 <script>
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var reveals=[].slice.call(document.querySelectorAll('.reveal'));
   if('IntersectionObserver' in window && !reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')}, (+el.dataset.d||0));io.unobserve(el);}})},{threshold:.14});
-    reveals.forEach(function(el,i){el.dataset.d=(i%4)*80;io.observe(el)});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;setTimeout(function(){el.classList.add('in')},(+el.dataset.d||0));io.unobserve(el);}})},{threshold:.12});
+    reveals.forEach(function(el,i){el.dataset.d=(i%3)*70;io.observe(el)});
   } else { reveals.forEach(function(el){el.classList.add('in')}); }
   var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
   if(mb&&mm){mb.addEventListener('click',function(){mm.classList.toggle('open')});
     [].forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});}
 })();
 </script>
-<a class="wa-fab" href="https://wa.me/34636224398?text=Hola,%20quiero%20informaci%C3%B3n%20de%20IPGuard" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Let's talk?</span></a>
 </body>
 </html>
