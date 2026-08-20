@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inteligencia artificial aplicada · IPGuard</title>
-<meta name="description" content="IA aplicada a tu negocio: agentes de voz, visión artificial, automatización e IA en local. Que trabaje de verdad, no humo.">
-<meta property="og:title" content="Inteligencia artificial aplicada · IPGuard">
+<title>Inteligencia artificial · IPGuard</title>
+<meta name="description" content="IA aplicada: agentes, chatbots y visión entrenados con tus datos (RAG), fine-tuning, voz y analítica predictiva, integrados en tu operativa.">
+<meta property="og:title" content="Inteligencia artificial · IPGuard">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipguard.es/servicios/ia">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -14,9 +14,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Arimo:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="/site.css?v=9">
+<style>
+.svc{--svc:#7c3aed}
+.svc-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--svc);margin:0 0 14px}
+.svc-eyebrow i{font-size:12px}
+.svc-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.svc-chips span{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+.kpi-row .kpi{border-top:3px solid var(--svc)}
+.kpi-row .kpi b{display:block;font-family:"Jost",sans-serif;font-size:23px;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.12}
+.kpi-row .kpi span{display:block;font-size:13px;color:var(--muted);margin-top:5px}
+.svc-label{text-align:center;font-family:"Montserrat",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--svc);margin:0 0 6px}
+.svc-band{background:linear-gradient(180deg,#f6f9f7,#eef4f1);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.svc-band{grid-template-columns:1fr}}
+.svc-opt{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 34px -30px rgba(16,24,32,.24)}
+.svc-opt .ic{width:46px;height:46px;border-radius:12px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-size:19px}
+.svc-opt h3{font-size:19px;margin:14px 0 0}
+.svc-opt ul{list-style:none;padding:0;margin:14px 0 0}
+.svc-opt li{position:relative;padding-left:25px;margin:10px 0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.svc-opt li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;top:2px;color:var(--svc);font-size:12px}
+.svc-logos{display:flex;flex-wrap:wrap;gap:18px 36px;justify-content:center;align-items:center;margin-top:30px}
+.svc-logos img{height:29px;width:auto;opacity:.55;transition:opacity .2s}
+.svc-logos img:hover{opacity:1}
+.svc-tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.svc-tools span{font-family:"Montserrat",sans-serif;font-size:13.5px;font-weight:600;color:var(--ink);background:#f3f6f5;border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+.svc-photoband{position:relative;border-radius:24px;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;box-shadow:0 30px 70px -40px rgba(16,24,32,.5)}
+.svc-photoband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.svc-photoband .ov{position:relative;width:100%;padding:34px;background:linear-gradient(0deg,rgba(16,24,32,.82),rgba(16,24,32,.06))}
+.svc-photoband h2{color:#fff;font-size:clamp(22px,3vw,34px);max-width:22ch;margin:0;line-height:1.1;text-wrap:balance}
+.svc a.uc{color:inherit;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s}
+.svc a.uc:hover{transform:translateY(-3px);box-shadow:0 22px 44px -30px rgba(16,24,32,.4)}
+.svc a.uc .more{display:inline-block;margin-top:12px;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;color:var(--svc)}
+</style>
 </head>
 <body>
-
 <header>
   <nav class="nav">
     <a class="brand" href="/"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
@@ -54,7 +86,7 @@
     <div class="nav-right">
       <div class="lang"><a class="on" href="/servicios/ia">ES</a><a href="/en/servicios/ia">EN</a><a href="/ca/servicios/ia">CA</a></div>
       <a class="nav-phone" href="tel:+34973266569"><i class="fa-solid fa-phone"></i> 973 26 65 69</a>
-      <a class="btn btn-dark btn-sm" href="/contacto">Pedir diagnóstico</a>
+      <a class="btn btn-dark btn-sm" href="/contacto">Pedir presupuesto</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
@@ -70,40 +102,23 @@
     </div>
   </div>
 </header>
-
-<section id="top" class="prod" style="padding-top:64px;padding-bottom:8px">
-  <div class="wrap hsplit">
-    <div class="hsplit-txt">
-      <h1 class="prod-h" style="text-align:left">Inteligencia artificial aplicada.</h1>
-      <p class="prod-claim" style="text-align:left;margin-left:0">IA que trabaja de verdad en tu negocio: que ve, oye, habla y ejecuta tareas, conectada a tus datos.</p>
-      <div class="hero-cta" style="justify-content:flex-start"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a><a class="btn btn-light" href="#detalle">Ver más</a></div>
-    </div>
-    <div class="hphoto"><img src="/img/ia.jpg" alt="Circuito de inteligencia artificial" loading="lazy"></div>
-  </div>
-</section>
-<section class="blk" style="padding-top:24px"><div class="wrap"><p class="sub" style="text-align:center;max-width:64ch;margin:0 auto">No vendemos humo de IA. Montamos agentes y automatizaciones que hacen trabajo real: atienden llamadas, analizan imágenes, redactan, clasifican y mueven información entre tus herramientas.</p></div></section>
-<section id="detalle" class="blk" style="padding-top:26px"><div class="wrap"><h2 class="h2 wtitle">Qué incluye.</h2><div class="uc-grid" style="margin-top:34px">
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-microphone-lines"></i></span><h3>Agentes de voz</h3><p>Atienden llamadas, resuelven dudas y agendan citas (Sense).</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-eye"></i></span><h3>Visión artificial</h3><p>Detectan objetos, personas y calidad en imágenes y vídeo (Vision).</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-robot"></i></span><h3>Automatización con IA</h3><p>La IA ejecuta tareas repetitivas y mueve datos entre tus apps.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-server"></i></span><h3>IA en local</h3><p>Modelos corriendo dentro de tu empresa, privados y sin coste por consulta.</p></div>
-    </div></div></section>
-<section class="blk" style="padding-top:26px"><div class="wrap"><h2 class="h2 wtitle">Se apoya en tu sistema.</h2><div class="uc-grid" style="margin-top:34px">
-      <a class="uc card reveal" href="/sense" style="text-decoration:none;color:inherit"><span class="ic"><i class="fa-solid fa-comment-dots"></i></span><h3>Sense</h3><p>Voz y visión que hablan con tus clientes.</p></a>
-      <a class="uc card reveal" href="/vision" style="text-decoration:none;color:inherit"><span class="ic"><i class="fa-solid fa-eye"></i></span><h3>Vision</h3><p>Analiza tus imágenes y vídeo en tiempo real.</p></a>
-      <a class="uc card reveal" href="/nexus" style="text-decoration:none;color:inherit"><span class="ic"><i class="fa-solid fa-diagram-project"></i></span><h3>Nexus</h3><p>Tus datos, una sola verdad para tu IA.</p></a>
-    </div></div></section>
-<section class="cta-band"><div class="wrap">
-    <h2 class="h2">¿Tienes un proyecto?</h2>
-    <p class="sub">Cuéntanoslo y te decimos cómo lo abordamos y qué necesita, sin compromiso.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a></div>
-  </div></section>
-
+<main class="svc" style="--svc:#7c3aed">
+<section id="top" class="prod" style="padding-top:64px;padding-bottom:8px"><div class="wrap hsplit"><div class="hsplit-txt"><div class="svc-eyebrow"><i class="fa-solid fa-robot"></i> Servicios · Inteligencia artificial</div><h1 class="prod-h" style="text-align:left">Inteligencia artificial aplicada.</h1><p class="prod-claim" style="text-align:left;margin-left:0">Agentes, chatbots y visión entrenados con los datos de tu empresa, integrados en tu día a día.</p><div class="hero-cta" style="justify-content:flex-start"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a><a class="btn btn-light" href="#detalle">Ver qué incluye</a></div><div class="svc-chips"><span>Agentes</span><span>Chatbots</span><span>RAG</span><span>Fine-tuning</span><span>Visión</span><span>Voz y transcripción</span></div></div><div class="hphoto"><img src="/img/ia.jpg" alt="Inteligencia artificial aplicada." loading="lazy"></div></div></section>
+<section class="blk" style="padding-top:22px"><div class="wrap"><p class="sub" style="text-align:center;max-width:64ch;margin:0 auto">No IA de escaparate: la conectamos a tus datos y tus procesos para que resuelva tareas reales, con precisión y sin disparar costes.</p></div></section>
+<section class="blk" style="padding-top:10px"><div class="wrap"><div class="kpi-row"><div class="kpi"><b>Con tus datos</b><span>RAG sobre tu información</span></div><div class="kpi"><b>A medida</b><span>Modelos afinados</span></div><div class="kpi"><b>Multimodal</b><span>Texto, voz y visión</span></div><div class="kpi"><b>Integrada</b><span>Dentro de tu software</span></div></div></div></section>
+<section id="detalle" class="blk" style="padding-top:34px"><div class="wrap"><p class="svc-label">Qué incluye</p><h2 class="h2 wtitle">IA conectada a tu negocio.</h2><div class="uc-grid" style="margin-top:34px"><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-comments"></i></span><h3>Chatbots y agentes</h3><p>Atienden, responden y ejecutan tareas con tus datos.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-database"></i></span><h3>RAG sobre tus datos</h3><p>Respuestas basadas en tu documentación y tu ERP/CRM.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-sliders"></i></span><h3>Fine-tuning</h3><p>Afinamos modelos para tu dominio y tu tono.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-eye"></i></span><h3>Visión por computador</h3><p>Detección, conteo y control de calidad con imágenes.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-microphone"></i></span><h3>Voz y transcripción</h3><p>Transcribe, traduce y responde por voz.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-chart-line"></i></span><h3>Analítica predictiva</h3><p>Predicción de demanda, bajas o mantenimiento.</p></div></div></div></section>
+<section class="blk" style="padding-top:36px"><div class="wrap"><p class="svc-label">Dónde encaja</p><h2 class="h2 wtitle">Casos de uso reales.</h2><div class="svc-band" style="margin-top:34px"><div class="svc-opt"><span class="ic"><i class="fa-solid fa-headset"></i></span><h3>Atención y ventas</h3><ul><li>Soporte 24/7 con IA</li><li>Cualificación de leads</li><li>Respuestas con tu catálogo</li><li>Resúmenes y correos</li></ul></div><div class="svc-opt"><span class="ic"><i class="fa-solid fa-industry"></i></span><h3>Operaciones</h3><ul><li>Visión en producción</li><li>Automatización de documentos</li><li>Búsqueda interna inteligente</li><li>Informes automáticos</li></ul></div></div></div></section>
+<section class="blk" style="padding-top:36px"><div class="wrap"><p class="svc-label">Cómo lo hacemos</p><h2 class="h2 wtitle">Un proceso claro.</h2><div class="steps4" style="margin-top:34px"><div class="step-c card reveal"><span class="num">01</span><h3>Detectamos</h3><p>Buscamos dónde la IA aporta valor real.</p></div><div class="step-c card reveal"><span class="num">02</span><h3>Conectamos</h3><p>La enlazamos a tus datos y sistemas.</p></div><div class="step-c card reveal"><span class="num">03</span><h3>Entrenamos</h3><p>La ajustamos a tu dominio y la probamos.</p></div><div class="step-c card reveal"><span class="num">04</span><h3>Desplegamos</h3><p>La ponemos a trabajar y la mantenemos.</p></div></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap" style="text-align:center"><p class="svc-label">Con qué trabajamos</p><h2 class="h2 wtitle">Fabricantes y tecnologías.</h2><div class="svc-logos"><img src="/img/vendors/anthropic.svg" alt="anthropic" loading="lazy"><img src="/img/vendors/python.svg" alt="python" loading="lazy"><img src="/img/vendors/pytorch.svg" alt="pytorch" loading="lazy"><img src="/img/vendors/tensorflow.svg" alt="tensorflow" loading="lazy"><img src="/img/vendors/huggingface.svg" alt="huggingface" loading="lazy"><img src="/img/vendors/ollama.svg" alt="ollama" loading="lazy"><img src="/img/vendors/n8n.svg" alt="n8n" loading="lazy"><img src="/img/vendors/docker.svg" alt="docker" loading="lazy"></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap"><div class="svc-photoband"><img src="/img/ia.jpg" alt="" loading="lazy"><div class="ov"><h2>Tu IA, entrenada con lo que sabe tu empresa.</h2><a class="btn btn-light" href="/contacto">Pedir presupuesto</a></div></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap"><p class="svc-label">Seguir explorando</p><h2 class="h2 wtitle">Otros servicios.</h2><div class="uc-grid" style="margin-top:34px"><a class="uc card reveal" href="/servicios/software"><span class="ic"><i class="fa-solid fa-code"></i></span><h3>Software a medida</h3><p>CRM, ERP y apps hechos a tu medida.</p><span class="more">Ver servicio &rarr;</span></a><a class="uc card reveal" href="/servicios/consultoria"><span class="ic"><i class="fa-solid fa-compass-drafting"></i></span><h3>Consultoría tecnológica</h3><p>Diagnóstico y estrategia digital.</p><span class="more">Ver servicio &rarr;</span></a><a class="uc card reveal" href="/servicios/seguridad"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>Ciberseguridad</h3><p>Protección en la nube o on-premise.</p><span class="more">Ver servicio &rarr;</span></a></div></div></section>
+<section class="cta-band"><div class="wrap"><h2 class="h2">¿Tienes un proyecto?</h2><p class="sub">Cuéntanoslo y te decimos cómo lo abordamos y qué necesita, sin compromiso.</p><div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a></div></div></section>
+</main>
 <footer class="rfoot">
   <div class="wrap rfoot-grid">
     <div>
       <div class="rf-name"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block;border-radius:50%"> IPGuard</div>
-      <p class="rf-desc">Arquitectura de empresa e IA aplicada, e ingeniería de telecomunicación. Del diagnóstico al proyecto firmado.</p>
+      <p class="rf-desc">Soluciones tecnológicas para tu empresa: web, apps, cloud, redes, ciberseguridad e IA a medida, con un único equipo.</p>
       <p class="rf-contact"><i class="fa-solid fa-phone"></i> 973 26 65 69</p>
       <p class="rf-contact"><i class="fa-solid fa-envelope"></i> info@ipguard.es</p>
       <p class="rf-contact"><i class="fa-solid fa-location-dot"></i> España &middot; cobertura nacional</p>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ingeniería de telecomunicación · IPGuard</title>
-<meta name="description" content="Proyectos de ingeniería de telecomunicación firmados por ingeniero colegiado: ICT, redes FTTH/5G, certificación radioeléctrica, CCTV, peritajes y más.">
+<meta name="description" content="Ingeniería de telecomunicación: proyectos ICT, certificaciones, fibra, radioenlaces y legalización, firmados por ingeniero colegiado.">
 <meta property="og:title" content="Ingeniería de telecomunicación · IPGuard">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipguard.es/servicios/telecom">
@@ -14,9 +14,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Arimo:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="/site.css?v=9">
+<style>
+.svc{--svc:#b45309}
+.svc-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--svc);margin:0 0 14px}
+.svc-eyebrow i{font-size:12px}
+.svc-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.svc-chips span{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+.kpi-row .kpi{border-top:3px solid var(--svc)}
+.kpi-row .kpi b{display:block;font-family:"Jost",sans-serif;font-size:23px;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.12}
+.kpi-row .kpi span{display:block;font-size:13px;color:var(--muted);margin-top:5px}
+.svc-label{text-align:center;font-family:"Montserrat",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--svc);margin:0 0 6px}
+.svc-band{background:linear-gradient(180deg,#f6f9f7,#eef4f1);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.svc-band{grid-template-columns:1fr}}
+.svc-opt{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 34px -30px rgba(16,24,32,.24)}
+.svc-opt .ic{width:46px;height:46px;border-radius:12px;background:var(--sage);color:var(--ink);display:grid;place-items:center;font-size:19px}
+.svc-opt h3{font-size:19px;margin:14px 0 0}
+.svc-opt ul{list-style:none;padding:0;margin:14px 0 0}
+.svc-opt li{position:relative;padding-left:25px;margin:10px 0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.svc-opt li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;top:2px;color:var(--svc);font-size:12px}
+.svc-logos{display:flex;flex-wrap:wrap;gap:18px 36px;justify-content:center;align-items:center;margin-top:30px}
+.svc-logos img{height:29px;width:auto;opacity:.55;transition:opacity .2s}
+.svc-logos img:hover{opacity:1}
+.svc-tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.svc-tools span{font-family:"Montserrat",sans-serif;font-size:13.5px;font-weight:600;color:var(--ink);background:#f3f6f5;border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+.svc-photoband{position:relative;border-radius:24px;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;box-shadow:0 30px 70px -40px rgba(16,24,32,.5)}
+.svc-photoband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.svc-photoband .ov{position:relative;width:100%;padding:34px;background:linear-gradient(0deg,rgba(16,24,32,.82),rgba(16,24,32,.06))}
+.svc-photoband h2{color:#fff;font-size:clamp(22px,3vw,34px);max-width:22ch;margin:0;line-height:1.1;text-wrap:balance}
+.svc a.uc{color:inherit;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s}
+.svc a.uc:hover{transform:translateY(-3px);box-shadow:0 22px 44px -30px rgba(16,24,32,.4)}
+.svc a.uc .more{display:inline-block;margin-top:12px;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;color:var(--svc)}
+</style>
 </head>
 <body>
-
 <header>
   <nav class="nav">
     <a class="brand" href="/"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block"> IPGuard</a>
@@ -54,7 +86,7 @@
     <div class="nav-right">
       <div class="lang"><a class="on" href="/servicios/telecom">ES</a><a href="/en/servicios/telecom">EN</a><a href="/ca/servicios/telecom">CA</a></div>
       <a class="nav-phone" href="tel:+34973266569"><i class="fa-solid fa-phone"></i> 973 26 65 69</a>
-      <a class="btn btn-dark btn-sm" href="/contacto">Pedir diagnóstico</a>
+      <a class="btn btn-dark btn-sm" href="/contacto">Pedir presupuesto</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
@@ -70,43 +102,23 @@
     </div>
   </div>
 </header>
-
-<section id="top" class="prod" style="padding-top:64px;padding-bottom:8px">
-  <div class="wrap hsplit">
-    <div class="hsplit-txt">
-      <h1 class="prod-h" style="text-align:left">Ingeniería de telecomunicación.</h1>
-      <p class="prod-claim" style="text-align:left;margin-left:0">Proyectos, certificaciones e instalaciones firmados por Ingeniero de Telecomunicación colegiado. De la ICT de tu edificio al despliegue de redes.</p>
-      <div class="hero-cta" style="justify-content:flex-start"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a><a class="btn btn-light" href="#detalle">Ver más</a></div>
-    </div>
-    <div class="hphoto"><img src="/img/telecom.jpg" alt="Red de telecomunicación y fibra" loading="lazy"></div>
-  </div>
-</section>
-<section class="blk" style="padding-top:18px"><div class="wrap">
-    <div class="cred card"><span class="cred-ic"><i class="fa-solid fa-stamp"></i></span><div>
-      <h3>Proyectos firmados por Ingeniero de Telecomunicación colegiado.</h3>
-      <p>Firmamos, visamos y legalizamos tus proyectos ante el colegio profesional y la administración. Con la competencia legal para certificar instalaciones ICT y de red.</p>
-    </div></div></div></section>
-<section id="detalle" class="blk" style="padding-top:26px"><div class="wrap"><h2 class="h2 wtitle">Lo que podemos hacer.</h2><div class="uc-grid" style="margin-top:34px">
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-building"></i></span><h3>ICT en edificación</h3><p>Proyectos y boletines ICT para obra nueva y reformas: fibra óptica, RTV, coaxial, telefonía y porteros. Legalización y tramitación ante la administración.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-tower-cell"></i></span><h3>Despliegue de redes FTTH/5G</h3><p>Fibra hasta el hogar, canalizaciones exteriores y estaciones base de telefonía móvil 4G/5G. Del plano al despliegue.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-satellite-dish"></i></span><h3>Certificación radioeléctrica</h3><p>Mediciones de emisión de antenas y certificados radioeléctricos para cumplir la normativa de exposición y renovarlos cada año.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-video"></i></span><h3>Seguridad y CCTV</h3><p>Redes de videovigilancia urbanas o industriales integradas con centros de control, cumpliendo la normativa de seguridad privada.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-file-contract"></i></span><h3>Peritajes e informes</h3><p>Informes técnicos y peritajes judiciales: fallos de sistemas, ciberseguridad, telecomunicaciones y disputas técnicas.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-volume-high"></i></span><h3>Acústica y licencias</h3><p>Estudios de aislamiento acústico y proyectos para licencias de actividad de locales de pública concurrencia e industria.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-server"></i></span><h3>CPD y redes privadas</h3><p>Centros de datos, redes de radio críticas (TETRA/DMR), SAI y climatización de salas de servidores.</p></div>
-      <div class="uc card reveal"><span class="ic"><i class="fa-solid fa-microchip"></i></span><h3>Kit y equipamiento</h3><p>Kit de ciberseguridad, Kit de IA local e IPGuard OS. Equipamiento llave en mano, instalado y gestionado.</p></div>
-    </div></div></section>
-<section class="cta-band"><div class="wrap">
-    <h2 class="h2">¿Tienes un proyecto?</h2>
-    <p class="sub">Cuéntanoslo y te decimos cómo lo abordamos y qué necesita, sin compromiso.</p>
-    <div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a></div>
-  </div></section>
-
+<main class="svc" style="--svc:#b45309">
+<section id="top" class="prod" style="padding-top:64px;padding-bottom:8px"><div class="wrap hsplit"><div class="hsplit-txt"><div class="svc-eyebrow"><i class="fa-solid fa-tower-cell"></i> Servicios · Ingeniería de telecomunicación</div><h1 class="prod-h" style="text-align:left">Ingeniería de telecomunicación.</h1><p class="prod-claim" style="text-align:left;margin-left:0">Proyectos ICT, certificaciones y legalización de instalaciones, firmados por ingeniero colegiado.</p><div class="hero-cta" style="justify-content:flex-start"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a><a class="btn btn-light" href="#detalle">Ver qué incluye</a></div><div class="svc-chips"><span>ICT</span><span>Certificaciones</span><span>Fibra</span><span>Radioenlaces</span><span>Proyectos</span><span>Legalización</span></div></div><div class="hphoto"><img src="/img/telecom.jpg" alt="Ingeniería de telecomunicación." loading="lazy"></div></div></section>
+<section class="blk" style="padding-top:22px"><div class="wrap"><p class="sub" style="text-align:center;max-width:64ch;margin:0 auto">Del proyecto a la certificación: infraestructuras comunes de telecomunicación (ICT), redes, fibra y radioenlaces, con la firma de un ingeniero colegiado.</p></div></section>
+<section class="blk" style="padding-top:10px"><div class="wrap"><div class="kpi-row"><div class="kpi"><b>Colegiado</b><span>Ingeniero que firma</span></div><div class="kpi"><b>ICT</b><span>Proyecto y dirección</span></div><div class="kpi"><b>Fibra</b><span>Diseño y certificación</span></div><div class="kpi"><b>Legal</b><span>Instalaciones al día</span></div></div></div></section>
+<section id="detalle" class="blk" style="padding-top:34px"><div class="wrap"><p class="svc-label">Qué hacemos</p><h2 class="h2 wtitle">De la idea al boletín.</h2><div class="uc-grid" style="margin-top:34px"><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-file-signature"></i></span><h3>Proyectos ICT</h3><p>Infraestructura común de telecomunicaciones para edificios.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-certificate"></i></span><h3>Certificaciones</h3><p>Boletines y certificaciones de instalaciones.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-ethernet"></i></span><h3>Fibra y cableado</h3><p>Diseño, tirada y certificación de puntos.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-tower-broadcast"></i></span><h3>Radioenlaces</h3><p>Enlaces punto a punto entre sedes o edificios.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-clipboard-check"></i></span><h3>Dirección de obra</h3><p>Supervisamos que se ejecute según proyecto.</p></div><div class="uc card reveal"><span class="ic"><i class="fa-solid fa-stamp"></i></span><h3>Legalización</h3><p>Ponemos al día y legalizamos tus instalaciones.</p></div></div></div></section>
+<section class="blk" style="padding-top:36px"><div class="wrap"><p class="svc-label">Para qué</p><h2 class="h2 wtitle">Del proyecto a la legalización.</h2><div class="svc-band" style="margin-top:34px"><div class="svc-opt"><span class="ic"><i class="fa-solid fa-building"></i></span><h3>Edificios y promociones</h3><ul><li>Proyecto ICT</li><li>Antenas y RITI/RITS</li><li>Certificación final</li><li>Documentación legal</li></ul></div><div class="svc-opt"><span class="ic"><i class="fa-solid fa-industry"></i></span><h3>Empresa e industria</h3><ul><li>Fibra entre sedes</li><li>Radioenlaces</li><li>Cableado estructurado</li><li>Certificación de red</li></ul></div></div></div></section>
+<section class="blk" style="padding-top:36px"><div class="wrap"><p class="svc-label">Cómo lo hacemos</p><h2 class="h2 wtitle">Un proceso claro.</h2><div class="steps4" style="margin-top:34px"><div class="step-c card reveal"><span class="num">01</span><h3>Proyectamos</h3><p>Redactamos el proyecto técnico.</p></div><div class="step-c card reveal"><span class="num">02</span><h3>Dirigimos</h3><p>Dirigimos y supervisamos la obra.</p></div><div class="step-c card reveal"><span class="num">03</span><h3>Certificamos</h3><p>Medimos y certificamos la instalación.</p></div><div class="step-c card reveal"><span class="num">04</span><h3>Legalizamos</h3><p>Tramitamos la documentación oficial.</p></div></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap" style="text-align:center"><p class="svc-label">Con qué trabajamos</p><h2 class="h2 wtitle">Fabricantes y tecnologías.</h2><div class="svc-logos"><img src="/img/vendors/cisco.svg" alt="cisco" loading="lazy"><img src="/img/vendors/huawei.svg" alt="huawei" loading="lazy"><img src="/img/vendors/nokia.svg" alt="nokia" loading="lazy"><img src="/img/vendors/mikrotik.svg" alt="mikrotik" loading="lazy"><img src="/img/vendors/ubiquiti.svg" alt="ubiquiti" loading="lazy"><img src="/img/vendors/fortinet.svg" alt="fortinet" loading="lazy"><img src="/img/vendors/ubuntu.svg" alt="ubuntu" loading="lazy"><img src="/img/vendors/pfsense.svg" alt="pfsense" loading="lazy"></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap"><div class="svc-photoband"><img src="/img/telecom.jpg" alt="" loading="lazy"><div class="ov"><h2>Telecomunicación firmada por ingeniero colegiado.</h2><a class="btn btn-light" href="/contacto">Pedir presupuesto</a></div></div></div></section>
+<section class="blk" style="padding-top:40px"><div class="wrap"><p class="svc-label">Seguir explorando</p><h2 class="h2 wtitle">Otros servicios.</h2><div class="uc-grid" style="margin-top:34px"><a class="uc card reveal" href="/servicios/redes"><span class="ic"><i class="fa-solid fa-network-wired"></i></span><h3>Redes y sistemas</h3><p>WiFi, servidores, VPN y soporte.</p><span class="more">Ver servicio &rarr;</span></a><a class="uc card reveal" href="/servicios/seguridad"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span><h3>Ciberseguridad</h3><p>Protección en la nube o on-premise.</p><span class="more">Ver servicio &rarr;</span></a><a class="uc card reveal" href="/servicios/consultoria"><span class="ic"><i class="fa-solid fa-compass-drafting"></i></span><h3>Consultoría tecnológica</h3><p>Diagnóstico y estrategia digital.</p><span class="more">Ver servicio &rarr;</span></a></div></div></section>
+<section class="cta-band"><div class="wrap"><h2 class="h2">¿Tienes un proyecto?</h2><p class="sub">Cuéntanoslo y te decimos cómo lo abordamos y qué necesita, sin compromiso.</p><div class="hero-cta" style="margin-top:26px"><a class="btn btn-dark" href="/contacto">Pedir un presupuesto</a></div></div></section>
+</main>
 <footer class="rfoot">
   <div class="wrap rfoot-grid">
     <div>
       <div class="rf-name"><img src="/logo-light.png" alt="IPGuard" width="34" height="34" style="display:block;border-radius:50%"> IPGuard</div>
-      <p class="rf-desc">Arquitectura de empresa e IA aplicada, e ingeniería de telecomunicación. Del diagnóstico al proyecto firmado.</p>
+      <p class="rf-desc">Soluciones tecnológicas para tu empresa: web, apps, cloud, redes, ciberseguridad e IA a medida, con un único equipo.</p>
       <p class="rf-contact"><i class="fa-solid fa-phone"></i> 973 26 65 69</p>
       <p class="rf-contact"><i class="fa-solid fa-envelope"></i> info@ipguard.es</p>
       <p class="rf-contact"><i class="fa-solid fa-location-dot"></i> España &middot; cobertura nacional</p>
