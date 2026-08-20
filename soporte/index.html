@@ -23,4 +23,34 @@
       })();
     </script> <!-- Seguimiento de visitas → panel Web del MSI (ipg.ipguard.es). Anónimo
          (id de sesión aleatorio, sin cookie ni huella). No mueve el alojamiento:
-         la web sigue en GitHub Pages; solo reporta las visitas. -->  </body> </html>
+         la web sigue en GitHub Pages; solo reporta las visitas. -->  <style id="ipg-ck-css">
+.ipg-cookies{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#fff;border:1px solid rgba(16,24,32,.12);border-radius:16px;box-shadow:0 20px 60px -20px rgba(16,24,32,.45);padding:18px 20px;font-family:"Arimo",system-ui,sans-serif}
+.ipg-cookies p{margin:0;font-size:13.5px;line-height:1.55;color:#3a4a44}
+.ipg-cookies a{color:#2f6b5e;text-decoration:underline}
+.ipg-ck-btns{display:flex;gap:10px;margin-top:14px;justify-content:flex-end}
+.ipg-ck-btns button{font-family:"Montserrat",sans-serif;font-size:13.5px;font-weight:600;border-radius:10px;padding:9px 18px;cursor:pointer;border:1px solid rgba(16,24,32,.16)}
+.ipg-ck-rej{background:#fff;color:#101820}
+.ipg-ck-acc{background:#101820;color:#fff;border-color:#101820}
+.rfoot-bottom .ipg-ck-open{cursor:pointer;color:inherit}
+@media(max-width:520px){.ipg-ck-btns{justify-content:stretch}.ipg-ck-btns button{flex:1}}
+</style>
+<div id="ipg-cookies" class="ipg-cookies" hidden>
+  <p>Usamos cookies propias y de terceros para analizar el uso de la web y mejorar tu experiencia. Puedes aceptar, rechazar o leer la <a href="/legal/politica-privacidad">politica de privacidad</a>.</p>
+  <div class="ipg-ck-btns"><button class="ipg-ck-rej" data-c="reject">Rechazar</button><button class="ipg-ck-acc" data-c="accept">Aceptar</button></div>
+</div>
+<script>
+(function(){var K='ipg_consent';var el=document.getElementById('ipg-cookies');
+function set(g){try{localStorage.setItem(K,g?'granted':'denied')}catch(e){}try{if(window.gtag){var v=g?'granted':'denied';gtag('consent','update',{ad_storage:v,analytics_storage:v,ad_user_data:v,ad_personalization:v});}}catch(e){}if(el)el.hidden=true;}
+var cur=null;try{cur=localStorage.getItem(K)}catch(e){}
+if(!cur&&el)el.hidden=false;
+function ev(n,p){try{if(window.gtag)gtag('event',n,p||{});}catch(e){}}
+document.addEventListener('click',function(e){
+  var t=e.target.closest('[data-c]');if(t){set(t.getAttribute('data-c')==='accept');return;}
+  var o=e.target.closest('.ipg-ck-open');if(o){e.preventDefault();if(el)el.hidden=false;return;}
+  var wa=e.target.closest('a[href*="wa.me"]');if(wa){ev('contact',{method:'whatsapp'});return;}
+  var ct=e.target.closest('a[href*="/contacto"]');if(ct){ev('lead_cta_click',{});}
+});
+var fb=document.querySelector('.rfoot-bottom');if(fb){var s=document.createElement('span');var a=document.createElement('a');a.href='#';a.className='ipg-ck-open';a.textContent='Cookies';s.appendChild(a);fb.appendChild(s);}
+})();
+</script>
+</body> </html>
