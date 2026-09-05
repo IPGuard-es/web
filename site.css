@@ -700,3 +700,80 @@ section.blk{padding:96px 0}
 .imgband .ov{position:relative;padding:34px 36px;background:linear-gradient(0deg,rgba(16,24,32,.85),rgba(16,24,32,.15) 70%,transparent);color:#fff;width:100%}
 .imgband .ov h3{color:#fff;font-family:"Jost",sans-serif;font-weight:600;font-size:26px;margin:0 0 8px}
 .imgband .ov p{color:rgba(255,255,255,.88);margin:0;max-width:56ch;font-size:15px}
+
+
+/* =================================================================
+   APPLE-STYLE LAYER  (v10) — capa global de refinamiento
+   ================================================================= */
+:root{
+  --ink:#1d1d1f;
+  --muted:#6e6e73;
+  --line:rgba(0,0,0,.10);
+  --applegrey:#f5f5f7;
+}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.5;letter-spacing:-.011em;background:#fff;
+}
+/* Titulares tipo SF Pro Display */
+h1,h2,.prod-h,.h2,.sec-head h2,.wtitle,.intro h2,.lead,.hero-h,.pt{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.prod-h{font-weight:700;letter-spacing:-.035em;line-height:1.03;font-size:clamp(40px,6.4vw,84px)}
+.h2,.sec-head h2,.wtitle,.intro h2{font-weight:700;letter-spacing:-.03em;line-height:1.06}
+.lead{font-weight:600;letter-spacing:-.022em;color:var(--ink);line-height:1.24}
+.eyebrow{letter-spacing:.02em;font-weight:600;text-transform:uppercase}
+p{letter-spacing:-.011em}
+
+/* Ritmo generoso (aire Apple) */
+.blk,section.blk{padding:clamp(76px,9.5vw,132px) 0}
+.prod{padding:clamp(72px,9vw,118px) 0}
+
+/* Botones tipo pastilla */
+.btn{border-radius:980px;font-weight:600;font-size:16px;padding:13px 24px;letter-spacing:-.01em;
+     transition:transform .2s cubic-bezier(.2,.7,.2,1),background .2s,opacity .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-dark{background:#1d1d1f;color:#fff}
+.btn-dark:hover{background:#000}
+.btn-light,.btn-ghost{background:#fff;border:1px solid rgba(0,0,0,.16);color:var(--ink)}
+.btn-light:hover,.btn-ghost:hover{background:#fafafa;border-color:rgba(0,0,0,.28)}
+
+/* Tarjetas redondeadas + sombras suaves + hover Apple */
+.hphoto{border-radius:24px;box-shadow:0 40px 90px -40px rgba(0,0,0,.38)}
+.imgband{border-radius:28px;overflow:hidden}
+.use,.rel a{background:var(--applegrey);border:1px solid transparent;border-radius:20px;padding:26px 24px;
+     transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.use:hover,.rel a:hover{transform:translateY(-4px);box-shadow:0 22px 48px -22px rgba(0,0,0,.28);border-color:transparent}
+.p4,.card,.prod-card,.pcard{border-radius:22px}
+
+/* Banda CTA sobre gris Apple */
+.cta-band{background:var(--applegrey)}
+
+/* Tamaños de lectura */
+.lead{font-size:clamp(24px,3.2vw,40px)}
+.intro h2{font-size:clamp(26px,3vw,38px)}
+.sec-head h2,.h2{font-size:clamp(28px,3.8vw,48px)}
+.faq summary{font-size:17px}
+.cap p,.use p,.rel a span,.appr p{color:var(--muted)}
+
+/* Foco accesible discreto */
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+/* ============================ fin capa Apple ============================ */
+
+
+/* ===== APPLE PASADA 2 ===== */
+/* Barra superior translúcida a todo el ancho */
+header{background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0}
+.nav{padding:11px 24px}
+.nav-pill{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:0!important;box-shadow:none!important;padding:0!important}
+/* Secciones alternas gris/blanco */
+section:has(.uses),section:has(.faq),section:has(.appr){background:var(--applegrey)}
+#productos,#como{background:var(--applegrey)}
+/* Animaciones al hacer scroll (con fallback: si no hay soporte, se ve normal) */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .blk>.wrap,.prod>.wrap{animation:appearUp linear both;animation-timeline:view();animation-range:entry 2% cover 22%}
+    @keyframes appearUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  }
+}
