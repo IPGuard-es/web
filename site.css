@@ -777,3 +777,26 @@ section:has(.uses),section:has(.faq),section:has(.appr){background:var(--applegr
     @keyframes appearUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
   }
 }
+
+
+/* ===== MÓVIL: ajustes finos (v10) ===== */
+body{overflow-x:hidden}
+@media(max-width:640px){
+  .blk,section.blk{padding:54px 0}
+  .prod{padding:44px 0}
+  .lead{font-size:clamp(22px,6vw,32px)}
+  .intro{gap:14px}
+  .imgband{border-radius:20px}
+}
+@media(max-width:520px){
+  .prod-h{font-size:clamp(32px,8.6vw,84px);letter-spacing:-.02em}
+  .sec-head h2,.h2,.wtitle,.intro h2{font-size:clamp(26px,7.2vw,48px)}
+  .wrap{padding:0 20px}
+  .btn{padding:12px 20px;font-size:15px}
+  .nav-right .btn-sm{padding:9px 13px;font-size:12.5px}
+  .use,.rel a{padding:20px 18px}
+}
+@media(max-width:430px){
+  .blk,section.blk{padding:44px 0}
+  .uses,.rel{gap:12px}
+}
