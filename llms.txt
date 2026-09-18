@@ -1,0 +1,49 @@
+# IPGuard
+
+> IPGuard es una empresa de soluciones tecnológicas por sectores, con sede en Lleida (Cataluña, España) y cobertura nacional. Un único equipo que diseña, integra y mantiene software a medida, inteligencia artificial, visión artificial y sensores, ciberseguridad, redes, marketing digital y ecommerce para empresas. Especialidad: visión artificial y sensores por sector ("soluciones inteligentes"). Idiomas: español, inglés y catalán.
+
+Datos de contacto: teléfono +34 636 22 43 98, WhatsApp +34 973 26 65 69, email info@ipguard.es. Plataforma: https://app.ipguard.es
+
+## En una frase
+IPGuard = tecnología a medida por sectores: web, apps, IA, visión artificial, ciberseguridad, redes, marketing y ecommerce, con un solo equipo.
+
+## Servicios
+- [Software a medida](https://ipguard.es/servicios/software/): Software a medida: CRM, ERP y apps web hechas con tus procesos y conectadas a tu IA. Integraciones, portales y automatización.
+- [Marketing digital](https://ipguard.es/servicios/marketing/): Agencia de marketing: Google Ads, Meta Ads, SEO, email marketing, redes sociales y CRM. Campañas medidas por resultados.
+- [Ecommerce, web y Amazon](https://ipguard.es/servicios/ecommerce/): Diseño web en WordPress, tiendas Shopify y WooCommerce, integraciones, Amazon Seller Central, FBM y SP-API. Tu web, tienda y marketplaces, de principio a fin.
+- [Inteligencia artificial aplicada](https://ipguard.es/servicios/ia/): IA aplicada: agentes, chatbots y visión entrenados con tus datos (RAG), fine-tuning, voz y analítica predictiva, integrados en tu operativa.
+- [Soluciones inteligentes](https://ipguard.es/servicios/soluciones-inteligentes/): Soluciones inteligentes: hardware + software a medida por sector. Cámaras, visión artificial y sensores que ven, miden y avisan, con tu plataforma. Instalación y cuota.
+- [Redes y sistemas](https://ipguard.es/servicios/redes/): Redes y sistemas: WiFi profesional, servidores, VPN, SD-WAN, virtualización y soporte 24/7 para que tu empresa funcione sin cortes.
+- [Ciberseguridad](https://ipguard.es/servicios/seguridad/): Ciberseguridad para empresas: firewall, VPN, EDR, copias anti-ransomware, monitorización 24/7 (SOC/SIEM) y pentesting. En la nube o on-premise.
+- [Ingeniería de telecomunicación](https://ipguard.es/servicios/telecom/): Ingeniería de telecomunicación: proyectos ICT, certificaciones, fibra, radioenlaces y legalización, firmados por ingeniero colegiado.
+- [Consultoría tecnológica](https://ipguard.es/servicios/consultoria/): Consultoría tecnológica: diagnóstico, estrategia y hoja de ruta para digitalizar tu empresa, CTO as a service y gestión del Kit Digital.
+- [Cumplimiento normativo](https://ipguard.es/servicios/cumplimiento/): Cumplimiento normativo: RGPD, NIS2, ISO 27001, ENS y AI Act. Análisis, documentación, implantación y auditoría, de la mano de seguridad.
+
+## Industrias (soluciones por sector)
+- [Hostelería y restauración](https://ipguard.es/industrias/hosteleria/)
+- [Retail y comercio](https://ipguard.es/industrias/retail/)
+- [Industria y fabricación](https://ipguard.es/industrias/industria/)
+- [Logística y almacén](https://ipguard.es/industrias/logistica/)
+- [Despachos y asesorías](https://ipguard.es/industrias/despachos/)
+- [Salud y clínicas](https://ipguard.es/industrias/salud/)
+- [Hoteles y turismo](https://ipguard.es/industrias/hoteles/)
+- [Inmobiliaria](https://ipguard.es/industrias/inmobiliaria/)
+- [Educación y formación](https://ipguard.es/industrias/educacion/)
+- [Ecommerce y marcas online](https://ipguard.es/industrias/ecommerce/)
+
+## Productos
+- [Nexus — Software a medida + IA](https://ipguard.es/nexus/)
+- [One — La plataforma, +50 apps](https://ipguard.es/one/)
+- [Sense — Los sentidos de tu IA](https://ipguard.es/sense/)
+- [Sentinel — Ciberseguridad + IA local](https://ipguard.es/kit/)
+
+## Casos de éxito
+- [Wiongo — Menos comida a la basura, con cámaras (visión por computador)](https://ipguard.es/casos/wiongo-vision-buffet/)
+- [Billy Brown — Todo el negocio en un único sistema (+50 apps)](https://ipguard.es/casos/billy-brown-plataforma/)
+- [Capittal — Su IA, más precisa y más barata (IA sobre datos)](https://ipguard.es/casos/capittal-ia-datos/)
+
+## Contacto
+- Teléfono: +34 636 22 43 98
+- WhatsApp: +34 973 26 65 69
+- Email: info@ipguard.es
+- Web: https://ipguard.es · Plataforma: https://app.ipguard.es
