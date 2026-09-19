@@ -5,4 +5,4 @@
 :HL["/wiongo-foto.jpg","image"]
 :HL["/billybrown-foto.jpg","image"]
 :HL["/logo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"en","param":null,"prefetchHints":4160,"slots":{"children":{"name":"casos","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"casa-tres-seguridad","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"8Sng5PJIyBuQfzRr0hErq"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"en","param":null,"prefetchHints":4160,"slots":{"children":{"name":"casos","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"casa-tres-seguridad","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"8vXF0IEUkg9z6Zzr5hpm4"}
