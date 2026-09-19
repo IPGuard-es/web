@@ -5,4 +5,4 @@
 :HL["/img/redes-hero.jpg","image"]
 :HL["/img/redes-band.jpg","image"]
 :HL["/logo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"ca","param":null,"prefetchHints":4160,"slots":{"children":{"name":"servicios","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"redes","siblings":["auditoria-codigo","automatizacion","avatares-ia","business-intelligence","cloud","formacion"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"NNbZ9AzACQSHeCR8CaMje"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"ca","param":null,"prefetchHints":4160,"slots":{"children":{"name":"servicios","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"redes","siblings":["auditoria-codigo","automatizacion","avatares-ia","business-intelligence","cloud","formacion"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"m3YQBRLWUJcbqMtfy9IWC"}
